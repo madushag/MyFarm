@@ -1,3 +1,3 @@
 # cscie-71
-Welcome to our projec repo!
+Welcome to our project repo!
 
