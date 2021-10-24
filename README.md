@@ -1,5 +1,8 @@
-# cscie-71 project repo
+# MyFarm (CSCIE-71)
 Welcome to our project repo!
+
+## Description
+We are the Amazon for local farmers
 
 ## Team Name
 TBD
