@@ -5,7 +5,7 @@ Welcome to our project repo!
 We are the Amazon for local farmers
 
 ## Team Name
-TBD
+Team MyFarm
 
 ## Members and roles(TBD)
 * Chris Rogers
