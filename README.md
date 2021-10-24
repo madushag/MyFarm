@@ -8,11 +8,11 @@ We are the Amazon for local farmers
 Team MyFarm
 
 ## Members and roles(TBD)
-* Chris Rogers
-* Neha Dubey
-* Christian Calleri
-* Shrikanth Ananthakrishnan
-* Luis Rengifo
-* Madusha Gamage
-* Kelly McDougall
+* Chris Rogers - Developer
+* Neha Dubey - Developer
+* Christian Calleri - Scrum Master
+* Shrikanth Ananthakrishnan - Product Owner
+* Luis Rengifo - Developer
+* Madusha Gamage - Developer
+* Kelly McDougall - Developer
 
