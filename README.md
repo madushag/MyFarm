@@ -23,5 +23,16 @@ Group 1
 Connecting farmers and consumers to make fresh produce more accessible, to reduce produce waste and to maximise the profits for farmers' season
 
 ## Near Vision
-1. Allow farmers to be a part of a marketplace, to advertise their presence and list the produce they want to sell to other farmers or directly to customers. 
-2. Allow customers (who could also be farmers) to browse through a list of produce to commit to buy from other farmers.
+To allow a farmer create an online farm that includes:
+1. Farm location (geolocation) and description (a window-shopping portal for the farm)
+2. Subscription model information and number of slots available if any (e.g. CSA shares, fruit share, meat share)
+3. Real-time information on the farm's offerings for sale in the open market
+4. Connection points for the customer to pick up farm offerings 
+    - drop off locations, farm stands, farmers' market
+    - day and time
+
+To allow a customer to shop for the following within a specified radius:
+1. Items to and their quantities
+2. Connection points to buy items
+3. Searching for local subscriptions (CSA share, fruits etc)
+4. Visit virtual farms
