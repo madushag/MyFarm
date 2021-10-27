@@ -20,7 +20,7 @@ Team MyFarm
 Group 1
 
 ## Far Vision
-Connecting farmers and consumers to make fresh produce more accessible, to reduce produce waste and to maximise the profits for farmers' season
+We are your own community farm. Connecting farmers and consumers to make fresh produce more accessible, to reduce produce waste and to maximise the profits for farmers' season. 
 
 ## Near Vision
 To allow a farmer create an online farm that includes:
