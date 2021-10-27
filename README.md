@@ -36,3 +36,13 @@ To allow a customer to shop for the following within a specified radius:
 2. Connection points to buy items
 3. Searching for local subscriptions (CSA share, fruits etc)
 4. Visit virtual farms
+
+## Definition of ready for our user stories
+- Has a title
+- Is a testable user story
+- Estimated
+- Has clear, unambigous acceptance criteria
+- Approved UI design
+- Has been discussed at sprint planning
+- Dependencies / pre-reqs are in place
+- The collectivre team agrees the story has been completed
