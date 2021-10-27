@@ -46,3 +46,4 @@ To allow a customer to shop for the following within a specified radius:
 - Has been discussed at sprint planning
 - Dependencies / pre-reqs are in place
 - The collectivre team agrees the story has been completed
+- Has additional details
