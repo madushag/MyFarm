@@ -38,6 +38,7 @@ To allow a farmer to manage an online farm that includes:
 ### Stakeholder Types 
 * Farmers
 * Customers of farm products
+* Suppliers to farmers
 
 ### A real stakeholder and their persona
 * Ari Kurtz, 70, Male, and Moira O'Donnel, 65, Female 
