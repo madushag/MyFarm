@@ -24,22 +24,16 @@
 
 
 ### Far Vision
-We are your own community farm. Connecting farmers and consumers to make fresh produce more accessible, to reduce produce waste and to maximise the profits for farmers' season. 
+Connecting farmers and consumers to make fresh produce more accessible 
 
-### Near Vision
-To allow a farmer create an online farm that includes:
-1. Farm location (geolocation) and description (a window-shopping portal for the farm)
-2. Subscription model information and number of slots available if any (e.g. CSA shares, fruit share, meat share)
-3. Real-time information on the farm's offerings for sale in the open market
-4. Connection points for the customer to pick up farm offerings 
+### Near Vision (MVP)
+To allow a farmer to manage an online farm that includes:
+1. Subscription model information and number of slots available if any (e.g. CSA shares, fruit share, meat share)
+2. Near real-time information on the farm's offerings for sale in the open market
+3.  Connection points for the customer to pick up farm offerings 
     - drop off locations, farm stands, farmers' market
     - day and time
-
-To allow a customer to shop for the following within a specified radius:
-1. Items to and their quantities
-2. Connection points to buy items
-3. Searching for local subscriptions (CSA share, fruits etc)
-4. Visit virtual farms
+4. Farm location (geolocation) and description (a window-shopping portal for the farm)
 
 ### Stakeholder Types 
 * Farmers
