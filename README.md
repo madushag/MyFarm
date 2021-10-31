@@ -1,13 +1,13 @@
 # MyFarm
 
-# Project Part 1:
+## Project Part 1:
 
 * We are Team 1 on Canvas
 * Our team name is "Team MyFarm"
 * Public Slack channel URL : https://app.slack.com/client/T4Q0SCW2K/C02J8D169RB
 * Public git repo URL :  https://github.com/madushag/MyFarm
 * Our product name is **"MyFarm"**
-* Out product backlog will be managed using Jira. URL : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
+
 
 ### Team
 
@@ -56,17 +56,21 @@ b) How to price the product so that it is attractive enough to buy, but at the s
 c)How to make inventory available in realtime to customers  
 
 
+### Product Backlog
+Our product backlog will be managed using Jira (https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog). We currently have more than 10 PBIs and they are all expressed as a true user story. We ordered the backlog based on the functionality that is needed to create a fluid and logical user experience ("Business Value"), and then taking into account pre-requisite/dependencies between tasks.
 
-## Definition of ready for our user stories
+#### Definition of ready for our user stories
 - Has a title
 - Is a testable user story
-- Estimated
-- Has clear, unambigous acceptance criteria
-- Has been discussed at sprint planning
-- Dependencies / pre-reqs are in place
-- The collectivre team agrees the story has been completed
+- Is Estimated
+- Has clear and unambigous acceptance criteria
+- Dependencies and pre-requisites are ready
 - Has additional details
+- Has been discussed at sprint planning and team agrees the story is complete (it has an opening sentence and additional details are added) and meets the INVEST (Independent, Negotiable, Valuable, Estimable, Small & Testable) criteria
 
-## Estimation technique and methdology used to order the backlog
-We used the affinity estimation method. Will add more details about this technique, and add the zoom link as evidence.
+#### Estimation technique
+We used the affinity estimation method using buckets/categories on a scale of 1 (Smallest) through 5 (Largest). The developers estimated the first 10 PBIs in story points using relative sizing and grouped them into each bucket. For example, while a PBI with an estimate of 2 story points was placed in bucket 1, a PBI with an estimate of 6 (3x) story points was placed in bucket 3.
 
+Only developers participated in estimating each PBI. 
+
+A recording of the Zoom session where we did most of this estimation can be viewed here : https://harvard.zoom.us/rec/share/7RBYFAdnjYFj7M_tqM7k6Ete0iwUiOPJSvVqJa8oiax1v3fMKXk3Ua7RgLjeHyHi.oCFtfjU87kVOR5-V
