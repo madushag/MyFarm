@@ -1,28 +1,31 @@
-# MyFarm (CSCIE-71)
-Welcome to our project repo!
+# MyFarm
 
-## Description
-We are the Amazon for local farmers
+# Project Part 1:
 
-## Team Name
-Team MyFarm
+* We are Team 1 on Canvas
+* Our team name is "Team MyFarm"
+* Public Slack channel URL : https://app.slack.com/client/T4Q0SCW2K/C02J8D169RB
+* Public git repo URL :  https://github.com/madushag/MyFarm
+* Our product name is **"MyFarm"**
 
-## Members and roles(TBD)
-* Chris Rogers - Developer
-* Neha Dubey - Developer
-* Christian Calleri - Scrum Master
-* Shrikanth Ananthakrishnan - Product Owner
-* Luis Rengifo - Developer
-* Madusha Gamage - Developer
-* Kelly McDougall - Developer
+### Team
 
-## Canvas Group Name
-Group 1
+| Member Name               |   Role        |
+|---------------------------|-------------  |
+| Chris Rogers              | Developer     |
+| Neha Dubey                | Developer     |
+| Christian Calleri         | Scrum Master  |
+| Shrikanth Ananthakrishnan | Product Owner |
+| Luis Rengifo              | Developer     |
+| Madusha Gamage            | Developer     |
+| Kelly McDougall           | Developer     |
 
-## Far Vision
+
+
+### Far Vision
 We are your own community farm. Connecting farmers and consumers to make fresh produce more accessible, to reduce produce waste and to maximise the profits for farmers' season. 
 
-## Near Vision
+### Near Vision
 To allow a farmer create an online farm that includes:
 1. Farm location (geolocation) and description (a window-shopping portal for the farm)
 2. Subscription model information and number of slots available if any (e.g. CSA shares, fruit share, meat share)
@@ -37,13 +40,20 @@ To allow a customer to shop for the following within a specified radius:
 3. Searching for local subscriptions (CSA share, fruits etc)
 4. Visit virtual farms
 
+### Stakeholder Types 
+* Farmers
+* Customers of farm products
+
 ## Definition of ready for our user stories
 - Has a title
 - Is a testable user story
 - Estimated
 - Has clear, unambigous acceptance criteria
-- Approved UI design
 - Has been discussed at sprint planning
 - Dependencies / pre-reqs are in place
 - The collectivre team agrees the story has been completed
 - Has additional details
+
+## Estimation technique and methdology used to order the backlog
+We used the affinity estimation method. Will add more details about this technique, and add the zoom link as evidence.
+
