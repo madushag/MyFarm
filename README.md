@@ -7,6 +7,7 @@
 * Public Slack channel URL : https://app.slack.com/client/T4Q0SCW2K/C02J8D169RB
 * Public git repo URL :  https://github.com/madushag/MyFarm
 * Our product name is **"MyFarm"**
+* Out product backlog will be managed using Jira. URL : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
 
 ### Team
 
@@ -43,6 +44,18 @@ To allow a customer to shop for the following within a specified radius:
 ### Stakeholder Types 
 * Farmers
 * Customers of farm products
+
+### A real stakeholder and their persona
+* Ari Kurtz, 70, Male, and Moira O'Donnel, 65, Female 
+* Occupation: Farmers, in Lincoln MA
+Ari and Moira grow many types of vegetables and fruits during the farming season. They runs a CSA (Community supported agriculture) and also sells produce in the farmer's market. they also give a part of their produce to a local charity. As a farmer they offers CSA subscriptions through a mailing list and the local newspaper of the town. They have experienced the following problems: 
+1. Outreach: Over the past few years they has seen their CSA membership decline. As a farmer outreach is a big challenge especially in the digital era, where the proportion of people accessing information through the traditional media is limited. Also maintaining a website is difficult.
+2. Marketing excess produce: When there is surplus produce like hot peppers this year, the issues they face are 
+a) They find it very difficut to find someone to buy them, whether small quantities or in bulk. They rely on a mailing list that most farmers in Massachusetts subscribe to, to market their produce
+b) How to price the product so that it is attractive enough to buy, but at the same time they are not losing money. They compare prices in local stores and gustimate a selling price for their produce
+c)How to make inventory available in realtime to customers  
+
+
 
 ## Definition of ready for our user stories
 - Has a title
