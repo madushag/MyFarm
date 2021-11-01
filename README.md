@@ -71,8 +71,8 @@ She would like to have a website that gives her up to date information she needs
 * Mary Manhannan: Age 44 Female
 * Occupation: Farmer in Pittsfield MA
 Mary is a new farmer who is has taken a new entry farmers training program offered by the Tufft's University. As a part of the program she has been given land to grow vegetables and hopes to run a small CSA with a few members as an experiment. As a new entrant she needs the following:
- - A portal to host and market her virtual farm
- - Ability to sell CSA shares online and attract customers
+    - A portal to host and market her virtual farm
+    - Ability to sell CSA shares online and attract customers
 If her venture works out she hopes to eventually lease some land and make farming her full time profession
 
 ### Product Backlog
