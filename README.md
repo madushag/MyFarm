@@ -40,7 +40,7 @@ To allow a farmer to manage an online farm that includes:
 * Customers of farm products
 * Suppliers to farmers
 
-### A real stakeholder and their persona
+### Real stakeholder 1
 * Ari Kurtz, 70, Male, and Moira O'Donnel, 65, Female 
 * Occupation: Farmers, in Lincoln MA
 Ari and Moira grow many types of vegetables and fruits during the farming season. They runs a CSA (Community supported agriculture) and also sells produce in the farmer's market. they also give a part of their produce to a local charity. As a farmer they offers CSA subscriptions through a mailing list and the local newspaper of the town. They have experienced the following problems: 
@@ -50,6 +50,30 @@ Ari and Moira grow many types of vegetables and fruits during the farming season
         - How to price the product so that it is attractive enough to buy, but at the same time they are not losing money. They compare prices in local stores and gustimate a selling price for their produce
         - How to make inventory available in realtime to customers  
 
+### Real stakeholder 2
+* Vijaya Meduri: Age 43, Female
+* Occupation: Home maker, Acton MA
+Vijaya is married and has a toddler and her spouse is a software professional. She is primarily responsible for providing food to her family. She is passionate about sourcing food from her local community. She buys fresh seasonal produce from locals farms and farm stands. The rough breakup  is 70% from the grocery store and 30% local farms, but she would like to increase the latter. She currently subscribes to a CSA but she also shops for produce that were scarce in her share or those she wants to store through winter. She gets her information in the following ways:
+    - A mailing list where farmers advertise and request anything and everything to do with farming and fresh produce
+    - Websites such as https://massnrc.org/farmlocator/map.aspx?Type=Organic%20Farms
+    - pickyourown.org
+
+She then calls individual farms to see what is availabe to buy/pick at that time (day or week) before heading there. She loves the fact that she is able to connect with her food source and also bring her child along to participate and play as an activity.
+
+Her problems are: 
+    - She has to spend a lot of time hunting for what she wants to buy locally.
+    - While she is familiar with a few farms locally there are many around that she doesn't know of and what they offer.
+
+She would like to have a website that gives her up to date information she needs about local farms within 20 miles from her home, their offerings and how and when she can buy produce from them. The most important aspect of buying from local farms is the sense of community and connection she feels with the local people.
+
+### Ficticious stakeholder 3
+
+* Mary Manhannan: Age 44 Female
+* Occupation: Farmer in Pittsfield MA
+Mary is a new farmer who is has taken a new entry farmers training program offered by the Tufft's University. As a part of the program she has been given land to grow vegetables and hopes to run a small CSA with a few members as an experiment. As a new entrant she needs the following:
+ - A portal to host and market her virtual farm
+ - Ability to sell CSA shares online and attract customers
+If her venture works out she hopes to eventually lease some land and make farming her full time profession
 
 ### Product Backlog
 Our product backlog will be managed using Jira (https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog). We currently have more than 10 PBIs and they are all expressed as a true user story. We ordered the backlog based on the functionality that is needed to create a fluid and logical user experience ("Business Value"), and then taking into account pre-requisite/dependencies between tasks.
