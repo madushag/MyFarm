@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    command: ["--production"]
+    volumes:
+      - static_volume_prod:/home/app/web/app/static
+      - media_volume_prod:/home/app/web/app/media
+    expose:
+      - 8000
+    env_file:
+      - ./.env
+    environment:
+      DEBUG: 0
+      DJANGO_SETTINGS_MODULE: app.settings.production
+      SQL_HOST: db
+
+  db:
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: ${SQL_PASSWORD}
+      POSTGRES_USER: ${SQL_USER}
+      POSTGRES_DB: ${SQL_DATABASE}
+
+  nginx_prod:
+    build: ./nginx
+    volumes:
+      - static_volume_prod:/home/app/web/app/static
+      - media_volume_prod:/home/app/web/app/media
+    ports:
+      - 127.0.0.1:1337:80
+
+volumes:
+  postgres_data_prod:
+  static_volume_prod:
+  media_volume_prod:
