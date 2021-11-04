@@ -33,7 +33,7 @@ services:
       - static_volume_prod:/home/app/web/app/static
       - media_volume_prod:/home/app/web/app/media
     ports:
-      - 127.0.0.1:1337:80
+      - 80:80
 
 volumes:
   postgres_data_prod:
