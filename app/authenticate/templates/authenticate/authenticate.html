@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+    <h1>register <br></h1>
+
+    <h5>Please sign up</h5> {% for field in form %}
+
+    <!-- <label>{{ field.label_tag }}</label> -->
+    {{ field }}
+    <br/> {% for error in field.errors %}
+    <p style="color: red">{{ error }}</p>
+    {% endfor %} {% endfor %}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <br/>
+
+</form>
+
+{% endblock %}
