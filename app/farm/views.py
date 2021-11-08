@@ -5,10 +5,9 @@ from django.urls import reverse
 from .models import Farm
 
 
-# Landing page that display the list of farms
+# Landing page that display the list of farms that belongs to the currently logged in user
 def index(request):
-    # return HttpResponse("You're looking at a test farm")
-    farm_list = Farm.objects.order_by('-name')[:5]
+    farm_list = Farm.objects.filter(farmer=request.user.id).order_by('-name')[:5]
     context = {'farm_list': farm_list}
     return render(request, 'farm/index.html', context)
 
@@ -16,7 +15,8 @@ def index(request):
 # Handler to display farm details
 def details(request, farm_id):
     try:
-        farm = Farm.objects.get(pk=farm_id)
+        # filter by user id to prevent information leakage
+        farm = Farm.objects.filter(pk=farm_id).filter(farmer=request.user.id).get()
     except Farm.DoesNotExist:
         return render(request, 'farm/details.html', {'error_message': 'Invalid farm ID'})
     else:
@@ -25,12 +25,12 @@ def details(request, farm_id):
 
 # Handler for adding a new farm
 def add(request):
-
     if request.method == 'POST':
         farm = Farm(
             name=request.POST['name'],
             description=request.POST['description'],
-            phone_no=request.POST['phone']
+            phone_no=request.POST['phone'],
+            farmer=request.user.id
         )
         farm.save()
 
@@ -42,7 +42,7 @@ def add(request):
         return render(request, 'farm/details.html')
 
 
-# Handler for updating details of an existing farm
+# Handler for saving details of an existing farm
 def update(request, farm_id):
     farm = get_object_or_404(Farm, pk=farm_id)
 
