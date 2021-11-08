@@ -25,17 +25,21 @@ def details(request, farm_id):
 
 # Handler for adding a new farm
 def add(request):
-    farm = Farm(
-        name=request.POST['name'],
-        description=request.POST['description'],
-        phone_no=request.POST['phone']
-    )
-    farm.save()
 
-    # Always return an HttpResponseRedirect after successfully dealing
-    # with POST data. This prevents data from being posted twice if a
-    # user hits the Back button.
-    return HttpResponseRedirect(reverse('farm:index'))
+    if request.method == 'POST':
+        farm = Farm(
+            name=request.POST['name'],
+            description=request.POST['description'],
+            phone_no=request.POST['phone']
+        )
+        farm.save()
+
+        # Always return an HttpResponseRedirect after successfully dealing
+        # with POST data. This prevents data from being posted twice if a
+        # user hits the Back button.
+        return HttpResponseRedirect(reverse('farm:index'))
+    else:
+        return render(request, 'farm/details.html')
 
 
 # Handler for updating details of an existing farm
@@ -52,3 +56,14 @@ def update(request, farm_id):
     # with POST data. This prevents data from being posted twice if a
     # user hits the Back button.
     return HttpResponseRedirect(reverse('farm:index'))
+
+
+# Handler for deleting a farm
+def delete(request, farm_id):
+    try:
+        farm = Farm.objects.get(pk=farm_id)
+    except Farm.DoesNotExist:
+        return render(request, 'farm/details.html', {'error_message': 'Invalid farm ID'})
+    else:
+        farm.delete()
+        return HttpResponseRedirect(reverse('farm:index'))
