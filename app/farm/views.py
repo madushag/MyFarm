@@ -5,6 +5,7 @@ from django.urls import reverse
 from .models import Farm
 
 
+# Landing page that display the list of farms
 def index(request):
     # return HttpResponse("You're looking at a test farm")
     farm_list = Farm.objects.order_by('-name')[:5]
@@ -12,11 +13,17 @@ def index(request):
     return render(request, 'farm/index.html', context)
 
 
+# Handler to display farm details
 def details(request, farm_id):
-    farm = get_object_or_404(Farm, pk=farm_id)
-    return render(request, 'farm/details.html', {'farm': farm})
+    try:
+        farm = Farm.objects.get(pk=farm_id)
+    except Farm.DoesNotExist:
+        return render(request, 'farm/details.html', {'error_message': 'Invalid farm ID'})
+    else:
+        return render(request, 'farm/details.html', {'farm': farm})
 
 
+# Handler for adding a new farm
 def add(request):
     farm = Farm(
         name=request.POST['name'],
@@ -24,9 +31,14 @@ def add(request):
         phone_no=request.POST['phone']
     )
     farm.save()
+
+    # Always return an HttpResponseRedirect after successfully dealing
+    # with POST data. This prevents data from being posted twice if a
+    # user hits the Back button.
     return HttpResponseRedirect(reverse('farm:index'))
 
 
+# Handler for updating details of an existing farm
 def update(request, farm_id):
     farm = get_object_or_404(Farm, pk=farm_id)
 
@@ -35,8 +47,8 @@ def update(request, farm_id):
     farm.phone_no = request.POST['phone']
 
     farm.save()
+
     # Always return an HttpResponseRedirect after successfully dealing
     # with POST data. This prevents data from being posted twice if a
     # user hits the Back button.
     return HttpResponseRedirect(reverse('farm:index'))
-

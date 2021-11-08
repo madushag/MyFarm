@@ -2,7 +2,10 @@
 
 {% load static %}
 
+
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
+
     {% if farm %}
         <form  action="{% url 'farm:update' farm.id %}" method="post" id="details">
     {% else %}
@@ -10,9 +13,14 @@
     {% endif %}
 
         <div style="padding:50px">
-                {% csrf_token %}
-                {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            {% csrf_token %}
+            {% if error_message %}
+                <div class="error"><span>{{ error_message }}</span></div>
 
+                <div class="col-auto">
+                    <a class="btn btn-primary mb-3 float-right" href="{% url 'farm:index' %}">Back</a>
+                </div>
+            {% else %}
                 <div class="mb-3 row">
                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
@@ -35,6 +43,7 @@
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3 float-right" value="Save">Save</button>
                 </div>
+            {% endif %}
         </div>
     </form>
 
