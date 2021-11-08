@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: ./app
-      dockerfile: app/Dockerfile
+      dockerfile: Dockerfile
     command: ["--production"]
     volumes:
       - static_volume_prod:/home/app/web/app/static
