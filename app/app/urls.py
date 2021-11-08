@@ -20,4 +20,5 @@ from homepage import urls as homepage_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(homepage_urls)),
+    path('farm/', include('farm.urls'))
 ]

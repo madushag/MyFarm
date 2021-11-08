@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    {% if farm %}
+        <form  action="{% url 'farm:update' farm.id %}" method="post" id="details">
+    {% else %}
+        <form  action="{% url 'farm:add' %}" method="post" id="details">
+    {% endif %}
+
+        <div style="padding:50px">
+                {% csrf_token %}
+                {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+                <div class="mb-3 row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Name of farm" value="{{ farm.name }}">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="description" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                        <textarea form="details" class="form-control" name="description" id="description" placeholder="Description of farm">{{ farm.description }}</textarea>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="description" class="col-sm-2 col-form-label">Phone #</label>
+                    <div class="col-sm-10">
+                      <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="form-control" name="phone" id="phone" placeholder="Phone # as 123-456-7890 " value="{{ farm.phone_no }}">
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3 float-right" value="Save">Save</button>
+                </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="{% static 'farm.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div style="padding: 50px">
+        {% if farm_list %}
+            <h1>List of farms</h1>
+            <ul>
+            {% for farm in farm_list %}
+                <li><a href="{% url 'farm:details' farm.id %}">This farm [{{ farm.name }}] belongs to farmer [{{ farm.farmer }}]</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No farms are available.</p>
+        {% endif %}
+
+        <div class="col-auto">
+            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right">Add New</a>
+        </div>
+    </div>
+{% endblock %}
