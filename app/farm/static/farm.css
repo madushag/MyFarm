@@ -1,0 +1,12 @@
+.error{
+    color: red;
+    font-weight: bold;
+    border:solid 1px red;
+    padding:10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.align-right{
+    float:right
+}

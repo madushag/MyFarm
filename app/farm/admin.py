@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Farm, FarmerStub
+from .models import Farm
 
 admin.site.register(Farm)
-admin.site.register(FarmerStub)
 

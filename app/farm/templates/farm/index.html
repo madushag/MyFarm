@@ -2,14 +2,19 @@
 
 {% block content %}
 
-    <div style="padding: 50px">
+    <div class="container" style="padding: 50px">
         {% if farm_list %}
             <h1>List of farms</h1>
-            <ul>
             {% for farm in farm_list %}
-                <li><a href="{% url 'farm:details' farm.id %}">This farm [{{ farm.name }}] belongs to farmer [{{ farm.farmer }}]</a></li>
+                <div class="row">
+                    <div class="col-8">
+                        <a href="{% url 'farm:details' farm.id %}">[{{ farm.name }}] belonging to farmer [{{ farm.farmer }}]</a>
+                    </div>
+                    <div class="col-4">
+                        <a href="{% url 'farm:delete' farm.id %}" class="btn btn-danger mb-3 float-right" value="Delete">Delete</a>
+                    </div>
+                </div>
             {% endfor %}
-            </ul>
         {% else %}
             <p>No farms are available.</p>
         {% endif %}
