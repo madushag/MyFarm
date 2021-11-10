@@ -27,7 +27,7 @@ SECRET_KEY = 'q_4yzrc-(no7po&tap8o^6a)7u8r3^s@k6$8&z30y!qkgs3rky'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127:0.0.1', '0.0.0.0']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
+    'authenticate'
 ]
 
 MIDDLEWARE = [
@@ -132,4 +133,3 @@ STATIC_ROOT = path.join(BASE_DIR, 'static')
 STATIC_URL = environ.get("STATIC_URL", '/static/')
 MEDIA_ROOT = path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
