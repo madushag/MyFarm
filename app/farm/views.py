@@ -22,15 +22,6 @@ def add(request):
             farm = Farm(**form.cleaned_data, farmer=request.user)
             farm.save()
 
-        # if form.is_valid():
-        #     farm = Farm(
-        #         name=form.cleaned_data['name'],
-        #         description=form.cleaned_data['description'],
-        #         phone_no=form.cleaned_data['phone_no'],
-        #         farmer=request.user
-        #     )
-        #     farm.save()
-
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
