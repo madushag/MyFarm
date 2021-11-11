@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import Group
 from django.contrib.auth import login, authenticate
-# from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import SignUpForm
 from homepage.views import homepage
-#
+
+
 def user_register(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -20,3 +20,24 @@ def user_register(request):
     else:
         form = SignUpForm()
     return render(request, 'authenticate/authenticate.html', {'form': form})
+
+
+
+def login_view(request):
+  if request.method == 'POST':
+    username = request.POST["username"]
+    password = request.POST["password"]
+    user = authenticate(request, username=username, password=password)
+    
+    # Check if authentication is successful
+    if user is not None:
+      login(request, user)
+      return render(request, 'authenticate/authenticate.html')
+    else:
+      return render(request, 'authenticate/login.html', {
+        'message': 'Invalid username and/or password.'
+      })
+
+  return render(request, 'authenticate/login.html')
+
+  
