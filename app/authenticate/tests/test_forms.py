@@ -22,7 +22,7 @@ class TestSignUpForm(TestCase):
   def test_form_is_valid_with_correct_data(self):
     form = SignUpForm(valid_form_data)
     self.assertTrue(form.is_valid())
-  
+
   def test_form_is_invalid_when_passwords_dont_match(self):
     form_data = {**valid_form_data, "password2": "aDifferentPassword"}
     form = SignUpForm(form_data)
@@ -42,4 +42,3 @@ class TestSignUpForm(TestCase):
     form_data = {**valid_form_data, "email": "This is not what an email looks like"}
     form = SignUpForm(form_data)
     self.assertFalse(form.is_valid())
-
