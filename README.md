@@ -96,4 +96,21 @@ A recording of the Zoom session where we did most of this estimation can be view
 Some of the estimation and grouping was done asynchronously via Slack. 
 
 ## Project Part 2
+### Sprint Planning
+#### Forecast
+
+The forecast for the number of story points the team can complete during the sprint is 20. The number is a guesstimate based on the developers assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
+
+You pulled stories into your sprint backlog: YES
+You pulled stories from the top of your product backlog: YES
+The aggregate size of the stories does not exceed your forecast: YES
+Only developers participated in the pointing activity: YES
+
+You decomposed user stories into developer tasks: YES 
+The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story
+
+![image](https://user-images.githubusercontent.com/7987070/141409518-0b5869c5-8b2e-4042-9f17-ac9e7e67ae97.png)
+
+Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point)
+
 A sample stand-up recording session : https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
