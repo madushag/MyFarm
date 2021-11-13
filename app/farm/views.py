@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.urls import reverse
 
 from .form import FarmDetailsForm
@@ -37,7 +37,10 @@ def details(request, farm_id):
     if request.method == 'GET':
         try:
             # filter by user id to prevent information leakage
-            farm = Farm.objects.filter(pk=farm_id).filter(farmer=request.user.id).get()
+            farm = Farm.objects.filter(pk=farm_id).get()
+            if farm.farmer != request.user:
+                return render(request, 'farm/details_form.html', {'error_message': 'You do not have permission to '
+                                                                                   'view this farm.'})
         except Farm.DoesNotExist:
             return render(request, 'farm/details_form.html', {'error_message': 'Invalid farm ID'})
 
@@ -49,7 +52,10 @@ def details(request, farm_id):
     if request.method == 'POST':
         try:
             # filtering by user id to prevent information leakage
-            farm = Farm.objects.filter(pk=farm_id).filter(farmer=request.user.id).get()
+            farm = Farm.objects.filter(pk=farm_id).get()
+            if farm.farmer != request.user:
+                return render(request, 'farm/details_form.html', {'error_message': 'You do not have permission to '
+                                                                                   'update this farm.'})
 
         except Farm.DoesNotExist:
             return render(request, 'farm/details_form.html', {'error_message': 'Invalid farm ID'})
@@ -72,7 +78,9 @@ def details(request, farm_id):
 def delete(request, farm_id):
     try:
         # filtering by user id to prevent information leakage
-        farm = Farm.objects.filter(pk=farm_id).filter(farmer=request.user.id).get()
+        farm = Farm.objects.filter(pk=farm_id).get()
+        if farm.farmer != request.user:
+            return render(request, 'farm/details_form.html', {'error_message': 'You do not have permission to delete this farm.'})
 
     except Farm.DoesNotExist:
         return render(request, 'farm/details_form.html', {'error_message': 'Invalid farm ID'})
