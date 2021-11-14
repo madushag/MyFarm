@@ -222,6 +222,8 @@ Neha and Luis Pair Programming: https://harvard.zoom.us/rec/share/5vED4_sZOFj_9s
 
 ![PairProgramming](images/Pair_prog_screenshot_2.png)
 
+Kelly and Chris Pair Programming: https://harvard.zoom.us/rec/share/EMsUUaM3kSBEW2e-uHSLICeAKLQyvuVIJ34uvtOzNKHVboUJ03iqUmB_8NGq9gPo.QGTikupl1cie4coR?startTime=1635984983000
+
 
 #### Test Driven Development.
 
