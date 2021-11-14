@@ -236,3 +236,6 @@ Added more failing tests to cover required functionality:
 Added code to then turn those wicked red tests to go green:
 
 ![PassingTests](images/Passing_tests.png)
+
+Followed TDD and finally have a test suit with 28 tests that covers most of the functionalty we added this sprint:
+![PassingTests](images/Final_green_tests.png)
