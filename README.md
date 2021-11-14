@@ -126,7 +126,87 @@ Your sprint backlog, including both the user stories and developer tasks, is rep
 A sample stand-up recording session : https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
 
 ### Daily Scrums
-The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. 
+The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/1, 11/3, 11/5, 11/8, 11/10 and 11/12.
+
 A recording of a daily scrum: https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
 
 Progress is updated in Jira using the Kanban Board:
+![Kanban](images/KanbanBoard.png)
+
+The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
+
+A sample burndow chart:
+![Burndow](images/Burndown%20Chart.png)
+
+##### Daily Scrum 11/1
+Completed in the last 24 hours:
+- Chris Rogers: Prepare training materials
+- Madusha Gamage: Did Django Tutorial.
+- Kelly McDougall: Setup development environment
+- Neha Dubey: Setup Django.
+- Chris Calleri: Researched potential UI designs.
+- Luis Rengifo: Setup development environment
+- Shrikanth Ananthakrishnan: Discussed with farmer the MVP
+
+will work on next:
+- All: conduct training session tonight.
+
+Impediments: none
+
+##### Daily Scrum 11/3
+Completed since our last meeting:
+- Chris Rogers: Developed architectural model for solution.
+- Madusha Gamage: Create database model for a farm
+- Kelly McDougall: Researched potential use of Google plug in for location.
+- Neha Dubey: Created Django form to allow farmer to log in
+
+Will work on next:
+- Chris and Kelly: Admin Interface and base.html.
+- Madusha: Create view to receive form data.
+- Neha and Luis: Work on login code.
+
+Impediments: none
+
+##### Daily Scrum 11/5
+Completed since last meeting
+- Chris and Kelly: Admin Interface;
+
+Will work on next:
+- Chris and Kelly: will continue pair programming of the combined tasks
+- Neha and Luis: will continue pair programming.
+
+Impediments: none.
+
+##### Daily scrum 11/8
+Completed since last meeting:
+- Chris and Kelly: Created view to allow creation of account.
+- Madusha: Created an update view for farms.
+
+Will work on next:
+- Chris and Kelly: start merging changes into main branch.
+- Madusha: Work on code for update view of farms.
+- Neha and Luis: made changes on login code based on feedback from team.
+
+Impediments: Feedback from Richard from first project deliverable has indicated that the focus of the team has been more on the technology rather than the real value that our main stakeholder will get from the solution. The team may need to pivot.
+
+##### Daily scrum 11/10
+Completed since last meeting:
+- Chris and Kelly: review various pull requests from the team and merged into main branch.
+- Madusha Finished code for update view; obtained meeting with Anu to discuss missed deliverable.
+- Neha and Luis: finished tests for login view.
+
+Will work on next:
+- All: prepare for discussion with Anu.
+
+Impediments: Need to meet with our main stakeholder to determine how to pivot.
+
+##### Daily scrum 11/12
+Completed since last meeting:
+- Chris and Kelly: merged new changes from team.
+- Neha and Luis: refactored login functionality.
+- Madusha: pull request to merge changes.
+
+Will work on next:
+- All: prepare for conversation with stakeholder.
+
+Impediments: Determine how to pivot - meeting with stakeholder on 11/14 at 7 pm.
