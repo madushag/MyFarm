@@ -123,7 +123,6 @@ The tasks are clearly listed in your sprint backlog: YES. Developer tasks are at
 
 Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point)
 
-A sample stand-up recording session : https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
 
 ### Daily Scrums
 The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/1, 11/3, 11/5, 11/8, 11/10 and 11/12.
@@ -137,6 +136,7 @@ The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/
 
 A sample burndow chart:
 ![Burndow](images/Burndown%20Chart.png)
+URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 ##### Daily Scrum 11/1
 Completed in the last 24 hours:
