@@ -210,3 +210,14 @@ Will work on next:
 - All: prepare for conversation with stakeholder.
 
 Impediments: Determine how to pivot - meeting with stakeholder on 11/14 at 7 pm.
+
+#### Burndown Chart at the end of the Sprint:
+
+![Burndow](images/BurndownAsOf11-14.png)
+
+#### Pair Programming:
+Neha and Luis Pair Programming: https://harvard.zoom.us/rec/share/5vED4_sZOFj_9sMcZHZB-eimVthwHXQL5l27k3K4Z6aG1Pjj9NRCAPN2BSReiHw.kV5-n1uW7L3lbvOL?startTime=1636589132000
+
+
+#### Test Driven Development.
+
