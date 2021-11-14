@@ -239,3 +239,10 @@ Added code to then turn those wicked red tests to go green:
 
 Followed TDD and finally have a test suit with 28 tests that covers most of the functionalty we added this sprint:
 ![PassingTests](images/Final_green_tests.png)
+
+### Product Increment - Working Software
+The product is installed in an EC2 instance.
+The URL is: http://54.226.105.77/
+
+Image of the working product:
+![WorkingProduct](images/WorkingProduct.png)
