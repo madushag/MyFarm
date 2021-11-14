@@ -42,9 +42,12 @@ class TestFarmView(TestCase):
         request.user = self.user
         add(request)
 
-        request = self.factory.get('/farm/1/details')
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/details"
+
+        request = self.factory.get(request_path)
         request.user = self.user
-        response = details(request, 1)
+        response = details(request, farmId)
         self.assertContains(response, 'Test Farm')
 
     def test_details_invalid_user(self):
@@ -52,11 +55,14 @@ class TestFarmView(TestCase):
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
+        
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/details"
 
-        request = self.factory.get('/farm/1/details')
+        request = self.factory.get(request_path)
         request.user = User.objects.create_user(username='anothertestuser', email='test@user.com',
                                                 password='testpassword')
-        response = details(request, 1)
+        response = details(request, farmId)
         self.assertContains(response, 'You do not have permission to view this farm.')
 
     def test_details_invalid_farm_id(self):
@@ -75,16 +81,19 @@ class TestFarmView(TestCase):
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
+        
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/details"
 
-        request = self.factory.post('/farm/1/details', update_form_data)
+        request = self.factory.post(request_path, update_form_data)
         request.user = authenticate(username='testuser', password='testpassword')
-        response = details(request, 1)
+        response = details(request, farmId)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/farm/')
 
-        request = self.factory.get('/farm/1/details')
+        request = self.factory.get(request_path)
         request.user = authenticate(username='testuser', password='testpassword')
-        response = details(request, 1)
+        response = details(request, farmId)
         self.assertContains(response, 'Test Farm 2')
 
     def test_details_update_invalid_user(self):
@@ -92,23 +101,30 @@ class TestFarmView(TestCase):
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
+        
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/details"
 
-        request = self.factory.post('/farm/1/details', update_form_data)
+        request = self.factory.post(request_path, update_form_data)
         request.user = User.objects.create_user(username='anothertestuser', email='test@user.com',
                                                 password='testpassword')
-        response = details(request, 1)
+        response = details(request, farmId)
         self.assertContains(response, 'You do not have permission to update this farm.')
 
     def test_delete_invalid_user(self):
         self.factory = RequestFactory()
         request = self.factory.post('/farm/add/', valid_form_data)
+
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
 
-        request = self.factory.post('/farm/1/delete')
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/delete"
+
+        request = self.factory.post(request_path)
         request.user = User.objects.create_user(username='anothertestuser', email='test@user.com',
                                                 password='testpassword')
-        response = delete(request, 1)
+        response = delete(request, farmId)
         self.assertContains(response, 'You do not have permission to delete this farm.')
 
     def test_delete_invalid_farm_id(self):
@@ -128,9 +144,12 @@ class TestFarmView(TestCase):
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
 
-        request = self.factory.post('/farm/1/delete')
+        farmId = Farm.objects.first().id
+        request_path = f"/farm/{farmId}/delete"
+
+        request = self.factory.post(request_path)
         request.user = authenticate(username='testuser', password='testpassword')
-        response = delete(request, 1)
+        response = delete(request, farmId)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/farm/')
 
