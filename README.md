@@ -97,9 +97,19 @@ Some of the estimation and grouping was done asynchronously via Slack.
 
 ## Project Part 2
 ### Sprint Planning
-#### Forecast
+#### 1) Why is this Sprint Valuable
+This sprint is valuable because it will allow us to understand the Minimum Viable Product from our main stakeholder's perspective, and because it will allow the Team to develop the technical foundation to develop the solution.
+##### Sprint Goal: To define the Minimum Viable Product and to architect the technical foundation.
 
-The forecast for the number of story points the team can complete during the sprint is 20. The number is a guesstimate based on the developers assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
+#### 2) What can be done this Sprint?
+The team reviewed the stories in the backlog and decided to focus on the minimum functionality required by the farmer to login to the MyFarm system and create a new farm. In addition, the team decided that the Django framework will allow pretty quick development of the MVP; since not all of the developers are familiar with Django, a use story was added to train the team. The following stories were added to the Sprint: Django Training for the team; Research > Exploration Story - Add a location; Farmer - Create a New Account; Farmer - Portal Login; Farmer - Create a new farm; Farmer - Update Farm Information.
+
+#### 3) How will the chosen work get done
+Here the team developed the forecast for the Sprint.
+
+##### Forecast
+
+The forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
 
 You pulled stories into your sprint backlog: YES
 You pulled stories from the top of your product backlog: YES
@@ -114,3 +124,9 @@ The tasks are clearly listed in your sprint backlog: YES. Developer tasks are at
 Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point)
 
 A sample stand-up recording session : https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
+
+### Daily Scrums
+The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. 
+A recording of a daily scrum: https://harvard.zoom.us/rec/share/R392t2uv9eFuXIPVt3dw7sQvuzcFhrum2mKPUJWnqZOTiqbOMSoi611EfF05sUWs.i_SdBZ-ntBZ0iEpe
+
+Progress is updated in Jira using the Kanban Board:
