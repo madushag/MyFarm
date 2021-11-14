@@ -1,7 +1,9 @@
+from django.http import request
 from django.test import TestCase, Client
 from authenticate.forms import SignUpForm
 from homepage.views import homepage
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth.models import User
 
 valid_form_data = {
   "username": "username",
@@ -106,3 +108,12 @@ class LoginTest(TestCase):
         response = self.client.login(username='temporary', password='temporary')
         self.assertNotEqual(response, True)
         
+class LogoutTest(TestCase):
+
+    def test_logout_view_redirects_to_homepage(self):
+        response = c.get('/register/logout')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, '/')
+
+        
+
