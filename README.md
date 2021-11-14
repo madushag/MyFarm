@@ -99,7 +99,7 @@ Some of the estimation and grouping was done asynchronously via Slack.
 ### Sprint Planning
 #### 1) Why is this Sprint Valuable
 This sprint is valuable because it will allow us to understand the Minimum Viable Product from our main stakeholder's perspective, and because it will allow the Team to develop the technical foundation to develop the solution.
-##### Sprint Goal: To define the Minimum Viable Product and to architect the technical foundation.
+##### Sprint Goal: To allow a farmer to log in and create a farm.
 
 #### 2) What can be done this Sprint?
 The team reviewed the stories in the backlog and decided to focus on the minimum functionality required by the farmer to login to the MyFarm system and create a new farm. In addition, the team decided that the Django framework will allow pretty quick development of the MVP; since not all of the developers are familiar with Django, a use story was added to train the team. The following stories were added to the Sprint: Django Training for the team; Research > Exploration Story - Add a location; Farmer - Create a New Account; Farmer - Portal Login; Farmer - Create a new farm; Farmer - Update Farm Information.
@@ -248,3 +248,15 @@ The URL is: http://54.226.105.77/
 
 Image of the working product:
 ![WorkingProduct](images/WorkingProduct.png)
+
+### Sprint Review
+The Sprint Review took place on 11/14 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+
+Recording of the Sprint Review can be found here:
+
+### Sprint Retrospective
+The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
+
+Recording of the Sprint Retrospective can be found here:
+
+The teams discussed the following action, which should make the team significantly better:
