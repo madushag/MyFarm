@@ -218,6 +218,21 @@ Impediments: Determine how to pivot - meeting with stakeholder on 11/14 at 7 pm.
 #### Pair Programming:
 Neha and Luis Pair Programming: https://harvard.zoom.us/rec/share/5vED4_sZOFj_9sMcZHZB-eimVthwHXQL5l27k3K4Z6aG1Pjj9NRCAPN2BSReiHw.kV5-n1uW7L3lbvOL?startTime=1636589132000
 
+![PairProgramming](https://github.com/madushag/MyFarm/blob/main/images/Pair_prog_screenshot_1.png)
+
+![PairProgramming](https://github.com/madushag/MyFarm/blob/main/images/Pair_prog_screenshot_2.png)
+
 
 #### Test Driven Development.
 
+Started adding tests first:
+
+![FailingTests](https://github.com/madushag/MyFarm/blob/main/images/Failed_test_1.png)
+
+Added more failing tests to cover required functionality:
+
+![FailingTests](https://github.com/madushag/MyFarm/blob/main/images/Failed_tests_2.png)
+
+Added code to then turn those wicked red tests to go green:
+
+![PassingTests](https://github.com/madushag/MyFarm/blob/main/images/Passing_tests.png)
