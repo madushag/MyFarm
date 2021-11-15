@@ -279,6 +279,149 @@ https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubL
 **Note: feedback from Ari, our farmer stakeholder can be found at minute 21. Feedback from Vijaya, our customer stakeholder can be found at minute 31.**
 
 ### Sprint Retrospective
+The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness.
+
+Recording of the Sprint Retrospective can be found here:
+https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubLyWrUQDJ6h95ui3AA_8.CaBosaO5hzDrh2Cu?startTime=1636937858000
+
+The teams discussed the following action, which should make the team significantly better:
+**Perform more detailed Planning Conversations**
+* Agree upon coding standards and conventions
+* Read out and refine acceptance criteria for all stories in a sprint as a group
+* Only include technical tasks within stories
+
+It is at the top of the backlog for Sprint 2:
+![Action](images/ActionFromRetrospective.png)
+
+As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
+
+
+## Project Part 3
+### Sprint Planning
+
+Sprint Planning took place on Nov. 15 - all members participated in the session; however, **only the developers participated in the forecast exercise.**
+
+The session was divided in three parts: 1) Why is this Sprint valuable, 2) What can be done this Sprint and 3) How will the chosen work get done:
+
+#### 1) Why is this Sprint Valuable
+This sprint is valuable because it will allow us to understand the Minimum Viable Product from our main stakeholder's perspective, and because it will allow the Team to develop the technical foundation to develop the solution.
+##### Sprint Goal: 
+
+#### 2) What can be done this Sprint?
+
+
+#### 3) How will the chosen work get done
+Here the team developed the forecast for the Sprint.
+
+##### Forecast
+
+
+
+**Our Sprint backlog's Kanban Board:**
+(Insert new Image after Sprint Planning
+
+Our sprint backlog is shown above. The URL of the board is : 
+
+At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 1; we made sure that the aggregate size did not exceed the forecast.
+
+**The Burndow Chart for Sprint 2:**
+(Insert Image after Sprint Planning)
+URL of the burndown chart: 
+
+### Daily Scrums
+The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/15, 11/17, 11/19, 11/22, 11/24 and 11/26.
+
+A recording of a daily scrum: 
+
+Progress is updated in Jira using the Kanban Board:
+
+
+The URL of the Kanban Board is: 
+
+
+##### Daily Scrum 11/15
+Completed in the last 24 hours:
+- Chris Rogers: 
+- Madusha Gamage: 
+- Kelly McDougall: 
+- Neha Dubey: 
+- Chris Calleri: R
+- Luis Rengifo: 
+- Shrikanth Ananthakrishnan: 
+
+will work on next:
+- 
+
+Impediments: 
+
+##### Daily Scrum 11/17
+Completed since our last meeting:
+
+
+Will work on next:
+
+
+Impediments: 
+
+##### Daily Scrum 11/19
+Completed since last meeting
+
+Will work on next:
+
+Impediments: 
+
+
+##### Daily scrum 11/22
+Completed since last meeting:
+
+Will work on next:
+
+Impediments: 
+
+##### Daily scrum 11/24
+Completed since last meeting:
+
+Will work on next:
+
+Impediments: 
+
+##### Daily scrum 11/12
+Completed since last meeting:
+
+Will work on next:
+
+Impediments: 
+
+#### Burndow Chart as of :
+
+#### Burndown Chart at the end of the Sprint:
+
+
+
+#### Pair Programming:
+
+
+
+#### Mob Programming:
+
+
+#### Test Driven Development.
+
+
+### Product Increment - Working Software
+The product is installed in an EC2 instance.
+The URL is: http://54.226.105.77/
+
+Image of the working product:
+
+
+### Sprint Review
+The Sprint Review took place on 11/14 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+
+Recording of the Sprint Review can be found here: 
+
+
+### Sprint Retrospective
 The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
 
 Recording of the Sprint Retrospective can be found here:
@@ -290,8 +433,9 @@ The teams discussed the following action, which should make the team significant
 * Read out and refine acceptance criteria for all stories in a sprint as a group
 * Only include technical tasks within stories
 
-It is at the top of the backlog from Sprint 2:
-![Action](images/ActionFromRetrospective.png)
+It is at the top of the backlog for Sprint 3:
 
-As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
+As a reminder, URL to the backlog is:
+
+
 
