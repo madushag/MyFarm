@@ -124,7 +124,7 @@ The forecast for the number of story points the team can complete during the spr
 - You decomposed user stories into developer tasks: YES 
 - The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story.
 
-**Our Sprint backlog's Kanban Board:
+**Our Sprint backlog's Kanban Board:**
 ![image](https://user-images.githubusercontent.com/7987070/141409518-0b5869c5-8b2e-4042-9f17-ac9e7e67ae97.png)
 
 Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1. 
