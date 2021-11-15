@@ -97,6 +97,11 @@ Some of the estimation and grouping was done asynchronously via Slack.
 
 ## Project Part 2
 ### Sprint Planning
+
+Sprint Planning took place on Nov. 1 - all members participated in the session; however, **only the developers participated in the forecast exercise.**
+
+The session was divided in three parts: 1) Why is this Sprint valuable, 2) What can be done this Sprint and 3) How will the chosen work get done:
+
 #### 1) Why is this Sprint Valuable
 This sprint is valuable because it will allow us to understand the Minimum Viable Product from our main stakeholder's perspective, and because it will allow the Team to develop the technical foundation to develop the solution.
 ##### Sprint Goal: To allow a farmer to log in and create a farm.
@@ -117,13 +122,16 @@ The forecast for the number of story points the team can complete during the spr
 - Only developers participated in the pointing activity: YES
 
 - You decomposed user stories into developer tasks: YES 
-- The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story
+- The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story.
 
+**Our Sprint backlog's Kanban Board:
 ![image](https://user-images.githubusercontent.com/7987070/141409518-0b5869c5-8b2e-4042-9f17-ac9e7e67ae97.png)
 
-Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1. Staff should have access to view this board. 
+Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1. 
 
-A sample burndow chart:
+At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 1; we made sure that the aggregate size did not exceed the forecast.
+
+**The Burndow Chart for Sprint 1:
 ![Burndow](images/Burndown%20Chart.png)
 URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
@@ -216,6 +224,9 @@ Will work on next:
 - All: prepare for conversation with stakeholder.
 
 Impediments: Determine how to pivot - meeting with stakeholder on 11/14 at 7 pm.
+
+#### Burndow Chart as of Nov. 5:
+![image](https://user-images.githubusercontent.com/7987070/141409518-0b5869c5-8b2e-4042-9f17-ac9e7e67ae97.png)
 
 #### Burndown Chart at the end of the Sprint:
 
