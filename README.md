@@ -192,13 +192,16 @@ Impediments: Feedback from Richard from first project deliverable has indicated 
 ##### Daily scrum 11/10
 Completed since last meeting:
 - Chris and Kelly: review various pull requests from the team and merged into main branch.
-- Madusha Finished code for update view; obtained meeting with Anu to discuss missed deliverable.
+- Madusha: Finished code for update view; obtained meeting with Anu to discuss missed deliverable.
 - Neha and Luis: finished tests for login view.
 
 Will work on next:
 - All: prepare for discussion with Anu.
+- Madusha : refactor views to use Django forms, add more tests
 
-Impediments: Need to meet with our main stakeholder to determine how to pivot.
+Impediments: 
+- All: Need to meet with our main stakeholder to determine how to pivot.
+- Madusha : Do not know how Django forms work. Will self-study/learn on Django forms to accomplish sprint goal.
 
 ##### Daily scrum 11/12
 Completed since last meeting:
