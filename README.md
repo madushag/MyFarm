@@ -141,7 +141,7 @@ The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/
 ##### Daily Scrum 11/1
 Completed in the last 24 hours:
 - Chris Rogers: Prepare training materials
-- Madusha Gamage: Did Django Tutorial.
+- Madusha Gamage: Did Django Tutorial and set up development environment
 - Kelly McDougall: Setup development environment
 - Neha Dubey: Setup Django.
 - Chris Calleri: Researched potential UI designs.
@@ -162,7 +162,7 @@ Completed since our last meeting:
 
 Will work on next:
 - Chris and Kelly: Admin Interface and base.html.
-- Madusha: Create view to receive form data.
+- Madusha: Create view to receive farm data, setup docker environment
 - Neha and Luis: Work on login code.
 
 Impediments: none
@@ -170,21 +170,24 @@ Impediments: none
 ##### Daily Scrum 11/5
 Completed since last meeting
 - Chris and Kelly: Admin Interface;
+- Madusha : setup docker environment, created view to receive add farm data
 
 Will work on next:
 - Chris and Kelly: will continue pair programming of the combined tasks
 - Neha and Luis: will continue pair programming.
+- Madusha: create views and templates to update farm data, add tests
 
-Impediments: none.
+Impediments: 
+- Madusha: Unable to get postgresql to work in docker. Will instead use SQLLite and local environment to develop and test
 
 ##### Daily scrum 11/8
 Completed since last meeting:
 - Chris and Kelly: Created view to allow creation of account.
-- Madusha: Created an update view for farms.
+- Madusha: Created an update view for farms and tests
 
 Will work on next:
 - Chris and Kelly: start merging changes into main branch.
-- Madusha: Work on code for update view of farms.
+- Madusha: Refactor code for update view of farms.
 - Neha and Luis: made changes on login code based on feedback from team.
 
 Impediments: Feedback from Richard from first project deliverable has indicated that the focus of the team has been more on the technology rather than the real value that our main stakeholder will get from the solution. The team may need to pivot.
@@ -197,7 +200,7 @@ Completed since last meeting:
 
 Will work on next:
 - All: prepare for discussion with Anu.
-- Madusha : refactor views to use Django forms, add more tests
+- Madusha : Add delete farm functionality and tests, refactor views to use Django forms
 
 Impediments: 
 - All: Need to meet with our main stakeholder to determine how to pivot.
