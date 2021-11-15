@@ -231,6 +231,10 @@ Neha and Luis Pair Programming: https://harvard.zoom.us/rec/share/5vED4_sZOFj_9s
 Kelly and Chris Pair Programming: https://harvard.zoom.us/rec/share/EMsUUaM3kSBEW2e-uHSLICeAKLQyvuVIJ34uvtOzNKHVboUJ03iqUmB_8NGq9gPo.QGTikupl1cie4coR?startTime=1635984983000
 
 
+#### Mob Programming:
+The developers in a mob programming session:
+![MobProgramming](images/MobProgramming.png)
+
 #### Test Driven Development.
 
 Started adding tests first:
