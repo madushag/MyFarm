@@ -111,18 +111,21 @@ Here the team developed the forecast for the Sprint.
 
 The forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
 
-You pulled stories into your sprint backlog: YES
-You pulled stories from the top of your product backlog: YES
-The aggregate size of the stories does not exceed your forecast: YES
-Only developers participated in the pointing activity: YES
+- You pulled stories into your sprint backlog: YES
+- You pulled stories from the top of your product backlog: YES
+- The aggregate size of the stories does not exceed your forecast: YES
+- Only developers participated in the pointing activity: YES
 
-You decomposed user stories into developer tasks: YES 
-The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story
+- You decomposed user stories into developer tasks: YES 
+- The tasks are clearly listed in your sprint backlog: YES. Developer tasks are attached to each story
 
 ![image](https://user-images.githubusercontent.com/7987070/141409518-0b5869c5-8b2e-4042-9f17-ac9e7e67ae97.png)
 
-Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point)
+Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1. Staff should have access to view this board. 
 
+A sample burndow chart:
+![Burndow](images/Burndown%20Chart.png)
+URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 ### Daily Scrums
 The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/1, 11/3, 11/5, 11/8, 11/10 and 11/12.
@@ -134,9 +137,6 @@ Progress is updated in Jira using the Kanban Board:
 
 The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 
-A sample burndow chart:
-![Burndow](images/Burndown%20Chart.png)
-URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 ##### Daily Scrum 11/1
 Completed in the last 24 hours:
@@ -204,7 +204,7 @@ Impediments: Need to meet with our main stakeholder to determine how to pivot.
 Completed since last meeting:
 - Chris and Kelly: merged new changes from team.
 - Neha and Luis: refactored login functionality.
-- Madusha: pull request to merge changes.
+- Madusha: added more tests, refactored to use forms and pull request to merge changes
 
 Will work on next:
 - All: prepare for conversation with stakeholder.
