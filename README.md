@@ -233,7 +233,7 @@ Kelly and Chris Pair Programming: https://harvard.zoom.us/rec/share/EMsUUaM3kSBE
 
 #### Mob Programming:
 The developers in a mob programming session:
-![MobProgramming](images/MobProgramming.png)
+![MobProgramming](images/MobProgramming2.jpg)
 
 #### Test Driven Development.
 
@@ -262,8 +262,10 @@ Image of the working product:
 ### Sprint Review
 The Sprint Review took place on 11/14 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
 
-Recording of the Sprint Review can be found here:
+Recording of the Sprint Review can be found here: 
 https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubLyWrUQDJ6h95ui3AA_8.CaBosaO5hzDrh2Cu?startTime=1636934489000
+
+**Note: feedback from Ari, our farmer stakeholder can be found at minute 21. Feedback from Vijaya, our customer stakeholder can be found at minute 31.**
 
 ### Sprint Retrospective
 The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
@@ -272,6 +274,13 @@ Recording of the Sprint Retrospective can be found here:
 https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubLyWrUQDJ6h95ui3AA_8.CaBosaO5hzDrh2Cu?startTime=1636937858000
 
 The teams discussed the following action, which should make the team significantly better:
+**Perform more detailed Planning Conversations**
 * Agree upon coding standards and conventions
 * Read out and refine acceptance criteria for all stories in a sprint as a group
 * Only include technical tasks within stories
+
+It is at the top of the backlog from Sprint 2:
+![Action](images/ActionFromRetrospective.png)
+
+As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
+
