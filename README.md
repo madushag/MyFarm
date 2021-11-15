@@ -340,19 +340,13 @@ The URL of the Kanban Board is:
 
 
 ##### Daily Scrum 11/15
-Completed in the last 24 hours:
-- Chris Rogers: 
-- Madusha Gamage: 
-- Kelly McDougall: 
-- Neha Dubey: 
-- Chris Calleri: R
-- Luis Rengifo: 
-- Shrikanth Ananthakrishnan: 
+Completed since our last meeting:
+- All: conducted Sprint Review and Sprint Retrospective.
 
 will work on next:
-- 
+- Sprint planning 
 
-Impediments: 
+Impediments: None at this time.
 
 ##### Daily Scrum 11/17
 Completed since our last meeting:
