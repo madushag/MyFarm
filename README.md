@@ -431,7 +431,8 @@ Will work on next:
 
 Impediments: 
 
-#### Burndow Chart as of :
+#### Burndown Chart as of Nov. 17:
+![Burndown](images/BurndownChartSprint2.png)
 
 #### Burndown Chart at the end of the Sprint:
 
@@ -442,10 +443,15 @@ Impediments:
 
 
 #### Mob Programming:
-
+Madusha, Chris and Luis mob programming:
+![MobProgramming](images/Sprint2MobProgramming.png)
 
 #### Test Driven Development.
+Test Failed:
+![TestFailed](images/Sprint2TestFailed.png)
 
+Test Passed:
+![TestPassed](images/Sprint2TestPassed.png)
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
@@ -455,7 +461,7 @@ Image of the working product:
 
 
 ### Sprint Review
-The Sprint Review took place on 11/14 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+The Sprint Review took place on 11/28 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
 
 Recording of the Sprint Review can be found here: 
 
@@ -464,13 +470,9 @@ Recording of the Sprint Review can be found here:
 The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
 
 Recording of the Sprint Retrospective can be found here:
-https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubLyWrUQDJ6h95ui3AA_8.CaBosaO5hzDrh2Cu?startTime=1636937858000
 
-The teams discussed the following action, which should make the team significantly better:
-**Perform more detailed Planning Conversations**
-* Agree upon coding standards and conventions
-* Read out and refine acceptance criteria for all stories in a sprint as a group
-* Only include technical tasks within stories
+The team discussed the following action, which should make the team significantly better:
+
 
 It is at the top of the backlog for Sprint 3:
 
