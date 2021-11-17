@@ -135,9 +135,9 @@ At the end of the meeting, the team pulled the stories as the top of the backlog
 
 https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown?source=sidebar
 
-**The Burndow Chart for Sprint 1:
+**The Burndow Chart for Sprint 1:**
 ![Burndow](images/Burndown%20Chart.png)
-URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
+URL of the burndown chart(please change filter to Sprint 1): https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 ### Daily Scrums
 The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/1, 11/3, 11/5, 11/8, 11/10 and 11/12.
