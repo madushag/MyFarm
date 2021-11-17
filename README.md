@@ -131,6 +131,10 @@ Our sprint backlog is shown above. The URL of the board is : https://txmd-webops
 
 At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 1; we made sure that the aggregate size did not exceed the forecast.
 
+**Note** - To view the stories that were pulled into Sprint 1, please follow the below URL, change the filter to "MYF Sprint 1", and scroll towars the bottom of the page.
+
+https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown?source=sidebar
+
 **The Burndow Chart for Sprint 1:
 ![Burndow](images/Burndown%20Chart.png)
 URL of the burndown chart: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
@@ -248,6 +252,11 @@ The developers in a mob programming session:
 
 #### Test Driven Development.
 
+URLs in Github to all of the tests conducted:
+https://github.com/madushag/MyFarm/blob/dev/app/farm/tests.py
+https://github.com/madushag/MyFarm/blob/dev/app/authenticate/tests/test_forms.py
+https://github.com/madushag/MyFarm/blob/dev/app/authenticate/tests/test_views.py
+
 Started adding tests first:
 
 ![FailingTests](images/Failed_test_1.png)
@@ -277,6 +286,13 @@ Recording of the Sprint Review can be found here:
 https://harvard.zoom.us/rec/share/003xRbYk2VcjeM1RbeBIt9m09u2EkDbfMrbGCLve70tubLyWrUQDJ6h95ui3AA_8.CaBosaO5hzDrh2Cu?startTime=1636934489000
 
 **Note: feedback from Ari, our farmer stakeholder can be found at minute 21. Feedback from Vijaya, our customer stakeholder can be found at minute 31.**
+
+Based on the feedback from Ari and Vijaya, the product backlog was amended to more adequately reflect the features that would add value to them. For example, features MYF-80, MYF-81 and MYF-84 were added to the backlog - links to each of these three below:
+
+MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-80
+MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-81
+MYF-82: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-84
+
 
 ### Sprint Retrospective
 The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness.
