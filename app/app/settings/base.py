@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'authenticate',
-    'farm.apps.FarmConfig',
+    'farm',
+    'produce'
 ]
 
 MIDDLEWARE = [
