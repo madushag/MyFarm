@@ -395,10 +395,14 @@ Impediments: None at this time.
 
 ##### Daily Scrum 11/17
 Completed since our last meeting:
-
+- Chris Rogers: Implemented the Continuous Integration setup in GitHub.
+- Chris R., Madusha, Luis: mob programming session on story MYF-80. Created the model for the story.
 
 Will work on next:
-
+- Chris R. MYF-81
+- Madusha and Kelly: MYF-80
+- Neha and Luis: MYF-84
+- Neha will watch the mob programming video to catch-up on CI setup.
 
 Impediments: 
 
