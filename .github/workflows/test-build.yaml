@@ -61,8 +61,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: chrxr
-          password: ${{ secrets.CR_PAT }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish stable image
         uses: docker/build-push-action@v2
         with:
