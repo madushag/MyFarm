@@ -32,6 +32,9 @@ else
     python manage.py runserver 0.0.0.0:8000
   elif [[ $EXEC_MODE == production ]]; then
     echo "Starting App in production mode..."
+    if [[ $USE_S3 == "true"]]; then
+      python manage.py collectstatic --noinput
+    fi
     gunicorn app.wsgi:application --bind 0.0.0.0:8000
   fi
 fi

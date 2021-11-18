@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'authenticate',
+    'storages',
     'farm.apps.FarmConfig',
 ]
 
@@ -127,10 +128,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = path.join(BASE_DIR, 'static')
-STATIC_URL = environ.get("STATIC_URL", '/static/')
-MEDIA_ROOT = path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+USE_S3 = os.getenv('USE_S3') == 'TRUE'
+
+if USE_S3:
+  # AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+  # AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+  AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+  AWS_DEFAULT_ACL = 'public-read'
+  AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+  AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+  # s3 static settings
+  AWS_LOCATION = 'static'
+  PUBLIC_MEDIA_LOCATION = 'media' 
+  DEFAULT_FILE_STORAGE = 'app.storage_backends.PublicMediaStorage'
+  MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
+  STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
+  STATICFILES_STORAGE = 'app.storage_backends.StaticStorage'
+  COMPRESS_URL = STATIC_URL
+  COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
+else:
+  STATIC_ROOT = path.join(BASE_DIR, 'static')
+  STATIC_URL = environ.get("STATIC_URL", '/static/')
+  MEDIA_ROOT = path.join(BASE_DIR, 'media')
+  MEDIA_URL = '/media/'
+
+
 
 LOGOUT_REDIRECT_URL = '/'
 
