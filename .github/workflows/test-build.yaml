@@ -69,4 +69,4 @@ jobs:
           context: app
           file: ./app/Dockerfile
           push: true
-          tags: ghcr.io/myfarm:stable
+          tags: ghcr.io/${{ github.repository_owner }}/myfarm:stable
