@@ -83,7 +83,7 @@ jobs:
           context: app
           file: ./app/Dockerfile
           push: true
-          tags: ${{ steps.get-image-tag.outputs.tags }}
+          tags: ghcr.io/${{ github.repository_owner }}/myfarm:${{ github.sha }}
 
   deploy:
     name: Deploy to ECS
