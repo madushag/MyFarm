@@ -83,7 +83,7 @@ jobs:
           context: app
           file: ./app/Dockerfile
           push: true
-          tags: steps.get-image-tag.outputs.tags
+          tags: ${{ steps.get-image-tag.outputs.tags }}
 
   deploy:
     name: Deploy to ECS
