@@ -27,6 +27,7 @@ if [[ $EXEC_MODE == exec ]]; then
 else
   python manage.py migrate
   python manage.py createsuperuser --noinput
+  
   if [[ $EXEC_MODE == development ]]; then
     echo "Starting app in development mode..."
     python manage.py runserver 0.0.0.0:8000
