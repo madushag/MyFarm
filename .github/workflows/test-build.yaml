@@ -76,6 +76,7 @@ jobs:
 
   deploy:
     name: Deploy to ECS
+    runs-on: ubuntu-latest
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
