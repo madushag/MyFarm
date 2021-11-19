@@ -57,23 +57,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Image tag as variable
+        id: get-image-tag
+        env:
+          IMAGE_TAG: ghcr.io/${{ github.repository_owner }}/myfarm:${{ github.sha }}
+        run: echo '::set-output name=tags::$IMAGE_TAG'
+
       - name: login
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Publish stable image
         id: build-image
         uses: docker/build-push-action@v2
-        env:
-          IMAGE_TAG: ghcr.io/${{ github.repository_owner }}/myfarm:${{ github.sha }}
+   
         with:
           context: app
           file: ./app/Dockerfile
           push: true
-          tags: ${{ IMAGE_TAG }}
-        run: echo '::set-output name=tags::$IMAGE_TAG'
+          tags: steps.get-image-tag.outputs.tags
 
   deploy:
     name: Deploy to ECS
@@ -112,7 +118,7 @@ jobs:
         with:
           task-definition: task-definition.json
           container-name: my-container
-          image: ${{ steps.build-image.outputs.tags }}
+          image: ${{ build.steps.get-image-tag.outputs.tags }}
 
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
