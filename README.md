@@ -376,7 +376,7 @@ URL of the burndown chart:
 ### Daily Scrums
 The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/15, 11/17, 11/19, 11/22, 11/24 and 11/26.
 
-A recording of a daily scrum: 
+A recording of a daily scrum: https://harvard.zoom.us/rec/share/H5e_8POVDciWos7smd1LfvDIcCdGjsu0RsmVeOZwdJz2_1xf-U9rJrFJpQ8auevh.Jhm4HzWa4le558K2
 
 Progress is updated in Jira using the Kanban Board:
 
@@ -397,9 +397,10 @@ Impediments: None at this time.
 Completed since our last meeting:
 - Chris Rogers: Implemented the Continuous Integration setup in GitHub.
 - Chris R., Madusha, Luis: mob programming session on story MYF-80. Created the model for the story.
+- Madusha: Planning the template for MYF-80.
 
 Will work on next:
-- Chris R. MYF-81
+- Chris R. MYF-81, including setup of CI/CD.
 - Madusha and Kelly: MYF-80
 - Neha and Luis: MYF-84
 - Neha will watch the mob programming video to catch-up on CI setup.
