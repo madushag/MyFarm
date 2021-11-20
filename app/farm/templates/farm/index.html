@@ -1,26 +1,32 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
 
     <div class="container" style="padding: 50px">
         {% if farm_list %}
             <h1>List of farms</h1>
+
             {% for farm in farm_list %}
-                <div class="row">
-                    <div class="col-8">
-                        <a href="{% url 'farm:details' farm.id %}">[{{ farm.name }}] belonging to farmer [{{ farm.farmer }}]</a>
-                    </div>
-                    <div class="col-4">
-                        <a href="{% url 'farm:delete' farm.id %}" class="btn btn-danger mb-3 float-right" value="Delete">Delete</a>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'produce:index' farm.id %}">{{ farm.name }}</a></h5>
+                    <div class="card-text">{{ farm.description }}<br/>[LOCATION PLACEHOLDER]</div>
+                    <div style="float:right">
+                        <a href="{% url 'farm:details' farm.id %}" class="btn btn-primary mb-3" style="position:relative;top:-80px">Edit</a>
+                        <a href="{% url 'farm:delete' farm.id %}" class="btn btn-danger mb-3" style="position:relative;top:-80px">Delete</a>
                     </div>
                 </div>
+            </div>
             {% endfor %}
+
         {% else %}
             <p>No farms are available.</p>
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right">Add New</a>
+            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New</a>
         </div>
     </div>
 {% endblock %}

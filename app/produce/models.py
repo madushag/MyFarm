@@ -4,6 +4,7 @@ from farm.models import Farm
 
 class Produce(models.Model):
     name = models.CharField(max_length=200)
+    description = models.TextField()
     price = models.FloatField()
     min_quantity = models.FloatField()
     is_organic = models.BooleanField()
