@@ -6,10 +6,8 @@
 <form method="post">
     {% csrf_token %}
 
-    <h1>register <br></h1>
-
-    <h5>Please sign up</h5>
-
+    <h1>Sign up for a New Account</h1>
+    <br/>
     {% for field in form %}
     {{ field }}
     <br/> {% for error in field.errors %}

@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Redirect LoginView on successful login
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/farm'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

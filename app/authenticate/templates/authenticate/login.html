@@ -9,10 +9,15 @@
     </head>
 
     <body>
-        <form method="POST">{% csrf_token %}    
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" name="sumbit">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" value="Login">Login</button>
+            </div>
         </form>
+        </div>
     </body>
 
     {% if message %}

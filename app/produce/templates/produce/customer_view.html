@@ -4,12 +4,11 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
-    <div class="container" style="padding-top:50px">
+    <div class="container">
         {% if produce_list %}
-            <h1>List of produce for {{ produce_list.farm_name }}</h1>
+            <h1>List of Produce</h1>
 
-            <div class="list-group" style="padding-top:30px; padding-bottom: 30px">
-
+            <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
             {% for produce in produce_list %}
                   <a href="#" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="d-flex w-100 justify-content-between">
@@ -21,15 +20,15 @@
                       <div class="gap-left"><b>Organic : </b>{% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
                     <small>[LOCATION PLACEHOLDER]</small>
                   </a>
+                <div style="padding-bottom: 10px"></div>
             {% endfor %}
-
             </div>
         {% else %}
             <p>No produce available.</p>
         {% endif %}
 
-        <div class="col-auto">
-            <a href="/" class="btn btn-primary mb-3 float-right">Back</a>
-        </div>
+{#        <div class="col-auto">#}
+{#            <a href="/" class="btn btn-primary mb-3 float-right">Back</a>#}
+{#        </div>#}
     </div>
 {% endblock %}
