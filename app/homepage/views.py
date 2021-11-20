@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
-from farm.models import Farm
+from produce.models import Produce
 
 
 def homepage(request):
-    farm_list = Farm.objects.all()
-    context = {'farm_list': farm_list}
+    produce_list = Produce.objects.all()
+    context = {'produce_list': produce_list}
     return render(request, 'homepage/homepage.html', context)

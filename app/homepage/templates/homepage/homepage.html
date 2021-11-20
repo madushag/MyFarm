@@ -3,22 +3,32 @@
 {% load static %}
 
 {% block content %}
- <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
-    <div class="container" style="padding: 50px">
-        {% if farm_list %}
-            <h1>List of farms</h1>
+    <div class="container" style="padding-top:50px">
+        {% if produce_list %}
+            <h1>List of produce</h1>
 
-            {% for farm in farm_list %}
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'produce:customer' farm.id %}">{{ farm.name }}</a></h5>
-                    <div class="card-text">{{ farm.description }}<br/>[LOCATION PLACEHOLDER]</div>
-                </div>
-            </div>
+            <div class="list-group" style="padding-top:30px; padding-bottom: 30px">
+
+            {% for produce in produce_list %}
+                  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ produce.name }}</h5>
+                        <small>${{ produce.price }}</small>
+                    </div>
+                    <p class="mb-1">{{ produce.description }}</p>
+                        <div class="gap-left"><b>Min. Quantity : </b>{{ produce.min_quantity }}</div>
+                        <div class="gap-left"><b>Organic : </b>{% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
+                        <div class="gap-left"><b>Farm : </b>{{ produce.farm.name }}</div>
+                    <small>[LOCATION PLACEHOLDER]</small>
+                  </a>
             {% endfor %}
 
+            </div>
         {% else %}
-            <p>No farms are available.</p>
+            <p>No produce available.</p>
         {% endif %}
-    </div>{% endblock %}
+
+    </div>
+{% endblock %}
