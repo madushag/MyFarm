@@ -102,18 +102,15 @@ class LoginTest(TestCase):
         User.objects.create_user('temporary', 'temporary@gmail.com', 'temporary')
         response = self.client.login(username='temporary', password='temporary')
         self.assertEqual(response, True)
-    
+
     def test_fake_user_authentication(self):
         User = get_user_model()
         response = self.client.login(username='temporary', password='temporary')
         self.assertNotEqual(response, True)
-        
+
 class LogoutTest(TestCase):
 
     def test_logout_view_redirects_to_homepage(self):
         response = c.get('/register/logout')
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, '/')
-
-        
-

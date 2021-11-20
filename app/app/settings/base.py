@@ -156,4 +156,3 @@ else:
 
 
 LOGOUT_REDIRECT_URL = '/'
-
