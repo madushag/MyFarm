@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'homepage',
     'authenticate',
     'storages',
-    'farm.apps.FarmConfig',
+    'farm',
+    'produce'
 ]
 
 MIDDLEWARE = [
@@ -139,7 +140,7 @@ if USE_S3:
   AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
   # s3 static settings
   AWS_LOCATION = 'static'
-  PUBLIC_MEDIA_LOCATION = 'media' 
+  PUBLIC_MEDIA_LOCATION = 'media'
   DEFAULT_FILE_STORAGE = 'app.storage_backends.PublicMediaStorage'
   MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
   STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
