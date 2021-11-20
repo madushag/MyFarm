@@ -9,3 +9,9 @@ class TestIndexView(TestCase):
         response = self.client.get('/produce')
         self.assertEqual(response.status_code, 404)
         # self.assertTemplateUsed(response, 'produce/index.html')
+
+    # This test cannot be completed until the CRUD views for produce are implemented
+    def test_customer(self):
+        response = self.client.get('/produce')
+        self.assertEqual(response.status_code, 404)
+        # self.assertTemplateUsed(response, 'produce/index.html')

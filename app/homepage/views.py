@@ -1,6 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from farm.models import Farm
+
 
 def homepage(request):
-  return render(request, 'homepage/homepage.html')
+    farm_list = Farm.objects.all()
+    context = {'farm_list': farm_list}
+    return render(request, 'homepage/homepage.html', context)

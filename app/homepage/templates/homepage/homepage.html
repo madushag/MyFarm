@@ -3,5 +3,22 @@
 {% load static %}
 
 {% block content %}
-  <h1>MY FARM HOMEPAGE</h1>
-{% endblock %}
+ <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
+
+    <div class="container" style="padding: 50px">
+        {% if farm_list %}
+            <h1>List of farms</h1>
+
+            {% for farm in farm_list %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'produce:customer' farm.id %}">{{ farm.name }}</a></h5>
+                    <div class="card-text">{{ farm.description }}<br/>[LOCATION PLACEHOLDER]</div>
+                </div>
+            </div>
+            {% endfor %}
+
+        {% else %}
+            <p>No farms are available.</p>
+        {% endif %}
+    </div>{% endblock %}
