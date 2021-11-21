@@ -132,8 +132,8 @@ USE_TZ = True
 USE_S3 = os.getenv('USE_S3') == 'true'
 
 if USE_S3:
-  AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', False)
-  AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', False)
+  # AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', False)
+  # AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', False)
   AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
   print(AWS_STORAGE_BUCKET_NAME)
   AWS_DEFAULT_ACL = 'public-read'
