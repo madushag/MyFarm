@@ -10,7 +10,7 @@ class ProduceForm(ModelForm):
     is_organic = forms.BooleanField(required=False)
     def __init__(self, user, *args, **kwargs):
         super(ProduceForm, self).__init__(*args, **kwargs)  # populates the post
-        # id = forms.IntegerField(widget=forms.HiddenInput(), require)
+        id = forms.IntegerField(widget=forms.HiddenInput(), required=False)
         name = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Name of produce'}))
         price = forms.FloatField()
         min_quantity = forms.FloatField()

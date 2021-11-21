@@ -14,10 +14,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{ produce.name }}</h5>
-                    <p>Price: {{ produce.price }}</p>
+                    <p>Price: ${{ produce.price }}</p>
                     <p>Minimum Qty: {{ produce.min_quantity }}</p>
-                    <p>Prganic: {{ produce.price }}</p>
-                    <p>Farm: {{ produce.min_quantity }}</p>
+                    <p>Is Organic: {% if produce.is_organic %} Yes {% else %} No {% endif %}</p>
+                    <p>Farm: {{ produce.farm}}</p>
                     <div style="float:right">
                         <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3">Edit</a>
                         <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3">Delete</a>
