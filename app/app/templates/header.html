@@ -1,13 +1,27 @@
-<div>
-  <ul>
-  {% if not request.user.id %}
-  <li><a href="/register">Sign-up as a farmer</a></li>
-  <li><a href="/register/login">Login</a></li>
-  {% endif %}
-  {% if request.user.id %}
-    <li><a href="/farm/">My farm</a></li>
-    <li><a href="/register/logout">Logout</a></li>
-  {% endif %}
-  
-  </ul>
+<div style="padding-bottom: 20px">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+       <div class="container-fluid">
+            <a href="/" class="navbar-brand">myFarm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% if not request.user.id %}
+                <div class="navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/register">Sign-up as a farmer</a>
+                        <a class="nav-link" href="/register/login">Farmer Login</a>
+                    </div>
+                </div>
+            {% endif %}
+
+             {% if request.user.id %}
+                 <div class="navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/farm/">My farms</a>
+                        <a class="nav-link" href="/register/logout">Logout</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
 </div>

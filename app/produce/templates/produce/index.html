@@ -4,11 +4,11 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
-    <div class="container" style="padding-top:50px">
+    <div class="container">
         {% if produce_list %}
-            <h1>List of produce for {{ produce_list.farm_name }}</h1>
+            <h1>Produce Available At Farm - {{ produce_list.farm_name }}</h1>
 
-            <div class="list-group" style="padding-top:30px; padding-bottom: 30px">
+            <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
 
             {% for produce in produce_list %}
             <div class="card">
@@ -32,10 +32,8 @@
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
             <a href="{% url 'produce:add' %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
-
-
+            <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
         </div>
 
     </div>

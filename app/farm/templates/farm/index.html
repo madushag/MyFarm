@@ -4,9 +4,9 @@
 {% block content %}
     <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
 
-    <div class="container" style="padding: 50px">
+    <div class="container">
         {% if farm_list %}
-            <h1>List of farms</h1>
+            <h1>My Farms</h1>
 
             {% for farm in farm_list %}
             <div class="card">
@@ -19,6 +19,7 @@
                     </div>
                 </div>
             </div>
+            <div style="padding-bottom: 10px"></div>
             {% endfor %}
 
         {% else %}
@@ -26,7 +27,8 @@
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New</a>
+            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New Farm</a>
+{#            <a href="/" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Homepage</a>#}
         </div>
     </div>
 {% endblock %}
