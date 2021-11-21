@@ -17,13 +17,22 @@ update_form_data = {
     "phone_no": "123-456-7890"
 }
 
+c = Client()
 
 class TestFarmView(TestCase):
 
-    def test_index(self):
-        response = self.client.get('/farm/')
+    def test_index_unauthenticated(self):
+        response = c.get('/farm/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.url, '/register/login/?next=/farm/')
+
+    def test_index_authenticated(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+        request = self.factory.get('/farm')
+        request.user = self.user
+        response = index(request)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'farm/index.html')
 
     def test_add(self):
         self.factory = RequestFactory()
