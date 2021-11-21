@@ -5,7 +5,7 @@ from .models import Produce, Farm
 
 
 class ProduceForm(ModelForm):
-    # id = forms.IntegerField(widget=forms.HiddenInput(), require)
+    id = forms.IntegerField(widget=forms.HiddenInput(), required=False)
     name = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder':'Name of produce'}))
     price = forms.FloatField()
     min_quantity = forms.FloatField()
@@ -15,4 +15,4 @@ class ProduceForm(ModelForm):
 
     class Meta:
         model = Produce
-        fields = ['name', 'price', 'min_quantity', 'is_organic', 'farm']
+        fields = ['id','name', 'price', 'min_quantity', 'is_organic', 'farm']

@@ -7,8 +7,7 @@ app_name = 'produce'
 urlpatterns = [
     path('<int:farm_id>/list', views.index, name='index'),
     path('<int:farm_id>/customer', views.customer, name='customer'),
-    # path('/', homepage_views.homepage, name='homepage'),
     path('add', views.add, name='add'),
-    # path('<int:farm_id>/details', views.details, name='details'),
-    # path('<int:farm_id>/delete', views.delete, name='delete'),
+    path('<int:produce_id>/edit', views.edit, name='edit'),
+    path('<int:produce_id>/delete', views.delete, name='delete'),
 ]

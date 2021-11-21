@@ -4,19 +4,19 @@
 
 
 {% block content %}
-    <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
+
 
     <div class="container-sm">
         {% if form.initial.id %}
             {% if not error_message %}
-                <h1>Add produce item</h1>
+                <h1>Update produce item</h1>
             {% endif %}
-            <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
+            <form  action="{% url 'produce:edit' form.initial.id %}" method="post">
         {% else %}
             {% if not error_message %}
                 <h1>Add produce item</h1>
             {% endif %}
-            <form  action="{% url 'produce:add' %}" method="post" id="details">
+            <form  action="{% url 'produce:add' %}" method="post">
         {% endif %}
 
                 <div style="padding:20px">
@@ -48,5 +48,5 @@
                 </div>
             </form>
         </div>
-    <script type="text/javascript" src="{% static 'farm.js' %}"></script>
+
 {% endblock %}

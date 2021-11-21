@@ -11,16 +11,19 @@
             <div class="list-group" style="padding-top:30px; padding-bottom: 30px">
 
             {% for produce in produce_list %}
-                  <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h5 class="mb-1">{{ produce.name }}</h5>
-                      <small>${{ produce.price }}</small>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ produce.name }}</h5>
+                    <p>Price: {{ produce.price }}</p>
+                    <p>Minimum Qty: {{ produce.min_quantity }}</p>
+                    <p>Prganic: {{ produce.price }}</p>
+                    <p>Farm: {{ produce.min_quantity }}</p>
+                    <div style="float:right">
+                        <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3">Edit</a>
+                        <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3">Delete</a>
                     </div>
-                    <p class="mb-1">{{ produce.description }}</p>
-                      <div class="gap-left"><b>Min. Quantity : </b>{{ produce.min_quantity }}</div>
-                      <div class="gap-left"><b>Organic : </b>{% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
-                    <small>[LOCATION PLACEHOLDER]</small>
-                  </a>
+                </div>
+            </div>
             {% endfor %}
 
             </div>

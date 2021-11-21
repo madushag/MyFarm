@@ -25,6 +25,46 @@ def add(request):
         return render(request, 'produce/produce_form.html', {'form': form})
 
 
+def edit(request, produce_id):
+
+    if request.method == 'GET':
+        try:
+            produce = Produce.objects.filter(pk=produce_id).get()
+
+        except Farm.DoesNotExist:
+            return render(request, 'farm/produce.html', {'error_message': 'Invalid produce ID'})
+
+        else:
+            return render(request, 'produce/produce_form.html',
+                          {'form': ProduceForm(instance=produce, use_required_attribute=True)})
+
+
+    if request.method == 'POST':
+        try:
+            produce = Produce.objects.filter(pk=produce_id).get()
+        except Produce.DoesNotExist:
+            return render(request, 'farm/details_form.html', {'error_message': 'Invalid farm ID'})
+
+        else:
+            form = ProduceForm(request.POST, instance=produce)
+
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect(reverse('farm:index'))
+            else:
+                return render(request, 'produce/produce_form.html', {'form': form})
+
+def delete(request, produce_id):
+    try:
+        produce = Produce.objects.filter(pk=produce_id).get()
+    except Produce.DoesNotExist:
+        return render(request, 'farm/details_form.html', {'error_message': 'Invalid ID'})
+
+    else:
+        produce.delete()
+        return HttpResponseRedirect(reverse('farm:index'))
+
+
 # View action to display a list of produce belonging to a farm for a customer
 def customer(request, farm_id):
     produce_list = Produce.objects.filter(farm=farm_id).order_by('-name')

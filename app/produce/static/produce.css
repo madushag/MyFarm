@@ -11,9 +11,11 @@
     float:right
 }
 
-.gap-left{
-    padding-right: 100px;
-    float:left;
-    font-size: .875em;
+.list-group-item-action:hover{
+    background-color: #0b5ed7;
+    color:white;
 }
 
+.card-body{
+    padding-bottom: 0px;
+}
