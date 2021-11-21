@@ -1,9 +1,12 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
 from .models import Produce, Farm
 from .form import ProduceForm
 
+
+@login_required(login_url='/register/login/')
 def index(request, farm_id):
     produce_list = Produce.objects.filter(farm=farm_id).filter(farm__farmer=request.user).order_by('-name')
     farm_name = Farm.objects.get(id=farm_id).name
@@ -11,9 +14,10 @@ def index(request, farm_id):
     context = {'produce_list': produce_list}
     return render(request, 'produce/index.html', context)
 
+@login_required(login_url='/register/login/')
 def add(request):
     if request.method == 'POST':
-        form = ProduceForm(request.POST)
+        form = ProduceForm(request.user, request.POST)
 
         if form.is_valid():
             produce = Produce(**form.cleaned_data)
@@ -21,7 +25,7 @@ def add(request):
 
         return HttpResponseRedirect(reverse('farm:index'))
     else:
-        form = ProduceForm(use_required_attribute=True)
+        form = ProduceForm(request.user, use_required_attribute=True)
         return render(request, 'produce/produce_form.html', {'form': form})
 
 

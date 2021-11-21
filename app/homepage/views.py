@@ -8,7 +8,3 @@ def homepage(request):
     context = {'produce_list': produce_list}
     return render(request, 'produce/customer_view.html', context)
 
-    # produce_list = Produce.objects.all()
-    # context = {'produce_list': produce_list}
-    # # return render(request, 'homepage/homepage.html', context)
-    # return render(request, 'homepage/homepage.html', context)

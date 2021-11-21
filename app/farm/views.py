@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
@@ -7,6 +8,7 @@ from .models import Farm
 
 
 # Landing page that display the list of farms that belongs to the currently logged in user
+@login_required(login_url='/register/login/')
 def index(request):
     farm_list = Farm.objects.filter(farmer=request.user.id).order_by('-name')[:5]
     context = {'farm_list': farm_list}
@@ -14,6 +16,7 @@ def index(request):
 
 
 # Handler for adding a new farm
+@login_required(login_url='/register/login/')
 def add(request):
     if request.method == 'POST':
         form = FarmDetailsForm(request.POST)
@@ -32,6 +35,7 @@ def add(request):
 
 
 # Handler for displaying and updating details of an existing farm
+@login_required(login_url='/register/login/')
 def details(request, farm_id):
     # if we are displaying the details
     if request.method == 'GET':
@@ -75,6 +79,7 @@ def details(request, farm_id):
 
 
 # Handler for deleting a farm
+@login_required(login_url='/register/login/')
 def delete(request, farm_id):
     try:
         # filtering by user id to prevent information leakage
