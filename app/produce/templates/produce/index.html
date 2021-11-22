@@ -8,25 +8,25 @@
         {% if produce_list %}
             <h1>Produce Available At Farm - {{ produce_list.farm_name }}</h1>
 
-            <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
-
             {% for produce in produce_list %}
-            <div class="card">
+             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{{ produce.name }}</h5>
-                    <p>Price: ${{ produce.price }}</p>
-                    <p>Minimum Qty: {{ produce.min_quantity }}</p>
-                    <p>Is Organic: {% if produce.is_organic %} Yes {% else %} No {% endif %}</p>
-                    <p>Farm: {{ produce.farm}}</p>
+                    <h5 class="card-title"><a href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
+                    <div class="card-text">
+                        <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
+                        <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
+                        <div class="gap-left"><b>Organic:</b> {% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
+                        <div class="gap-left"><b>Farm:</b> {{ produce.farm}}</div>
+                    </div>
                     <div style="float:right">
-                        <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3">Edit</a>
-                        <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3">Delete</a>
+                        <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>
+                        <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3" style="position:relative;top:-55px">Delete</a>
                     </div>
                 </div>
             </div>
+            <div style="padding-bottom: 10px"></div>
             {% endfor %}
-
-            </div>
         {% else %}
             <p>No produce available.</p>
         {% endif %}
