@@ -413,12 +413,16 @@ Completed since last meeting
 Will work on next:
 
 Impediments: 
+    - All: understand how to use the CI/CD pipeline.
 
 
 ##### Daily scrum 11/22
 Completed since last meeting:
+    - Chris Rogers: further developed the CI/CD pipelines.
+    - Madusha and Kelly: continued to move forward the MYF-80 story.
 
 Will work on next:
+    - Chris Rogers: the filter for the produce view.
 
 Impediments: 
 
