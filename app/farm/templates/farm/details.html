@@ -29,6 +29,7 @@
                 </div>
             {% else %}
                 {% for field in form %}
+                    {# Dont display id, state and city fields#}
                     {% if field.name != 'id' and field.name != 'location_state' and field.name != 'city' %}
                         <div class="mb-3 row">
                             {{ field.errors }}
@@ -52,13 +53,14 @@
 
                 <div class="col-auto align-right">
                     <button type="submit" class="btn btn-primary mb-3" id="save">Save</button>
-                    <a class="btn btn-primary mb-3" href="{% url 'farm:index' %}">Back</a>
+                    <a class="btn btn-primary mb-3" href="{% url 'farm:index' %}">Cancel</a>
                 </div>
             {% endif %}
-         </div>
+          </div>
         </form>
     </div>
 
+    <script type="text/javascript" src="{% static 'farm.js' %}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&callback=initMap&libraries=places&v=weekly"></script>
 
      <script>

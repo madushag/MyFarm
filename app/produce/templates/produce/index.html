@@ -17,7 +17,7 @@
                         <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
                         <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
                         <div class="gap-left"><b>Organic:</b> {% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
-                        <div class="gap-left"><b>Farm:</b> {{ produce.farm}}</div>
+                        <div class="gap-left"><b>Farm:</b> {{ produce.farm }}</div>
                     </div>
                     <div style="float:right">
                         <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>
@@ -32,7 +32,7 @@
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'produce:add' %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
+            <a href="{% url 'produce:add' produce_list.farm_id %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
             <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
         </div>
 

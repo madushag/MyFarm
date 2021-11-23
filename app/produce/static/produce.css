@@ -26,3 +26,8 @@
     float:left;
     font-size: .875em;
 }
+
+.form-check-input{
+    height: 2em;
+    width: 2em;
+}

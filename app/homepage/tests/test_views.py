@@ -20,22 +20,25 @@ class TestHomepageViews(TestCase):
     request = self.factory.post('/farm/add/', {
         "name": "Test Farm",
         "description": "Test Description",
-        "phone_no": "123-456-7890"
+        "phone_no": "123-456-7890",
+        "location_state": "MA",
+        "city": "Revere"
     })
     request.user = self.user
-    add(request)
+    response = add(request)
 
     # create test produce
     farm_id = Farm.objects.first().id
     request = self.factory.post('/produce/add', {
         "name": "Item 1",
+        "description": "Test Description",
         "price": "1.00",
         "min_quantity": "10",
         "is_organic": False,
         "farm": farm_id
     })
     request.user = self.user
-    produce_add(request)
+    response = produce_add(request, farm_id)
 
     response = c.get('/')
     self.assertEqual(response.status_code, 200)

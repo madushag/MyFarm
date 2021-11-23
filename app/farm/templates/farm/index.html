@@ -11,7 +11,7 @@
             {% for farm in farm_list %}
             <div class="card">
                 <div class="card-body" style="margin-bottom: -30px">
-                    <h5 class="card-title"><a href="{% url 'produce:index' farm.id %}">{{ farm.name }}</a></h5>
+                    <h5 class="card-title"><a href="{% url 'produce:list' farm.id %}">{{ farm.name }}</a></h5>
                     <div class="card-text">
                         {{ farm.description }}
                         {% if farm.city %}

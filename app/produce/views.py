@@ -7,26 +7,28 @@ from .form import ProduceForm
 
 
 @login_required(login_url='/register/login/')
-def index(request, farm_id):
+def list_produce(request, farm_id):
     produce_list = Produce.objects.filter(farm=farm_id).filter(farm__farmer=request.user).order_by('-name')
-    farm_name = Farm.objects.get(id=farm_id).name
-    produce_list.farm_name = farm_name
+    produce_list.farm_name = Farm.objects.get(id=farm_id).name
+    produce_list.farm_id = farm_id
     context = {'produce_list': produce_list}
     return render(request, 'produce/index.html', context)
 
+
 @login_required(login_url='/register/login/')
-def add(request):
+def add(request, farm_id):
     if request.method == 'POST':
-        form = ProduceForm(request.user, request.POST)
+        form = ProduceForm(request.POST)
 
         if form.is_valid():
             produce = Produce(**form.cleaned_data)
             produce.save()
-
-        return HttpResponseRedirect(reverse('farm:index'))
+            return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
     else:
-        form = ProduceForm(request.user, use_required_attribute=True)
-        return render(request, 'produce/produce_form.html', {'form': form})
+        form = ProduceForm(use_required_attribute=True)
+        farm_name = Farm.objects.get(id=farm_id).name
+        return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
+
 
 @login_required(login_url='/register/login/')
 def edit(request, produce_id):
@@ -36,8 +38,10 @@ def edit(request, produce_id):
         except Farm.DoesNotExist:
             return render(request, 'farm/produce.html', {'error_message': 'Invalid produce ID'})
         else:
-            return render(request, 'produce/produce_form.html',
-                          {'form': ProduceForm(user=request.user, instance=produce, use_required_attribute=True)})
+            farm_name = produce.farm.name
+            farm_id = produce.farm.id
+            return render(request, 'produce/produce_form.html', {'form': ProduceForm(instance=produce, use_required_attribute=True),
+                                                                 'farm_name': farm_name, 'farm_id': farm_id})
 
     if request.method == 'POST':
         try:
@@ -45,22 +49,27 @@ def edit(request, produce_id):
         except Produce.DoesNotExist:
             return render(request, 'farm/details_form.html', {'error_message': 'Invalid ID'})
         else:
-            form = ProduceForm(request.user, request.POST, instance=produce)
+            form = ProduceForm(request.POST, instance=produce)
             if form.is_valid():
                 form.save()
-                return HttpResponseRedirect(reverse('farm:index'))
+                farm_id = produce.farm.id
+                return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
             else:
-                return render(request, 'produce/produce_form.html', {'form': form})
+                farm_name = produce.farm.name
+                farm_id = produce.farm.id
+                return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
+
 
 def delete(request, produce_id):
     try:
         produce = Produce.objects.filter(pk=produce_id).get()
+        farm_id = produce.farm.id
     except Produce.DoesNotExist:
         return render(request, 'farm/details_form.html', {'error_message': 'Invalid ID'})
 
     else:
         produce.delete()
-        return HttpResponseRedirect(reverse('farm:index'))
+        return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
 
 
 # View action to display a list of produce belonging to a farm for a customer

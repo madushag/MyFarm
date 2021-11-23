@@ -1,14 +1,6 @@
 from django.conf import settings
 from django.db import models
 
-# STATES = (
-#     ('-1', ''),
-#     ('MA', 'Massachusetts'),
-#     ('VT', 'Vermont'),
-#     ('NH', 'New Hampshire')
-# )
-
-
 class Farm(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()

@@ -4,7 +4,7 @@
 
 
 {% block content %}
-
+    <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
     <div class="container-sm">
         {% if form.initial.id %}
@@ -14,9 +14,9 @@
             <form  action="{% url 'produce:edit' form.initial.id %}" method="post">
         {% else %}
             {% if not error_message %}
-                <h1>Add produce item</h1>
+                <h1>Add Produce Item</h1>
             {% endif %}
-            <form  action="{% url 'produce:add' %}" method="post">
+            <form  action="{% url 'produce:add' farm_id %}" method="post">
         {% endif %}
 
                 <div style="padding:20px">
@@ -32,9 +32,12 @@
                             {% if field.name != 'id' %}
                                 <div class="mb-3 row">
                                     {{ field.errors }}
-                                    <label for="id_{{ field.name }}" class="col-sm-2 col-form-label">{{ field.name.upper }}:</label>
+                                    <label for="id_{{ field.name }}" class="col-sm-2 col-form-label"><b>{{ field.label.upper }}:</b></label>
                                     <div class="col-sm-10">
                                         {{ field }}
+                                        {% if field.name == 'farm' %}
+                                            <input type="text" id="farm_name" value="{{ farm_name }}" class="form-control" readonly />
+                                        {% endif %}
                                     </div>
                                 </div>
                             {% endif %}
@@ -42,11 +45,24 @@
 
                         <div class="col-auto align-right">
                             <button type="submit" class="btn btn-primary mb-3" value="Save">Save</button>
-                            <a class="btn btn-primary mb-3" href="{% url 'farm:index' %}">Back</a>
+                            <a class="btn btn-primary mb-3" href="{% url 'produce:list' farm_id %}">Cancel</a>
                         </div>
                     {% endif %}
                 </div>
             </form>
         </div>
+
+        <input type="hidden" id="farm_id" value="{{ farm_id }}">
+
+        <script type="text/javascript" src="{% static 'produce.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            attachEventHandlers();
+            setFieldStyles();
+            enableFieldValidations();
+            populateInitialValues();
+        });
+    </script>
 
 {% endblock %}
