@@ -464,7 +464,7 @@ Test Passed:
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
-The URL is: http://54.226.105.77/
+The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
 
