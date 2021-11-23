@@ -9,7 +9,7 @@
     <div class="container-sm">
         {% if form.initial.id %}
             {% if not error_message %}
-                <h1>Update produce item</h1>
+                <h1>Update Produce Item</h1>
             {% endif %}
             <form  action="{% url 'produce:edit' form.initial.id %}" method="post">
         {% else %}
