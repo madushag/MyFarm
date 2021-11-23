@@ -8,16 +8,21 @@ from .views import add, details, delete, index
 valid_form_data = {
     "name": "Test Farm",
     "description": "Test Description",
-    "phone_no": "123-456-7890"
+    "phone_no": "123-456-7890",
+    "location_state": "MA",
+    "city": "Boston"
 }
 
 update_form_data = {
     "name": "Test Farm 2",
     "description": "Test Description",
-    "phone_no": "123-456-7890"
+    "phone_no": "123-456-7890",
+    "location_state": "CA",
+    "city": "Los Angeles"
 }
 
 c = Client()
+
 
 class TestFarmView(TestCase):
 
@@ -58,19 +63,20 @@ class TestFarmView(TestCase):
         request.user = self.user
         response = details(request, farmId)
         self.assertContains(response, 'Test Farm')
+        self.assertContains(response, 'MA')
+        self.assertContains(response, 'Boston')
 
     def test_details_invalid_user(self):
         self.factory = RequestFactory()
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
-        
+
         farmId = Farm.objects.first().id
         request_path = f"/farm/{farmId}/details"
 
         request = self.factory.get(request_path)
-        request.user = User.objects.create_user(username='anothertestuser', email='test@user.com',
-                                                password='testpassword')
+        request.user = User.objects.create_user(username='anothertestuser', email='test@user.com', password='testpassword')
         response = details(request, farmId)
         self.assertContains(response, 'You do not have permission to view this farm.')
 
@@ -90,7 +96,7 @@ class TestFarmView(TestCase):
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
-        
+
         farmId = Farm.objects.first().id
         request_path = f"/farm/{farmId}/details"
 
@@ -104,13 +110,15 @@ class TestFarmView(TestCase):
         request.user = authenticate(username='testuser', password='testpassword')
         response = details(request, farmId)
         self.assertContains(response, 'Test Farm 2')
+        self.assertContains(response, 'CA')
+        self.assertContains(response, 'Los Angeles')
 
     def test_details_update_invalid_user(self):
         self.factory = RequestFactory()
         request = self.factory.post('/farm/add/', valid_form_data)
         request.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
         add(request)
-        
+
         farmId = Farm.objects.first().id
         request_path = f"/farm/{farmId}/details"
 
