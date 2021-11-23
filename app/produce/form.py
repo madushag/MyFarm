@@ -21,4 +21,4 @@ class ProduceForm(ModelForm):
 
     class Meta:
         model = Produce
-        fields = ['id','name', 'price', 'min_quantity', 'is_organic', 'farm']
+        fields = ['id', 'name', 'price', 'min_quantity', 'is_organic', 'farm']
