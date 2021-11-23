@@ -11,12 +11,12 @@
             {% for produce in produce_list %}
              <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a></h5>
+                    <h5 class="card-title"><a href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a>{% if produce.is_organic %} <img style="margin-left: 10px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
                     <div class="card-text">
                         <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
                         <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
-                        <div class="gap-left"><b>Organic:</b> {% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
+{#                        <div class="gap-left"><b>Organic:</b> {% if produce.is_organic %} Yes {% else %} No {% endif %}</div>#}
                         <div class="gap-left"><b>Farm:</b> {{ produce.farm }}</div>
                     </div>
                     <div style="float:right">
