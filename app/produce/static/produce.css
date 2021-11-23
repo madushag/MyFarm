@@ -31,3 +31,11 @@
     height: 2em;
     width: 2em;
 }
+
+.tooltip-inner{
+    background: transparent;
+    padding: 0px;
+}
+
+.tooltip-arrow {visibility:hidden;}
+
