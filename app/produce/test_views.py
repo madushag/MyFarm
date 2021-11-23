@@ -54,6 +54,7 @@ class TestProduceView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Produce Available At Farm - Test Farm')
         self.assertContains(response, 'Item 1')
+        self.assertContains(response, 'Boston, MA')
 
     def test_farmer_view_unauthenticated(self):
         self.factory = RequestFactory()
