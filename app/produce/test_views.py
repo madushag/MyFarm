@@ -3,7 +3,7 @@ from .models import Produce
 from django.contrib.auth.models import User
 from farm.views import add, details, delete, index
 from farm.models import Farm
-from produce.views import add as produce_add, index as produce_index
+from produce.views import add as produce_add, list_produce as list_produce
 
 valid_form_data = {
     "name": "CARROTS",
@@ -13,6 +13,13 @@ valid_form_data = {
     "farm": "Test Farm"
 }
 
+valid_farm_data = {
+    "name": "Test Farm",
+    "description": "Test Description",
+    "phone_no": "123-456-7890",
+    "location_state": "MA",
+    "city": "Boston"
+}
 c = Client()
 
 
@@ -23,11 +30,7 @@ class TestProduceView(TestCase):
         self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
 
         # create test farm
-        request = self.factory.post('/farm/add/', {
-            "name": "Test Farm",
-            "description": "Test Description",
-            "phone_no": "123-456-7890"
-        })
+        request = self.factory.post('/farm/add/', valid_farm_data)
         request.user = self.user
         add(request)
 
@@ -41,12 +44,12 @@ class TestProduceView(TestCase):
             "farm": farm_id
         })
         request.user = self.user
-        produce_add(request)
+        produce_add(request, farm_id)
 
         request_path = f"produce/{farm_id}/list"
         request = self.factory.get(request_path)
         request.user = self.user
-        response = produce_index(request, farm_id)
+        response = list_produce(request, farm_id)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Produce Available At Farm - Test Farm')
         self.assertContains(response, 'CARROTS')
@@ -56,11 +59,7 @@ class TestProduceView(TestCase):
         self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
 
         # create test farm
-        request = self.factory.post('/farm/add/', {
-            "name": "Test Farm",
-            "description": "Test Description",
-            "phone_no": "123-456-7890"
-        })
+        request = self.factory.post('/farm/add/', valid_farm_data)
         request.user = self.user
         add(request)
 
@@ -74,7 +73,7 @@ class TestProduceView(TestCase):
             "farm": farm_id
         })
         request.user = self.user
-        produce_add(request)
+        produce_add(request, farm_id)
 
         response = c.get(f"/produce/{farm_id}/list")
         self.assertEqual(response.status_code, 302)
@@ -82,6 +81,5 @@ class TestProduceView(TestCase):
 
 
     def test_form_input(self):
-        response = self.client.post('/produce/add', valid_form_data)
+        response = self.client.post('/produce/add', valid_produce_data)
         self.assertEqual(response.status_code, 302)
-        # self.assertTemplateUsed(response,'authenticate/authenticate.html')
