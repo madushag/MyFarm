@@ -9,10 +9,11 @@ from .models import Produce
 class ProduceForm(ModelForm):
     class Meta:
         model = Produce
-        fields = ['id', 'name', 'description', 'price', 'min_quantity', 'is_organic', 'farm']
+        fields = ['id', 'name', 'description', 'price', 'min_quantity', 'is_organic', 'farm', 'picture']
         widgets = {
             'id': forms.HiddenInput(),
             'farm': forms.Select(attrs={'style': 'display:none'}),
+            'picture': forms.FileInput(),
         }
 
     # def __init__(self, user, *args, **kwargs):
