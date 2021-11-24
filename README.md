@@ -335,7 +335,12 @@ Enable the farmer to provide a list of produce to potential customers, and allow
 
 In Sprint 1 the team accomplished 14 points.
 
-We agreed that as the team gets more familiar with the development tools, we should be able to complete 14 points this sprint as well, despite the holiday in week 2.
+We agreed that as the team gets more familiar with the development tools, we should be able to complete 14 points this sprint as well, despite the holiday in week 2. The following stories were added to the backlog: 
+- Sprint 1, retro action: Perform more detailed planning conversations (MYF-76)
+- Farmer/Customer - As a farmer I want customers to be able to see what bulk produce I have for sale so that they can buy it from me (MYF-80)
+- Customer - As a customer I want to be able to find a specific produce (e.g. carrots) so that I do not have to go through the long list of items and look for carrots (MYF-81)
+- Customer - As a customer I want to see the location for produce so that I can figure out the closest pick up point (MYF-83)
+- Customer - Having figured out where to buy carrots (quantity, price, location) as a customer I want to send a message to the farmer so that I can set up when and where to complete the transaction (MYF-84)
 
 #### 3) How will the chosen work get done
 Here the team developed the forecast for the Sprint.
@@ -344,12 +349,16 @@ Here the team developed the forecast for the Sprint.
 
 As indicated aboveThe forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
 
-We pulled stories into the sprint backlog. 
-The stories were pulled from the top of the product backlog. The backlog had been sorted by what will add the most value.
-We confirmed that the aggregate size of the stories did not exceed the forecast.
-Only the developers participated in the forecasting.
+- We pulled stories into the sprint backlog. 
+- The stories were pulled from the top of the product backlog. The backlog had been sorted by what will add the most value.
+- We confirmed that the aggregate size of the stories did not exceed the forecast.
+- Only the developers participated in the forecasting.
+- We decomposed the stories into developer tasks
+- The tasks are listed in the sprint backlog - the developer tasks are attached to each story.
 
-**Our Sprint backlog's Kanban Board:**
+
+**Our Sprint backlog's Kanban Board at the beginning of the Sprint:**
+
 ![KanbanBoardSprint2](images/KanbanSprint2.jpg)
 
 Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
@@ -362,15 +371,16 @@ MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?se
 MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
 
 
-At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 1; we made sure that the aggregate size did not exceed the forecast.
+At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 2; we made sure that the aggregate size did not exceed the forecast.
 
 **The Burndow Chart for Sprint 2:**
+
 ![BurndownChartSprint2](images/BurndownChartSprint2.png)
 
 URL of the burndown chart: 
 **Note:** Please make sure that the filter is set to MYF-Sprint2.
 
-
+https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 
 ### Daily Scrums
@@ -381,7 +391,7 @@ A recording of a daily scrum: https://harvard.zoom.us/rec/share/H5e_8POVDciWos7s
 Progress is updated in Jira using the Kanban Board:
 
 
-The URL of the Kanban Board is: 
+The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 
 
 ##### Daily Scrum 11/15
@@ -395,6 +405,7 @@ Impediments: None at this time.
 
 ##### Daily Scrum 11/17
 Completed since our last meeting:
+- All: conducted Sprint Planning.
 - Chris Rogers: Implemented the Continuous Integration setup in GitHub.
 - Chris R., Madusha, Luis: mob programming session on story MYF-80. Created the model for the story.
 - Madusha: Planning the template for MYF-80.
@@ -463,6 +474,15 @@ Madusha, Chris and Luis mob programming:
 ![MobProgramming](images/Sprint2MobProgramming.png)
 
 #### Test Driven Development.
+
+URLs in Github to all of the tests conducted:
+- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_forms.py
+- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_views.py
+- https://github.com/madushag/MyFarm/blob/main/app/farm/tests.py
+- https://github.com/madushag/MyFarm/blob/main/app/homepage/tests/test_views.py
+- https://github.com/madushag/MyFarm/blob/main/app/produce/test_models.py
+- https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
+
 Test Failed:
 ![TestFailed](images/Sprint2TestFailed.png)
 
@@ -474,6 +494,8 @@ The product is installed in an EC2 instance.
 The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
+
+![WorkingProduct](images/WorkingSoftwareSprint2.png)
 
 
 ### Sprint Review
