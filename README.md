@@ -435,6 +435,10 @@ Will work on next:
     - Neha and Luis: email functionality.
 
 Impediments: 
+    - Neha and Luis: understanding how to code email functionality in Django framework.
+    
+Burndown Chart as of 11/24:
+![BurndownChartSprint2](images/BurnDownAsOf1124.png)
 
 ##### Daily scrum 11/12
 Completed since last meeting:
