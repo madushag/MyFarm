@@ -8,9 +8,11 @@ from .form import ProduceForm
 
 @login_required(login_url='/register/login/')
 def list_produce(request, farm_id):
+    farm = Farm.objects.get(id=farm_id)
     produce_list = Produce.objects.filter(farm=farm_id).filter(farm__farmer=request.user).order_by('-name')
-    produce_list.farm_name = Farm.objects.get(id=farm_id).name
+    produce_list.farm_name = farm.name
     produce_list.farm_id = farm_id
+    produce_list.farm_website = farm.website_url
     context = {'produce_list': produce_list}
     return render(request, 'produce/index.html', context)
 

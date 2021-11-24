@@ -6,7 +6,7 @@ from .models import Farm
 class FarmDetailsForm(ModelForm):
     class Meta:
         model = Farm
-        fields = ['id', 'name', 'description', 'phone_no', 'location_state', 'city']
+        fields = ['id', 'name', 'description', 'phone_no', 'location_state', 'city', 'website_url']
         widgets = {
             'city': forms.HiddenInput(),
             'location_state': forms.HiddenInput(),

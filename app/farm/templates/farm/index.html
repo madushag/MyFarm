@@ -13,7 +13,8 @@
                 <div class="card-body" style="margin-bottom: -30px">
                     <h5 class="card-title"><a href="{% url 'produce:list' farm.id %}">{{ farm.name }}</a></h5>
                     <div class="card-text">
-                        {{ farm.description }}
+                        {{ farm.description }}<br/>
+                        <span><b>Website: </b>{{ farm.website_url }}</span>
                         {% if farm.city %}
                             <div class="gap-left">
                                 <b>Located in {{ farm.city }}, {{ farm.location_state }}</b>

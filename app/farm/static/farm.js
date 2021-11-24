@@ -11,9 +11,9 @@ function setFieldStyles(){
         if($(this).attr('id').indexOf('phone') > 0){
             $(this).attr({'placeholder': 'Phone number of farm as 123-456-7890'});
         }
-        // if($(this).attr('id').indexOf('city') > 0){
-        //     $(this).attr({'placeholder': 'City where farm is located'});
-        // }
+         if($(this).attr('id').indexOf('website') > 0){
+            $(this).attr({'placeholder': 'Farm website URL'});
+        }
     });
 
     //  $('select[id^="id"]').each(function() {
