@@ -312,7 +312,7 @@ It is at the top of the backlog for Sprint 2:
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
 
 
-## Project Part 3 [create an anchor](#anchors-in-markdown)
+## Project Part 3 
 
 ### Sprint Planning
 
