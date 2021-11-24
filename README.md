@@ -424,16 +424,16 @@ Completed since last meeting
 Will work on next:
 
 Impediments: 
-    - All: understand how to use the CI/CD pipeline.
+- All: understand how to use the CI/CD pipeline.
 
 
 ##### Daily scrum 11/22
 Completed since last meeting:
-    - Chris Rogers: further developed the CI/CD pipelines.
-    - Madusha and Kelly: continued to move forward the MYF-80 story.
+- Chris Rogers: further developed the CI/CD pipelines.
+- Madusha and Kelly: continued to move forward the MYF-80 story.
 
 Will work on next:
-    - Chris Rogers: the filter for the produce view.
+- Chris Rogers: the filter for the produce view.
 
 Impediments: 
 
@@ -442,11 +442,11 @@ Completed since last meeting:
 
 
 Will work on next:
-    - Chris Rogers: filtering functionality.
-    - Neha and Luis: email functionality.
+- Chris Rogers: filtering functionality.
+- Neha and Luis: email functionality.
 
 Impediments: 
-    - Neha and Luis: understanding how to code email functionality in Django framework.
+- Neha and Luis: understanding how to code email functionality in Django framework.
     
 Burndown Chart as of 11/24:
 ![BurndownChartSprint2](images/BurnDownAsOf1124.png)
