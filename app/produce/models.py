@@ -15,7 +15,8 @@ class Produce(models.Model):
     min_quantity = models.FloatField(verbose_name='Min. Qty')
     is_organic = models.BooleanField(verbose_name='Organic')
     # picture = models.ImageField(upload_to=UploadedConfigPath, blank=True)
-    picture = models.ImageField(upload_to='produce_pics', blank=True)
+    # picture = models.ImageField(upload_to='produce_pics', blank=True)
+    picture = models.FileField(upload_to='produce_pics', blank=True)
     farm = models.ForeignKey(Farm, on_delete=models.CASCADE)
 
     def __str__(self):
