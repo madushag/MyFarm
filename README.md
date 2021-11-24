@@ -471,6 +471,7 @@ Impediments:
 
 #### Mob Programming:
 Madusha, Chris and Luis mob programming:
+
 ![MobProgramming](images/Sprint2MobProgramming.png)
 
 #### Test Driven Development.
