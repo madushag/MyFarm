@@ -34,7 +34,7 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "Item 1",
+            "name": "CARROTS",
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
@@ -49,7 +49,7 @@ class TestProduceView(TestCase):
         response = produce_index(request, farm_id)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Produce Available At Farm - Test Farm')
-        self.assertContains(response, 'Item 1')
+        self.assertContains(response, 'CARROTS')
 
     def test_farmer_view_unauthenticated(self):
         self.factory = RequestFactory()
