@@ -364,11 +364,11 @@ As indicated aboveThe forecast for the number of story points the team can compl
 Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 **Note** this URL shows the Kanban board for the active Sprint. As of 11/16, the board was as depicted above, with the tasks MYF-76, MYF-80, MYF-81, MYF-84 and MYF-8. Links to these tasks below:
 
-MYF-77: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-76
-MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-80
-MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-81
-MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-84
-MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
+- MYF-76: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-76
+- MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-80
+- MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-81
+- MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-84
+- MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
 
 
 At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 2; we made sure that the aggregate size did not exceed the forecast.
@@ -398,7 +398,7 @@ The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/
 Completed since our last meeting:
 - All: conducted Sprint Review and Sprint Retrospective.
 
-will work on next:
+Will work on next:
 - Sprint planning 
 
 Impediments: None at this time.
@@ -451,7 +451,7 @@ Impediments:
 Burndown Chart as of 11/24:
 ![BurndownChartSprint2](images/BurnDownAsOf1124.png)
 
-##### Daily scrum 11/12
+##### Daily scrum 11/26
 Completed since last meeting:
 
 Will work on next:
@@ -484,13 +484,16 @@ URLs in Github to all of the tests conducted:
 - https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
 
 Test Failed:
+
 ![TestFailed](images/Sprint2TestFailed.png)
 
 Test Passed:
+
 ![TestPassed](images/Sprint2TestPassed.png)
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
+
 The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
