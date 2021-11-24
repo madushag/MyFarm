@@ -10,14 +10,20 @@
 
             {% for produce in produce_list %}
              <div class="card">
+                {% if produce.picture %}
+                    <img class="produce-pic" src="{{ produce.picture.url }}"  alt="Card image cap">
+                {% endif %}
+
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a></h5>
+                    <h5 class="card-title"><a data-toggle="tooltip" title="<img style='height:10px;width:10px' src='{% static 'edit_pencil.png' %}' />"
+                                              href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a>
+                            {% if produce.is_organic %} <img style="margin-left: 20px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
                     <div class="card-text">
                         <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
                         <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
-                        <div class="gap-left"><b>Organic:</b> {% if produce.is_organic %} Yes {% else %} No {% endif %}</div>
-                        <div class="gap-left"><b>Farm:</b> {{ produce.farm}}</div>
+                        <div class="gap-left"><b>Farm:</b> {% if produce_list.farm_website %} <a href="{{ produce_list.farm_website }}">{{ produce_list.farm_name }}</a> {% else %} {{ produce_list.farm_name }} {% endif %}</div>
+                        <div class="gap-left"><b>Location:</b> {{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
                     </div>
                     <div style="float:right">
                         <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>
@@ -32,9 +38,19 @@
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'produce:add' %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
+            <a href="{% url 'produce:add' produce_list.farm_id %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
             <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
         </div>
 
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('a[data-toggle="tooltip"]').tooltip({
+                animated: 'fade',
+                placement: 'right',
+                html: true
+            });
+        });
+    </script>
 {% endblock %}

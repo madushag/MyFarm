@@ -131,6 +131,9 @@ USE_TZ = True
 
 USE_S3 = os.getenv('USE_S3') == 'true'
 
+GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+
+
 if USE_S3:
   # AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID', False)
   # AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY', False)

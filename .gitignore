@@ -13,4 +13,4 @@
 *.db
 /Env/
 .env*
-
+/app/app/media/*
