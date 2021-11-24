@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Produce, Farm
 from .form import ProduceForm
 
@@ -18,12 +18,16 @@ def list_produce(request, farm_id):
 @login_required(login_url='/register/login/')
 def add(request, farm_id):
     if request.method == 'POST':
-        form = ProduceForm(request.POST)
+        form = ProduceForm(request.POST, request.FILES)
 
         if form.is_valid():
             produce = Produce(**form.cleaned_data)
             produce.save()
             return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
+
+        else:
+            farm_name = Farm.objects.get(id=farm_id).name
+            return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
     else:
         form = ProduceForm(use_required_attribute=True)
         farm_name = Farm.objects.get(id=farm_id).name
@@ -49,7 +53,7 @@ def edit(request, produce_id):
         except Produce.DoesNotExist:
             return render(request, 'farm/details_form.html', {'error_message': 'Invalid ID'})
         else:
-            form = ProduceForm(request.POST, instance=produce)
+            form = ProduceForm(request.POST, request.FILES, instance=produce)
             if form.is_valid():
                 form.save()
                 farm_id = produce.farm.id

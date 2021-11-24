@@ -10,6 +10,10 @@
 
             {% for produce in produce_list %}
              <div class="card">
+                {% if produce.picture %}
+                    <img class="produce-pic" src="{{ produce.picture.url }}"  alt="Card image cap">
+                {% endif %}
+
                 <div class="card-body">
                     <h5 class="card-title"><a data-toggle="tooltip" title="<img style='height:10px;width:10px' src='{% static 'edit_pencil.png' %}' />"
                                               href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a>
