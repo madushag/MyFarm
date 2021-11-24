@@ -1,19 +1,19 @@
 // Test blank JS file
 
 const urlParams = new URLSearchParams(window.location.search);
-const produce_filter = urlParams.get('produce');
+const produce_query = urlParams.get('produce');
 
-filter = document.getElementById("produce-filter")
+produce_filter = document.getElementById("produce-filter")
 
-if (filter) {
-  if (produce_filter) {
-    filter.value = produce_filter
+if (produce_filter) {
+  if (produce_query) {
+    produce_filter.value = produce_query
   }
   else {
-    filter.value = "ALL"
+    produce_filter.value = "ALL"
   }
   
-  filter.addEventListener('change', ()=>filter_page(filter.value), false);
+  produce_filter.addEventListener('change', ()=>filter_page(produce_filter.value), false);
   
   function filter_page(filter_value) {
     const filter_url = "/?produce=" + filter_value
