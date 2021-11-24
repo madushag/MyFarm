@@ -28,7 +28,7 @@ class TestHomepageViews(TestCase):
     # create test produce
     farm_id = Farm.objects.first().id
     request = self.factory.post('/produce/add', {
-        "name": "Item 1",
+        "name": "CARROTS",
         "price": "1.00",
         "min_quantity": "10",
         "is_organic": False,
@@ -41,5 +41,5 @@ class TestHomepageViews(TestCase):
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'produce/customer_view.html')
     self.assertContains(response, 'List of Produce')
-    self.assertContains(response, 'Item 1')
+    self.assertContains(response, 'CARROTS')
     self.assertContains(response, 'Test Farm')

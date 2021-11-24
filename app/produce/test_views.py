@@ -6,11 +6,11 @@ from farm.models import Farm
 from produce.views import add as produce_add, index as produce_index
 
 valid_form_data = {
-    "name": "Item 1",
+    "name": "CARROTS",
     "price": "1.00",
     "min_quantity": "10",
     "is_organic": False,
-    "farm": "my first farm"
+    "farm": "Test Farm"
 }
 
 c = Client()
@@ -34,7 +34,7 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "Item 1",
+            "name": "CARROTS",
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
@@ -49,7 +49,7 @@ class TestProduceView(TestCase):
         response = produce_index(request, farm_id)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Produce Available At Farm - Test Farm')
-        self.assertContains(response, 'Item 1')
+        self.assertContains(response, 'CARROTS')
 
     def test_farmer_view_unauthenticated(self):
         self.factory = RequestFactory()
@@ -67,7 +67,7 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "Item 1",
+            "name": "CARROTS",
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
@@ -80,8 +80,7 @@ class TestProduceView(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, f'/register/login/?next=/produce/{farm_id}/list')
 
-    # Test response code POST with incorrect data
-    # (Passwords different)
+
     def test_form_input(self):
         response = self.client.post('/produce/add', valid_form_data)
         self.assertEqual(response.status_code, 302)
