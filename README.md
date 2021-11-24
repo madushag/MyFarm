@@ -429,7 +429,10 @@ Impediments:
 ##### Daily scrum 11/24
 Completed since last meeting:
 
+
 Will work on next:
+    - Chris Rogers: filtering functionality.
+    - Neha and Luis: email functionality.
 
 Impediments: 
 
