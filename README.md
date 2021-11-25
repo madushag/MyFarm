@@ -424,7 +424,7 @@ Completed since last meeting
 Will work on next:
 
 Impediments: 
-- All: understand how to use the CI/CD pipeline.
+- All: understand how to use the CI/CD pipeline. The plan to remove this impediment is to have Chris R. finish researching and implementing the CI/CD pipeline and transfer the knowledge to the rest of the team.
 
 
 ##### Daily scrum 11/22
@@ -446,7 +446,7 @@ Will work on next:
 - Neha and Luis: email functionality.
 
 Impediments: 
-- Neha and Luis: understanding how to code email functionality in Django framework.
+- Neha and Luis: understanding how to code email functionality in Django framework. The plan to address this impediment is to conduct research on the web on how the Django framework supports email functionality. We expect to have this solved by the end of the sprint.
     
 Burndown Chart as of 11/24:
 ![BurndownChartSprint2](images/BurnDownAsOf1124.png)
@@ -475,6 +475,8 @@ Madusha, Chris and Luis mob programming:
 ![MobProgramming](images/Sprint2MobProgramming.png)
 
 #### Test Driven Development.
+
+Our solution currently has 35 micro-scale unit tests, and they all pass.
 
 URLs in Github to all of the tests conducted:
 - https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_forms.py
@@ -522,8 +524,28 @@ As a reminder, URL to the backlog is:
 
 ### Continuous Integration
 
+The full CI/CD workflow can be seen at: https://github.com/madushag/MyFarm/actions/runs/1500976876/workflow
+
+Every time that a change is pushed to github, the CI/CD workflow is triggered. The first thing that the CI portion of the workflow does is run the tests. 
+
+If any of the tests fail, the workflow aborts. URL to a failed test sample: https://github.com/madushag/MyFarm/actions/runs/1500920552
+
+A sample of a successful completion of the tests:
+
+![CITestsPassed](images/CITestsPassed.png)
+
+If the tests pass, the workflow then builds a container for the application:
+
+![DockerBuilt](images/CIDockerBuilt.png)
 
 ### Continuous Delivery
 
+With these two action having completed successfully, the Delivery portion of the workflow triggers next.
+
+![CDRunning](images/CD-Running.png)
+
+If the entire pipeline is successful the working application is delivered to AWS ECS:
+
+![CICDSuccess](CI-CD-RanSuccess.png)
 
 
