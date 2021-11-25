@@ -20,8 +20,9 @@
                     <div class="gap-left"></div>
                     <div class="gap-left"><b>Farm:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm }}</a>{% else %} {{ produce.farm }} {% endif %}</div>
                     <div class="gap-left"><b>Location : </b>{{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
-                    <a href="mailto:{{ produce.farm.farmer.email }}">&#128231;</a>
+                    <a class="gap-left fa fa-envelope" href="mailto:{{ produce.farm.farmer.email }}"></a>
                 </div>
+
                 <div style="padding-bottom: 10px"></div>
             {% endfor %}
             </div>
