@@ -335,12 +335,12 @@ Enable the farmer to provide a list of produce to potential customers, and allow
 
 In Sprint 1 the team accomplished 14 points.
 
-We agreed that as the team gets more familiar with the development tools, we should be able to complete 14 points this sprint as well, despite the holiday in week 2. The following stories were added to the backlog: 
-- Sprint 1, retro action: Perform more detailed planning conversations (MYF-76)
-- Farmer/Customer - As a farmer I want customers to be able to see what bulk produce I have for sale so that they can buy it from me (MYF-80)
-- Customer - As a customer I want to be able to find a specific produce (e.g. carrots) so that I do not have to go through the long list of items and look for carrots (MYF-81)
-- Customer - As a customer I want to see the location for produce so that I can figure out the closest pick up point (MYF-83)
-- Customer - Having figured out where to buy carrots (quantity, price, location) as a customer I want to send a message to the farmer so that I can set up when and where to complete the transaction (MYF-84)
+We agreed that as the team gets more familiar with the development tools, we should be able to complete at least 14 points this sprint as well, despite the holiday in week 2. The following stories were added to the backlog: 
+- Sprint 1, retro action: Perform more detailed planning conversations [MYF-76](https://txmd-webops.atlassian.net/browse/MYF-76)
+- Farmer/Customer - As a farmer I want customers to be able to see what bulk produce I have for sale so that they can buy it from me [MYF-80](https://txmd-webops.atlassian.net/browse/MYF-80)
+- Customer - As a customer I want to be able to find a specific produce (e.g. carrots) so that I do not have to go through the long list of items and look for carrots [MYF-81](https://txmd-webops.atlassian.net/browse/MYF-81)
+- Customer - As a customer I want to see the location for produce so that I can figure out the closest pick up point [MYF-83](https://txmd-webops.atlassian.net/browse/MYF-83)
+- Customer - Having figured out where to buy carrots (quantity, price, location) as a customer I want to send a message to the farmer so that I can set up when and where to complete the transaction [MYF-84](https://txmd-webops.atlassian.net/browse/MYF-84)
 
 #### 3) How will the chosen work get done
 Here the team developed the forecast for the Sprint.
