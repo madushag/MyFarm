@@ -8,32 +8,41 @@ from .form import ProduceForm
 
 @login_required(login_url='/register/login/')
 def list_produce(request, farm_id):
-    farm = Farm.objects.get(id=farm_id)
-    produce_list = Produce.objects.filter(farm=farm_id).filter(farm__farmer=request.user).order_by('-name')
-    produce_list.farm_name = farm.name
-    produce_list.farm_id = farm_id
-    produce_list.farm_website = farm.website_url
-    context = {'produce_list': produce_list}
-    return render(request, 'produce/index.html', context)
+    try:
+        farm = Farm.objects.get(id=farm_id)
+    except Farm.DoesNotExist:
+        return render(request, 'produce/index.html', {'error_message': 'Invalid farm ID'})
+    else:
+        produce_list = Produce.objects.filter(farm=farm_id).filter(farm__farmer=request.user).order_by('-name')
+        produce_list.farm_name = farm.name
+        produce_list.farm_id = farm_id
+        produce_list.farm_website = farm.website_url
+        context = {'produce_list': produce_list}
+        return render(request, 'produce/index.html', context)
 
 
 @login_required(login_url='/register/login/')
 def add(request, farm_id):
-    if request.method == 'POST':
-        form = ProduceForm(request.POST, request.FILES)
+    try:
+        farm = Farm.objects.get(id=farm_id)
+    except Farm.DoesNotExist:
+        return render(request, 'produce/produce_form.html', {'error_message': 'Invalid farm ID', 'farm_id': farm_id})
+    else:
+        if request.method == 'POST':
+            form = ProduceForm(request.POST, request.FILES)
 
-        if form.is_valid():
-            produce = Produce(**form.cleaned_data)
-            produce.save()
-            return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
+            if form.is_valid():
+                produce = Produce(**form.cleaned_data)
+                produce.save()
+                return HttpResponseRedirect(reverse('produce:list', args=(farm_id,)))
 
+            else:
+                farm_name = Farm.objects.get(id=farm_id).name
+                return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
         else:
+            form = ProduceForm(use_required_attribute=True)
             farm_name = Farm.objects.get(id=farm_id).name
             return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
-    else:
-        form = ProduceForm(use_required_attribute=True)
-        farm_name = Farm.objects.get(id=farm_id).name
-        return render(request, 'produce/produce_form.html', {'form': form, 'farm_name': farm_name, 'farm_id': farm_id})
 
 
 @login_required(login_url='/register/login/')
