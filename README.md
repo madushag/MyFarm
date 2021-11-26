@@ -486,6 +486,18 @@ URLs in Github to all of the tests conducted:
 - https://github.com/madushag/MyFarm/blob/main/app/produce/test_models.py
 - https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
 
+The following tests were added and/or updated to account for functionality delivered in this sprint:
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/homepage/tests/test_views.py#L15
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L29
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L34
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L52
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L94
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/produce/test_views.py#L28
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L40
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L59
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L90
+https://github.com/madushag/MyFarm/blob/de134cacb1a2e5466fff5cc92c9f6e4f4ab42d3e/app/produce/test_views.py#L122
+
 Test Failed:
 
 ![TestFailed](images/Sprint2TestFailed.png)
