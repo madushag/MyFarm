@@ -538,7 +538,7 @@ As a reminder, URL to the backlog is:
 
 The full CI/CD workflow can be seen at: https://github.com/madushag/MyFarm/actions/runs/1500976876/workflow
 
-Every time that a change is pushed to github, the CI/CD workflow is triggered. The first thing that the CI portion of the workflow does is run the tests. 
+Every time changes for a branch is pushed to github, the CI/CD workflow is triggered. For all non-main branch pushes the CI portion of the workflow runs all tests. 
 
 If any of the tests fail, the workflow aborts. URL to a failed test sample: https://github.com/madushag/MyFarm/actions/runs/1500920552
 
@@ -546,7 +546,7 @@ A sample of a successful completion of the tests:
 
 ![CITestsPassed](images/CITestsPassed.png)
 
-If the tests pass, the workflow then builds a container for the application:
+If a push is made to the main branch and the tests pass, the workflow then builds a container for the application:
 
 ![DockerBuilt](images/CIDockerBuilt.png)
 
