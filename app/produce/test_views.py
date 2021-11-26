@@ -3,7 +3,7 @@ from .models import Produce
 from django.contrib.auth.models import User
 from farm.views import add, details, delete, index
 from farm.models import Farm
-from produce.views import add as produce_add, list_produce as list_produce
+from produce.views import add as produce_add, list_produce as list_produce, edit as produce_edit
 
 valid_produce_data = {
     "name": "Item 1",
@@ -118,3 +118,15 @@ class TestProduceView(TestCase):
     def test_form_input(self):
         response = self.client.post('/produce/add', valid_produce_data)
         self.assertEqual(response.status_code, 302)
+
+    def test_invalid_produce_id(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        invalid_produce_id = "1"
+        request_path = f"produce/{invalid_produce_id}/edit"
+        request = self.factory.get(request_path)
+        request.user = self.user
+        response = produce_edit(request, invalid_produce_id)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Invalid produce ID')

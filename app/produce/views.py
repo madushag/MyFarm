@@ -50,8 +50,8 @@ def edit(request, produce_id):
     if request.method == 'GET':
         try:
             produce = Produce.objects.filter(pk=produce_id).get()
-        except Farm.DoesNotExist:
-            return render(request, 'farm/produce.html', {'error_message': 'Invalid produce ID'})
+        except Produce.DoesNotExist:
+            return render(request, 'produce/produce_form.html', {'error_message': 'Invalid produce ID', 'id': produce_id, 'farm_id': 0})
         else:
             farm_name = produce.farm.name
             farm_id = produce.farm.id
