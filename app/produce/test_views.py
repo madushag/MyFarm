@@ -6,7 +6,8 @@ from farm.models import Farm
 from produce.views import add as produce_add, list_produce as list_produce
 
 valid_form_data = {
-    "name": "CARROTS",
+    "name": "Carrots",
+    "description": "test description",
     "price": "1.00",
     "min_quantity": "10",
     "is_organic": False,
@@ -37,7 +38,8 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "CARROTS",
+            "name": "Carrots",
+            "description": "test description",
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
@@ -66,7 +68,8 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "CARROTS",
+            "name": "Carrots",
+            "description": "test description",
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
@@ -81,5 +84,5 @@ class TestProduceView(TestCase):
 
 
     def test_form_input(self):
-        response = self.client.post('/produce/add', valid_produce_data)
+        response = self.client.post('/produce/add', valid_form_data)
         self.assertEqual(response.status_code, 302)

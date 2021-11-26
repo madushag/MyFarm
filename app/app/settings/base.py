@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'authenticate',
-    'storages',
+    # 'storages',
     'farm',
     'produce'
 ]
