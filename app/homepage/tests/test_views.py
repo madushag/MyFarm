@@ -25,7 +25,7 @@ class TestHomepageViews(TestCase):
     self.assertEqual(response.status_code, 200)
     self.assertTemplateUsed(response, 'produce/customer_view.html')
     self.assertContains(response, 'List of Produce')
-    self.assertContains(response, 'CARROTS</h5>')
+    self.assertContains(response, '>CARROTS')
     self.assertContains(response, 'Test Farm')
 
   def test_customer_view_of_produce_filtered_returns_200(self):
@@ -34,11 +34,11 @@ class TestHomepageViews(TestCase):
 
   def test_customer_view_of_produce_filtered_contains_query_term(self):
     response = c.get('/?produce=KALE')
-    self.assertContains(response, "KALE</h5>")
+    self.assertContains(response, ">KALE")
 
   def test_customer_view_of_produce_filtered_only_contains_query_term(self):
     response = c.get('/?produce=KALE')
-    self.assertNotContains(response, "CARROTS</h5>")
+    self.assertNotContains(response, ">CARROTS")
 
   def test_customer_view_of_produce_filtered_returns_correct_template(self):
     response = c.get('/?produce=KALE')

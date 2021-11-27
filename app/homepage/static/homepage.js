@@ -9,9 +9,6 @@ if (produce_filter) {
   if (produce_query) {
     produce_filter.value = produce_query
   }
-  else {
-    produce_filter.value = "ALL"
-  }
   
   produce_filter.addEventListener('change', ()=>filter_page(produce_filter.value), false);
   
