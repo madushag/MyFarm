@@ -454,15 +454,15 @@ Burndown Chart as of 11/24:
 ##### Daily scrum 11/26
 Completed since last meeting:
 - Chris: finished on the local branch the filter of produce
-- Madusha: finishing the location implementation
-- Neha: added the changes for sending emails to the farmers.
+- Madusha: finished the location implementation
+- Neha and Luis : added the changes for sending emails to the farmers.
 - Kelly: updated produce model and pushed changes
-- Shrikant: confirmed stakeholders for Sunday at 7 pm.
+- Shrikanth: confirmed stakeholders for Sunday at 7 pm.
 
 Will work on next:
-- Chris:
+- Chris: push the changes of the filter produce to production.
 - Madusah: address some of the edge cases; update the label for the produce
-- Neha: make changes 
+- Neha and Luis: make changes to email functionality.
 - Kelly: cleanup and adding more tests.
 - Shrikanth: coordinate Sprint Review on Sunday.
 
@@ -479,6 +479,7 @@ Impediments:
 
 #### Pair Programming:
 
+Neha and Luis pair programming:
 
 
 #### Mob Programming:
