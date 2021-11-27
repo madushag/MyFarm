@@ -48,7 +48,9 @@
                                             <input type="text" id="farm_name" value="{{ farm_name }}" class="form-control" readonly />
                                             {{ field }}
                                         {% elif field.name == 'picture' %}
-                                            <img class="current-produce-pic" src="{{ field.initial.url }}" style="padding-bottom:20px" />
+                                            {% if field.initial %}
+                                                <img class="current-produce-pic" src="{{ field.initial.url }}" style="padding-bottom:20px" />
+                                            {% endif %}
                                             {{ field }}
                                         {% else %}
                                             {{ field }}
