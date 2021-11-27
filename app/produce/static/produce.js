@@ -13,6 +13,10 @@ function setFieldStyles(){
         }
     });
 
+    $('select').each(function() {
+        $(this).addClass('form-select');
+    })
+
     $('input[type="checkbox"]').each(function() {
         $(this).addClass('form-check-input');
     })

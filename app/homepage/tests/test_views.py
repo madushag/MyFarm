@@ -4,6 +4,8 @@ from farm.views import add, details, delete, index
 from produce.views import add as produce_add
 from farm.models import Farm
 
+from produce.models import Produce
+
 c = Client()
 
 class TestHomepageViews(TestCase):
