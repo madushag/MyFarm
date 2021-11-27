@@ -46,3 +46,4 @@ class TestHomepageViews(TestCase):
     self.assertContains(response, 'List of Produce')
     self.assertContains(response, 'CARROTS')
     self.assertContains(response, 'Test Farm')
+    self.assertContains(response, '10.0 lbs.')
