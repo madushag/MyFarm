@@ -529,7 +529,7 @@ The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
 
-![WorkingProduct](images/WorkingSoftwareSprint2.png)
+![WorkingProduct](images/WorkingProductSprint2.png)
 
 
 ### Sprint Review
