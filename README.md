@@ -473,6 +473,8 @@ Impediments:
 
 #### Burndown Chart at the end of the Sprint:
 
+![Burndown](images/BurndownChartAtEndOfSprint2.png)
+
 
 
 #### Pair Programming:
