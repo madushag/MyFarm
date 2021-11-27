@@ -5,8 +5,16 @@
     <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
     <div class="container">
+      <h1>List of Produce</h1>
+      <p>Filter produce</p>
+        <select id="produce-filter">
+          <option selected=true value="All">All</option>
+          {% for key, value in filter_values %}
+            <option value="{{ key }}">{{ value }}</option>
+          {% endfor %}
+        </select>
         {% if produce_list %}
-            <h1>List of Produce</h1>
+
 
             <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
             {% for produce in produce_list %}
@@ -26,6 +34,8 @@
                 <div style="padding-bottom: 10px"></div>
             {% endfor %}
             </div>
+        {% elif error_message %}
+            <p>{{ error_message }}</p>
         {% else %}
             <p>No produce available.</p>
         {% endif %}

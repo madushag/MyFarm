@@ -453,8 +453,18 @@ Burndown Chart as of 11/24:
 
 ##### Daily scrum 11/26
 Completed since last meeting:
+- Chris: finished on the local branch the filter of produce
+- Madusha: finished the location implementation
+- Neha and Luis : added the changes for sending emails to the farmers.
+- Kelly: updated produce model and pushed changes
+- Shrikanth: confirmed stakeholders for Sunday at 7 pm.
 
 Will work on next:
+- Chris: push the changes of the filter produce to production.
+- Madusah: address some of the edge cases; update the label for the produce
+- Neha and Luis: make changes to email functionality.
+- Kelly: cleanup and adding more tests.
+- Shrikanth: coordinate Sprint Review on Sunday.
 
 Impediments: 
 
@@ -463,16 +473,23 @@ Impediments:
 
 #### Burndown Chart at the end of the Sprint:
 
+![Burndown](images/BurndownChartAtEndOfSprint2.png)
+
 
 
 #### Pair Programming:
 
+Neha and Luis pair programming:
 
 
 #### Mob Programming:
 Madusha, Chris and Luis mob programming:
 
 ![MobProgramming](images/Sprint2MobProgramming.png)
+
+Mob programming session with all developers and the product owner:
+
+![MobProgramming2](images/Sprint2MobProgramming2.png)
 
 #### Test Driven Development.
 
@@ -513,7 +530,7 @@ The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
 
-![WorkingProduct](images/WorkingSoftwareSprint2.png)
+![WorkingProduct](images/WorkingProductSprint2.png)
 
 
 ### Sprint Review
@@ -522,17 +539,7 @@ The Sprint Review took place on 11/28 at 7 pm. In attendance were Ari Kurtz, our
 Recording of the Sprint Review can be found here: 
 
 
-### Sprint Retrospective
-The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
 
-Recording of the Sprint Retrospective can be found here:
-
-The team discussed the following action, which should make the team significantly better:
-
-
-It is at the top of the backlog for Sprint 3:
-
-As a reminder, URL to the backlog is:
 
 ### Continuous Integration
 
@@ -558,6 +565,23 @@ With these two action having completed successfully, the Delivery portion of the
 
 If the entire pipeline is successful the working application is delivered to AWS ECS:
 
-![CICDSuccess](CI-CD-RanSuccess.png)
+![CICDSuccess](images/CI-CD-RanSuccess.png)
+
+URL to a successful end-to-end CI/CD workflow: https://github.com/madushag/MyFarm/actions/runs/1502264087
+
+A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group for the application load balancer that is serving requests for the ECS container includes a health check that pings the root (‘/’) url every 30 seconds. If it doesn’t receive a reply within five seconds it records a failure. If it receives 2 consecutive failures, it will restart the ECS service, resulting in the app being redeployed. Screenshot of the health check configuration in the screenshot below.
+
+![ECS-Healthcheck](images/ECS-Healthcheck.png)
 
 
+### Sprint Retrospective
+The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
+
+Recording of the Sprint Retrospective can be found here:
+
+The team discussed the following action, which should make the team significantly better:
+
+
+It is at the top of the backlog for Sprint 3:
+
+As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
