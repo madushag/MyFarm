@@ -129,3 +129,29 @@ class TestProduceView(TestCase):
         response = produce_edit(request, invalid_produce_id)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Invalid produce ID')
+
+    def test_invalid_price_qty_values_shows_error_message(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        # create test farm
+        request = self.factory.post('/farm/add/', valid_farm_data)
+        request.user = self.user
+        add(request)
+
+        # create test produce
+        farm_id = Farm.objects.first().id
+        request = self.factory.post('/produce/add', {
+            "name": "Item 1",
+            "description": "Test Description",
+            "price": "-1",
+            "min_quantity": "-10",
+            "is_organic": False,
+            "farm": farm_id
+        })
+        request.user = self.user
+        response = produce_add(request, farm_id)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'PRICE - Ensure this value is greater than or equal to 0.0.')
+        self.assertContains(response, 'MIN. QTY - Ensure this value is greater than or equal to 0.0.')
