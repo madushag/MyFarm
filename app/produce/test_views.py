@@ -3,7 +3,7 @@ from .models import Produce
 from django.contrib.auth.models import User
 from farm.views import add, details, delete, index
 from farm.models import Farm
-from produce.views import add as produce_add, list_produce as list_produce
+from produce.views import add as produce_add, list_produce as list_produce, edit as produce_edit
 
 valid_form_data = {
     "name": "Carrots",
@@ -25,6 +25,37 @@ c = Client()
 
 
 class TestProduceView(TestCase):
+
+    def test_list_produce_of_invalid_farm(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        invalid_farm_id = "1"
+        request_path = f"produce/{invalid_farm_id}/list"
+        request = self.factory.get(request_path)
+        request.user = self.user
+        response = list_produce(request, invalid_farm_id)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Invalid farm ID')
+
+    def test_add_produce_to_invalid_farm(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        # create test produce
+        invalid_farm_id = "1"
+        request = self.factory.post('/produce/add', {
+            "name": "Item 1",
+            "description": "Test Description",
+            "price": "1.00",
+            "min_quantity": "10",
+            "is_organic": False,
+            "farm": invalid_farm_id
+        })
+        request.user = self.user
+        response = produce_add(request, invalid_farm_id)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Invalid farm ID')
 
     def test_farmer_view_of_produce(self):
         self.factory = RequestFactory()
@@ -86,3 +117,15 @@ class TestProduceView(TestCase):
     def test_form_input(self):
         response = self.client.post('/produce/add', valid_form_data)
         self.assertEqual(response.status_code, 302)
+
+    def test_invalid_produce_id(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        invalid_produce_id = "1"
+        request_path = f"produce/{invalid_produce_id}/edit"
+        request = self.factory.get(request_path)
+        request.user = self.user
+        response = produce_edit(request, invalid_produce_id)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'Invalid produce ID')

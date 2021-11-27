@@ -5,46 +5,55 @@
     <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
     <div class="container">
-        {% if produce_list %}
-            <h1>Produce Available At Farm - {{ produce_list.farm_name }}</h1>
+        {% if error_message %}
+            <div class="error"><span>{{ error_message }}</span></div>
 
-            {% for produce in produce_list %}
-             <div class="card">
-                {% if produce.picture %}
-                    <img class="produce-pic" src="{{ produce.picture.url }}"  alt="Card image cap">
-                {% endif %}
+            <div class="col-auto">
+                <a class="btn btn-primary mb-3 float-right" href="{% url 'farm:index' %}">Back</a>
+            </div>
+        {% else %}
 
-                <div class="card-body">
-                    <h5 class="card-title"><a data-toggle="tooltip" title="<img style='height:10px;width:10px' src='{% static 'edit_pencil.png' %}' />"
-                                              href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a>
-                            {% if produce.is_organic %} <img style="margin-left: 20px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
-                    <div class="card-text">
-                        <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
-                        <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
-                        <div class="gap-left"><b>Farm:</b> {% if produce_list.farm_website %} <a href="{{ produce_list.farm_website }}">{{ produce_list.farm_name }}</a> {% else %} {{ produce_list.farm_name }} {% endif %}</div>
-                        <div class="gap-left"><b>Location:</b> {{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
-                    </div>
-                    <div style="float:right">
-                        <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>
-                        <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3" style="position:relative;top:-55px">Delete</a>
+            {% if produce_list %}
+                <h1>Produce Available At Farm - {{ produce_list.farm_name }}</h1>
+
+                {% for produce in produce_list %}
+                 <div class="card">
+                    {% if produce.picture %}
+                        <img class="produce-pic" src="{{ produce.picture.url }}"  alt="Card image cap">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h5 class="card-title"><a data-toggle="tooltip" title="<img style='height:10px;width:10px' src='{% static 'edit_pencil.png' %}' />"
+                                                  href="{% url 'produce:edit' produce.id %}">{{ produce.name }}</a>
+                                {% if produce.is_organic %} <img style="margin-left: 20px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
+                        <div class="card-text">
+                            <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
+                            <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
+                            <div class="gap-left"><b>Farm:</b> {% if produce_list.farm_website %} <a href="{{ produce_list.farm_website }}">{{ produce_list.farm_name }}</a> {% else %} {{ produce_list.farm_name }} {% endif %}</div>
+                            <div class="gap-left"><b>Location:</b> {{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
+                        </div>
+                        <div style="float:right">
+                            <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>
+                            <a href="{% url 'produce:delete' produce.id %}" class="btn btn-danger mb-3" style="position:relative;top:-55px">Delete</a>
+                        </div>
                     </div>
                 </div>
+                <div style="padding-bottom: 10px"></div>
+                {% endfor %}
+            {% else %}
+                <p>No produce available.</p>
+            {% endif %}
+
+            <div class="col-auto">
+                <a href="{% url 'produce:add' produce_list.farm_id %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
+                <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
             </div>
-            <div style="padding-bottom: 10px"></div>
-            {% endfor %}
-        {% else %}
-            <p>No produce available.</p>
         {% endif %}
-
-        <div class="col-auto">
-            <a href="{% url 'produce:add' produce_list.farm_id %}" class="btn btn-primary mb-3 float-right">Add Produce Item</a>
-            <a href="{% url 'farm:index' %}" class="btn btn-primary mb-3 float-right">Back</a>
-        </div>
-
     </div>
 
     <script>
+        //Show tooltips on hover
         $(document).ready(function(){
             $('a[data-toggle="tooltip"]').tooltip({
                 animated: 'fade',
