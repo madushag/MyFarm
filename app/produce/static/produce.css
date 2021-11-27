@@ -26,3 +26,36 @@
     float:left;
     font-size: .875em;
 }
+
+.form-check-input{
+    height: 2em;
+    width: 2em;
+}
+
+.tooltip-inner{
+    background: transparent;
+    padding: 0px;
+}
+
+.tooltip-arrow {visibility:hidden;}
+
+.card {
+  flex-direction: row;
+}
+
+.produce-pic {
+    width: 20%;
+    height: 20%;
+    max-width: 250px;
+    min-width: 200px;
+    border-right: 1px solid rgba(0,0,0,.125);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 5px;
+}
+
+.current-produce-pic {
+    width: 20%;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 20px;
+    padding:5px;
+}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block content %}
+
     <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
 
     <div class="container">
@@ -10,12 +10,20 @@
 
             {% for farm in farm_list %}
             <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'produce:index' farm.id %}">{{ farm.name }}</a></h5>
-                    <div class="card-text">{{ farm.description }}<br/>[LOCATION PLACEHOLDER]</div>
+                <div class="card-body" style="margin-bottom: -30px">
+                    <h5 class="card-title"><a href="{% url 'produce:list' farm.id %}">{{ farm.name }}</a></h5>
+                    <div class="card-text">
+                        {{ farm.description }}<br/>
+                        <span><b>Website: </b>{{ farm.website_url }}</span>
+                        {% if farm.city %}
+                            <div class="gap-left">
+                                <b>Located in {{ farm.city }}, {{ farm.location_state }}</b>
+                            </div>
+                         {% endif %}
+                    </div>
                     <div style="float:right">
-                        <a href="{% url 'farm:details' farm.id %}" class="btn btn-primary mb-3" style="position:relative;top:-80px">Edit</a>
-                        <a href="{% url 'farm:delete' farm.id %}" class="btn btn-danger mb-3" style="position:relative;top:-80px">Delete</a>
+                        <a href="{% url 'farm:details' farm.id %}" class="btn btn-primary mb-3" style="position:relative;bottom:40px">Edit</a>
+                        <a href="{% url 'farm:delete' farm.id %}" class="btn btn-danger mb-3" style="position:relative;bottom:40px">Delete</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +36,9 @@
 
         <div class="col-auto">
             <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New Farm</a>
-{#            <a href="/" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Homepage</a>#}
         </div>
     </div>
+
+
+
 {% endblock %}

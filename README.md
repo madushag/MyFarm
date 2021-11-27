@@ -312,7 +312,7 @@ It is at the top of the backlog for Sprint 2:
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
 
 
-## Project Part 3
+## Project Part 3 
 
 ### Sprint Planning
 
@@ -335,7 +335,12 @@ Enable the farmer to provide a list of produce to potential customers, and allow
 
 In Sprint 1 the team accomplished 14 points.
 
-We agreed that as the team gets more familiar with the development tools, we should be able to complete 14 points this sprint as well, despite the holiday in week 2.
+We agreed that as the team gets more familiar with the development tools, we should be able to complete at least 14 points this sprint as well, despite the holiday in week 2. The following stories were added to the backlog: 
+- Sprint 1, retro action: Perform more detailed planning conversations [MYF-76](https://txmd-webops.atlassian.net/browse/MYF-76)
+- Farmer/Customer - As a farmer I want customers to be able to see what bulk produce I have for sale so that they can buy it from me [MYF-80](https://txmd-webops.atlassian.net/browse/MYF-80)
+- Customer - As a customer I want to be able to find a specific produce (e.g. carrots) so that I do not have to go through the long list of items and look for carrots [MYF-81](https://txmd-webops.atlassian.net/browse/MYF-81)
+- Customer - As a customer I want to see the location for produce so that I can figure out the closest pick up point [MYF-83](https://txmd-webops.atlassian.net/browse/MYF-83)
+- Customer - Having figured out where to buy carrots (quantity, price, location) as a customer I want to send a message to the farmer so that I can set up when and where to complete the transaction [MYF-84](https://txmd-webops.atlassian.net/browse/MYF-84)
 
 #### 3) How will the chosen work get done
 Here the team developed the forecast for the Sprint.
@@ -344,33 +349,38 @@ Here the team developed the forecast for the Sprint.
 
 As indicated aboveThe forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
 
-We pulled stories into the sprint backlog. 
-The stories were pulled from the top of the product backlog. The backlog had been sorted by what will add the most value.
-We confirmed that the aggregate size of the stories did not exceed the forecast.
-Only the developers participated in the forecasting.
+- We pulled stories into the sprint backlog. 
+- The stories were pulled from the top of the product backlog. The backlog had been sorted by what will add the most value.
+- We confirmed that the aggregate size of the stories did not exceed the forecast.
+- Only the developers participated in the forecasting.
+- We decomposed the stories into developer tasks
+- The tasks are listed in the sprint backlog - the developer tasks are attached to each story.
 
-**Our Sprint backlog's Kanban Board:**
+
+**Our Sprint backlog's Kanban Board at the beginning of the Sprint:**
+
 ![KanbanBoardSprint2](images/KanbanSprint2.jpg)
 
 Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 **Note** this URL shows the Kanban board for the active Sprint. As of 11/16, the board was as depicted above, with the tasks MYF-76, MYF-80, MYF-81, MYF-84 and MYF-8. Links to these tasks below:
 
-MYF-77: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-76
-MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-80
-MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-81
-MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-84
-MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
+- MYF-76: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-76
+- MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-80
+- MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-81
+- MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-84
+- MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
 
 
-At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 1; we made sure that the aggregate size did not exceed the forecast.
+At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 2; we made sure that the aggregate size did not exceed the forecast.
 
 **The Burndow Chart for Sprint 2:**
+
 ![BurndownChartSprint2](images/BurndownChartSprint2.png)
 
 URL of the burndown chart: 
 **Note:** Please make sure that the filter is set to MYF-Sprint2.
 
-
+https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 
 ### Daily Scrums
@@ -381,20 +391,21 @@ A recording of a daily scrum: https://harvard.zoom.us/rec/share/H5e_8POVDciWos7s
 Progress is updated in Jira using the Kanban Board:
 
 
-The URL of the Kanban Board is: 
+The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 
 
 ##### Daily Scrum 11/15
 Completed since our last meeting:
 - All: conducted Sprint Review and Sprint Retrospective.
 
-will work on next:
+Will work on next:
 - Sprint planning 
 
 Impediments: None at this time.
 
 ##### Daily Scrum 11/17
 Completed since our last meeting:
+- All: conducted Sprint Planning.
 - Chris Rogers: Implemented the Continuous Integration setup in GitHub.
 - Chris R., Madusha, Luis: mob programming session on story MYF-80. Created the model for the story.
 - Madusha: Planning the template for MYF-80.
@@ -413,27 +424,34 @@ Completed since last meeting
 Will work on next:
 
 Impediments: 
-    - All: understand how to use the CI/CD pipeline.
+- All: understand how to use the CI/CD pipeline. The plan to remove this impediment is to have Chris R. finish researching and implementing the CI/CD pipeline and transfer the knowledge to the rest of the team.
 
 
 ##### Daily scrum 11/22
 Completed since last meeting:
-    - Chris Rogers: further developed the CI/CD pipelines.
-    - Madusha and Kelly: continued to move forward the MYF-80 story.
+- Chris Rogers: further developed the CI/CD pipelines.
+- Madusha and Kelly: continued to move forward the MYF-80 story.
 
 Will work on next:
-    - Chris Rogers: the filter for the produce view.
+- Chris Rogers: the filter for the produce view.
 
 Impediments: 
 
 ##### Daily scrum 11/24
 Completed since last meeting:
 
+
 Will work on next:
+- Chris Rogers: filtering functionality.
+- Neha and Luis: email functionality.
 
 Impediments: 
+- Neha and Luis: understanding how to code email functionality in Django framework. The plan to address this impediment is to conduct research on the web on how the Django framework supports email functionality. We expect to have this solved by the end of the sprint.
+    
+Burndown Chart as of 11/24:
+![BurndownChartSprint2](images/BurnDownAsOf1124.png)
 
-##### Daily scrum 11/12
+##### Daily scrum 11/26
 Completed since last meeting:
 
 Will work on next:
@@ -453,20 +471,49 @@ Impediments:
 
 #### Mob Programming:
 Madusha, Chris and Luis mob programming:
+
 ![MobProgramming](images/Sprint2MobProgramming.png)
 
 #### Test Driven Development.
+
+Our solution currently has 35 micro-scale unit tests, and they all pass.
+
+URLs in Github to all of the tests conducted:
+- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_forms.py
+- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_views.py
+- https://github.com/madushag/MyFarm/blob/main/app/farm/tests.py
+- https://github.com/madushag/MyFarm/blob/main/app/homepage/tests/test_views.py
+- https://github.com/madushag/MyFarm/blob/main/app/produce/test_models.py
+- https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
+
+The following tests were added and/or updated to account for functionality delivered in this sprint:
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/homepage/tests/test_views.py#L15
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L29
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L34
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L52
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L94
+https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/produce/test_views.py#L28
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L40
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L59
+https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L90
+https://github.com/madushag/MyFarm/blob/de134cacb1a2e5466fff5cc92c9f6e4f4ab42d3e/app/produce/test_views.py#L122
+
 Test Failed:
+
 ![TestFailed](images/Sprint2TestFailed.png)
 
 Test Passed:
+
 ![TestPassed](images/Sprint2TestPassed.png)
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
-The URL is: http://54.226.105.77/
+
+The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
+
+![WorkingProduct](images/WorkingSoftwareSprint2.png)
 
 
 ### Sprint Review
@@ -489,8 +536,28 @@ As a reminder, URL to the backlog is:
 
 ### Continuous Integration
 
+The full CI/CD workflow can be seen at: https://github.com/madushag/MyFarm/actions/runs/1500976876/workflow
+
+Every time changes for a branch is pushed to github, the CI/CD workflow is triggered. For all non-main branch pushes the CI portion of the workflow runs all tests. 
+
+If any of the tests fail, the workflow aborts. URL to a failed test sample: https://github.com/madushag/MyFarm/actions/runs/1500920552
+
+A sample of a successful completion of the tests:
+
+![CITestsPassed](images/CITestsPassed.png)
+
+If a push is made to the main branch and the tests pass, the workflow then builds a container for the application:
+
+![DockerBuilt](images/CIDockerBuilt.png)
 
 ### Continuous Delivery
 
+With these two action having completed successfully, the Delivery portion of the workflow triggers next.
+
+![CDRunning](images/CD-Running.png)
+
+If the entire pipeline is successful the working application is delivered to AWS ECS:
+
+![CICDSuccess](CI-CD-RanSuccess.png)
 
 
