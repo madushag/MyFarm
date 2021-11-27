@@ -30,7 +30,7 @@ class TestHomepageViews(TestCase):
     # create test produce
     farm_id = Farm.objects.first().id
     request = self.factory.post('/produce/add', {
-        "name": "Carrots",
+        "name": "CARROTS",
         "description": "Test description",
         "price": "1.00",
         "min_quantity": "10",
