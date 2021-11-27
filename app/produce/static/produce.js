@@ -20,6 +20,11 @@ function setFieldStyles(){
 }
 
 function enableFieldValidations(){
+    $('#id_price').attr('step', '0.01');
+    $('#id_price').attr('min', '0.0');
+
+    $('#id_min_quantity').attr('step', '0.01');
+    $('#id_min_quantity').attr('min', '0.0');
 }
 
 function populateInitialValues(){

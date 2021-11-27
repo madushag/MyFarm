@@ -24,7 +24,7 @@ def list_produce(request, farm_id):
 @login_required(login_url='/register/login/')
 def add(request, farm_id):
     try:
-        farm = Farm.objects.get(id=farm_id)
+        Farm.objects.get(id=farm_id)
     except Farm.DoesNotExist:
         return render(request, 'produce/produce_form.html', {'error_message': 'Invalid farm ID', 'farm_id': farm_id})
     else:
