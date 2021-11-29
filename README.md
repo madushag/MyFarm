@@ -539,7 +539,7 @@ Image of the working product:
 ### Sprint Review
 The Sprint Review took place on 11/28 at 7 pm. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
 
-Recording of the Sprint Review can be found here: 
+Recording of the Sprint Review can be found here: https://harvard.zoom.us/rec/play/X7QOVJjfTjxT_IBgYjPtVDbYs3FcnEDN9VDz6clwbwjAyBAw5elT5VhGRbAfr1_mw0qkCyBA9asMXYfY.JzIIqtnljjd7dhrS?_x_zm_rhtaid=873&_x_zm_rtaid=WEuGlLM2ScSfhyARFds16g.1638144755620.267071cce8a565bae1e1337bf9890bd1&autoplay=true&continueMode=true&startTime=1638143746000
 
 The team during Sprint Review with the two stakeholders:
 
@@ -596,7 +596,7 @@ A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group
 ### Sprint Retrospective
 The Sprint Restrospective took place on 11/28 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
 
-Recording of the Sprint Retrospective can be found here:
+Recording of the Sprint Retrospective can be found here: https://harvard.zoom.us/rec/play/X7QOVJjfTjxT_IBgYjPtVDbYs3FcnEDN9VDz6clwbwjAyBAw5elT5VhGRbAfr1_mw0qkCyBA9asMXYfY.JzIIqtnljjd7dhrS?_x_zm_rhtaid=873&_x_zm_rtaid=WEuGlLM2ScSfhyARFds16g.1638144755620.267071cce8a565bae1e1337bf9890bd1&autoplay=true&continueMode=true&startTime=1638149475000
 
 The team during the retrospective:
 
