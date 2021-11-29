@@ -452,6 +452,9 @@ Burndown Chart as of 11/24:
 ![BurndownChartSprint2](images/BurnDownAsOf1124.png)
 
 ##### Daily scrum 11/26
+
+Zoom recording of the standup: https://harvard.zoom.us/rec/play/CUW5ElpmTbBHyB8fuLG_rc1-j0ynQyf9kgIBZC-93CDCcaD4uIT6ABvlFr1wQC6HjV1UvWklqh_xWssp.K9N0Dt9lAhMJTbCi?_x_zm_rhtaid=873&_x_zm_rtaid=WEuGlLM2ScSfhyARFds16g.1638144755620.267071cce8a565bae1e1337bf9890bd1&autoplay=true&continueMode=true&startTime=1637973520000
+
 Completed since last meeting:
 - Chris: finished on the local branch the filter of produce
 - Madusha: finished the location implementation
@@ -534,11 +537,27 @@ Image of the working product:
 
 
 ### Sprint Review
-The Sprint Review took place on 11/28 at 7 pm. In attendance were Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+The Sprint Review took place on 11/28 at 7 pm. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
 
 Recording of the Sprint Review can be found here: 
 
+The team during Sprint Review with the two stakeholders:
 
+![SprintReview](images/Sprint2Review.png)
+
+Feedback from both Ari and Vijaya was very positive; they like the simplicity and ease of use of the interface.
+
+Based on feedback from Vijaya, as a customer she would like the ability to filter based on whether or not the item in organic or conventional. Three user stories were added to the backlog during the meeting:
+
+![BacklogEdited](images/Sprint2ReviewBacklogModification.png)
+
+URLs to these stories are:
+
+MYF-118: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-118
+
+MYF-117: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-117
+
+MYF-116: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-116
 
 
 ### Continuous Integration
@@ -575,13 +594,21 @@ A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group
 
 
 ### Sprint Retrospective
-The Sprint Restrospective took place on 11/14 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
+The Sprint Restrospective took place on 11/28 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
 
 Recording of the Sprint Retrospective can be found here:
 
+The team during the retrospective:
+
+![Sprint2Retrospective](images/Sprint2Retrospective.png)
+
 The team discussed the following action, which should make the team significantly better:
+
+Do more pair programming / mob programming and implement code review session to address lack of uniformity in how the various modules are coded. This story was added at the top of the backlog as story MYF-119 - the URL: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-119
 
 
 It is at the top of the backlog for Sprint 3:
+
+![ActionforSprint3](images/Sprint2ActionToImprove.png)
 
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
