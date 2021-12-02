@@ -37,8 +37,15 @@ function enableFieldValidations(){
 }
 
 function populateInitialValues(){
-    if($('#id_city').val() && $('#id_location_state').val()){
-        $('#id_location').val($('#id_city').val() + ', ' + $('#id_location_state').val());
+    // If there is a location, then show the location address details
+    if($('#id_location_name').val()){
+        $('#id_location').val($('#id_location_name').val());
+        $('#id_address_link').html($('#id_location_address').val());
+        $('#id_address_link').attr('href', $('#id_location_url').val());
+        $('#id_view_in_google').html("(Click to view in Google Maps)");
+        $('#id_view_in_google').attr('href', $('#id_location_url').val());
+        $("label[for='id_address']").show();
+
     }
 }
 

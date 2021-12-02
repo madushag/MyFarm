@@ -7,57 +7,66 @@
     <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
 
     <div class="container-sm">
-    {% if form.initial.id %}
-        {% if not error_message %}
-            <h1>Update farm details</h1>
-        {% endif %}
-        <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
-    {% else %}
-        {% if not error_message %}
-            <h1>Add a new farm</h1>
-        {% endif %}
-        <form  action="{% url 'farm:add' %}" method="post" id="details">
-    {% endif %}
-
-        <div style="padding-top:20px">
-            {% csrf_token %}
-            {% if error_message %}
-                <div class="error"><span>{{ error_message }}</span></div>
-
-                <div class="col-auto">
-                    <a class="btn btn-primary mb-3 float-right" href="{% url 'farm:index' %}">Back</a>
-                </div>
-            {% else %}
-                {% for field in form %}
-                    {# Dont display id, state and city fields#}
-                    {% if field.name != 'id' and field.name != 'location_state' and field.name != 'city' %}
-                        <div class="mb-3 row">
-                            {{ field.errors }}
-                            <label for="id_{{ field.name }}" class="col-sm-2 col-form-label"><b>{{ field.label.upper }}:</b></label>
-                            <div class="col-sm-10">
-                                {{ field }}
-                            </div>
-                        </div>
-                    {% else %}
-                            {{ field }}
-                    {% endif %}
-                {% endfor %}
-
-                <div class="mb-3 row">
-                    <label for="id_location" class="col-sm-2 col-form-label"><b>LOCATION:</b></label>
-                        <div class="col-sm-10">
-                            <input id="id_location" type="text" placeholder="Enter a location" maxlength="200"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-auto align-right">
-                    <button type="submit" class="btn btn-primary mb-3" id="save">Save</button>
-                    <a class="btn btn-primary mb-3" href="{% url 'farm:index' %}">Cancel</a>
-                </div>
+        {% if form.initial.id %}
+            {% if not error_message %}
+                <h1>Update farm details</h1>
             {% endif %}
-          </div>
-        </form>
+            <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
+        {% else %}
+            {% if not error_message %}
+                <h1>Add a new farm</h1>
+            {% endif %}
+            <form  action="{% url 'farm:add' %}" method="post" id="details">
+         {% endif %}
+
+            <div style="padding-top:20px">
+                {% csrf_token %}
+                {% if error_message %}
+                    <div class="error"><span>{{ error_message }}</span></div>
+
+                    <div class="col-auto">
+                        <a class="btn btn-primary mb-3 float-right" href="{% url 'farm:index' %}">Back</a>
+                    </div>
+                {% else %}
+                    {% for field in form %}
+                        {# Dont display id, state and city fields#}
+                        {% if field.name != 'id' and field.name != 'location_state' and field.name != 'city' and field.name != 'location_lat' and field.name != 'location_lng' and field.name != 'location_name' and field.name != 'location_url' and field.name != 'location_address'  %}
+                            <div class="mb-3 row">
+                                {{ field.errors }}
+                                <label for="id_{{ field.name }}" class="col-sm-2 col-form-label"><b>{{ field.label.upper }}:</b></label>
+                                <div class="col-sm-10">
+                                    {{ field }}
+                                </div>
+                            </div>
+                        {% else %}
+                                {{ field }}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="mb-3 row">
+                        <label for="id_location" class="col-sm-2 col-form-label"><b>LOCATION:</b></label>
+                            <div class="col-sm-10">
+                                <input id="id_location" type="text" placeholder="Enter a location" maxlength="200"/>
+                            </div>
+                    </div>
+                     <div class="mb-3 row">
+                        <label for="id_address" class="col-sm-2 col-form-label" style="display: none"><b>ADDRESS:</b></label>
+                            <div class="col-sm-10" style="margin-top: 5px" >
+                                <a id="id_address_link" target="_blank">
+                                    {#location address will be shown here after fetching from Places API#}
+                                </a><br/>
+                                <a id="id_view_in_google" target="_blank"></a>
+                            </div>
+                    </div>
+            </div>
+
+            <div class="col-auto align-right">
+                <button type="submit" class="btn btn-primary mb-3" id="save">Save</button>
+                <a class="btn btn-primary mb-3" href="{% url 'farm:index' %}">Cancel</a>
+            </div>
+
+            {% endif %}
+            </form>
     </div>
 
     <script type="text/javascript" src="{% static 'farm.js' %}"></script>
@@ -75,15 +84,31 @@
             const input = document.getElementById("id_location");
             const options = {
                 componentRestrictions: { country: "us" },
-                fields: ["address_components"],
-                types: ["(cities)"],
+                fields: ["formatted_address", "name", "url", "address_components", "geometry"],
+                types: ["establishment"],
             };
             const autocomplete = new google.maps.places.Autocomplete(input, options);
 
             autocomplete.addListener("place_changed", ()=>{
-                const place = autocomplete.getPlace();
-                $('#id_city').val(place.address_components.filter(obj => obj.types[0] === "locality")[0].long_name);
-                $('#id_location_state').val(place.address_components.filter(obj => obj.types[0] === "administrative_area_level_1")[0].short_name);
+                let place = autocomplete.getPlace();
+                let address_comps = place.address_components;
+                let address_location = place.geometry.location;
+                $('#id_city').val(address_comps.filter(obj => obj.types[0] === "locality")[0].long_name);
+                $('#id_location_state').val(address_comps.filter(obj => obj.types[0] === "administrative_area_level_1")[0].short_name);
+                $('#id_location_lat').val(address_location.lat);
+                $('#id_location_lng').val(address_location.lng);
+                $("label[for='id_address']").show();
+                $('#id_address_link').html(place.formatted_address);
+                $('#id_address_link').attr('href', place.url);
+                $('#id_view_in_google').html("(Click to view in Google Maps)");
+                $('#id_view_in_google').attr('href', place.url);
+                $('#id_location_name').val(place.name
+                                            + ", " + address_comps.filter(obj => obj.types[0] === "route")[0].long_name
+                                            + ", " + address_comps.filter(obj => obj.types[0] === "locality")[0].long_name
+                                            + ", " + address_comps.filter(obj => obj.types[0] === "administrative_area_level_1")[0].short_name
+                                            + ", " + address_comps.filter(obj => obj.types[0] === "country")[0].long_name);
+                $('#id_location_url').val(place.url);
+                $('#id_location_address').val(place.formatted_address);
             })
         }
     </script>
