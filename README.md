@@ -619,9 +619,9 @@ As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/sof
 
 ### Sprint Planning
 
-**Recording of the session:** https://harvard.zoom.us/rec/share/tryF4_Ovq7pUoEn9w1VF8Jk1oTaAMA8XSUbHV8_0eQzcz3ryRccrotsWjfBayFQZ.hStQw-QvCMEFIUbL
+**Recording of the session:** https://harvard.zoom.us/rec/share/103ajXbne9do6yCpiNsu3bQ0ZSrAY0P8Gj6dOooQjuz5qIrWBTrHHJMSOCCHbJIo.uhvva4JadU2qT8Eu
 
-Sprint Planning took place on Nov. 15 - all members participated in the session; however, **only the developers participated in the forecast exercise.**
+Sprint Planning took place on Nov. 30 - all members participated in the session; however, **only the developers participated in the forecast exercise.**
 
 The session was divided in three parts: 1) Why is this Sprint valuable, 2) What can be done this Sprint and 3) How will the chosen work get done:
 
@@ -632,64 +632,72 @@ Based on the feedback from Ari and Vijaya, the team reworked the stories in the 
 
 ##### Sprint Goal: 
 
-Enable the farmer to provide a list of produce to potential customers, and allow the customers to easily contact the farmer with an inquiry.
+To give the customers more options and tools to find what they want to buy.
 
 #### 2) What can be done this Sprint?
 
-In Sprint 1 the team accomplished 14 points.
+In Sprint 2 the team accomplished 20 points, which was above the 14 points planned. The team is getting more comfortable with the development environment, and starting to perform.
 
-We agreed that as the team gets more familiar with the development tools, we should be able to complete at least 14 points this sprint as well, despite the holiday in week 2. The following stories were added to the backlog: 
-- Sprint 1, retro action: Perform more detailed planning conversations [MYF-76](https://txmd-webops.atlassian.net/browse/MYF-76)
-- Farmer/Customer - As a farmer I want customers to be able to see what bulk produce I have for sale so that they can buy it from me [MYF-80](https://txmd-webops.atlassian.net/browse/MYF-80)
-- Customer - As a customer I want to be able to find a specific produce (e.g. carrots) so that I do not have to go through the long list of items and look for carrots [MYF-81](https://txmd-webops.atlassian.net/browse/MYF-81)
-- Customer - As a customer I want to see the location for produce so that I can figure out the closest pick up point [MYF-83](https://txmd-webops.atlassian.net/browse/MYF-83)
-- Customer - Having figured out where to buy carrots (quantity, price, location) as a customer I want to send a message to the farmer so that I can set up when and where to complete the transaction [MYF-84](https://txmd-webops.atlassian.net/browse/MYF-84)
+We agreed that for the next sprint it makes sense to plan 20 points as well. The following stories were added to the backlog: 
+
+- Sprint 2 Retro Action - Increase Pair Programming & Mob Programming Sessions [MYF-119](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-119)
+- Farmer - As a farmer I want to set/remove multiple locations for buying produce so that the customer can see my produce in nearby locations choose accordingly [MYF-124](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-124)
+- Customer - As a customer I want to be able to filter based on mode of purchase, such as wholesale, retail, pick your own so that I can choose to buy produce based on my choice [MYF-51](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-51)
+- Customer - As a customer I want to set a location and a search distance so that the search results are displayed within the radius of the location I set [MYF-85](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-85)
+- Farmer - In addition to pounds, as a farmer I want to set additional units of purchasing produce such as ounces, pints, quarts and bunches so that the customer can buy the produce accordingly [MYF-120](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-120)
+- Farmer - As a farmer I want to display a mode of sale (wholesale/retail/pick your own) so that the customer can choose how to buy the produce [MYF-4](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-4)
+- Customer - Having filtered results I want to be able to click on the farm name to see additional available items so that I can shop all my needs from the farmer [MYF-118](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-118)
 
 #### 3) How will the chosen work get done
 Here the team developed the forecast for the Sprint.
 
 ##### Forecast
 
-As indicated aboveThe forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
+As indicated above the forecast for the number of story points the team can complete during the sprint is 20. The number is an "educated guess" based on the developers' assesment on learning and applying the technology for the project and prior experience with databases and the web forms to create and save the data.
 
 - We pulled stories into the sprint backlog. 
 - The stories were pulled from the top of the product backlog. The backlog had been sorted by what will add the most value.
-- We confirmed that the aggregate size of the stories did not exceed the forecast.
+- We confirmed that the aggregate size of the stories did not exceed the forecast, and that the size of each backlog item is less than half of the forecast velocity for the sprint.
 - Only the developers participated in the forecasting.
 - We decomposed the stories into developer tasks
 - The tasks are listed in the sprint backlog - the developer tasks are attached to each story.
 
+**The Sprint backlog:**
 
-**Our Sprint backlog's Kanban Board at the beginning of the Sprint:**
+![Sprint3Backlog](images/Sprint3Backlog.png)
 
-![KanbanBoardSprint2](images/KanbanSprint2.jpg)
+**Our Sprint backlog's Kanban Board at the beginning of the Sprint (including subtasks):**
+
+![KanbanBoardSprint3](images/KanbanwithSubtasksSprint3.png)
 
 Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
-**Note** this URL shows the Kanban board for the active Sprint. As of 11/16, the board was as depicted above, with the tasks MYF-76, MYF-80, MYF-81, MYF-84 and MYF-8. Links to these tasks below:
+**Note** this URL shows the Kanban board for the active Sprint. As of 11/30, the board was as depicted above, with the tasks MYF-124, MYF-51, MYF-85, MYF-120, MYF-4, MYF-118 and MYF-119. Links to these tasks below:
 
-- MYF-76: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-76
-- MYF-80: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-80
-- MYF-81: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-81
-- MYF-84: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-84
-- MYF-8: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-8
+- MYF-124: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
+- MYF-51: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-51
+- MYF-85: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-85
+- MYF-120:https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-120
+- MYF-4: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-4
+- MYF-118: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-118
+- MYF-119: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-119
 
 
-At the end of the meeting, the team pulled the stories as the top of the backlog into Sprint 2; we made sure that the aggregate size did not exceed the forecast.
+At the end of the meeting, the team pulled the stories at the top of the backlog into Sprint 3; we made sure that the aggregate size did not exceed the forecast.
 
-**The Burndow Chart for Sprint 2:**
+**The Burndow Chart for Sprint 3:**
 
-![BurndownChartSprint2](images/BurndownChartSprint2.png)
+![BurndownChartSprint3](images/BurndownCharSprint3.png)
 
 URL of the burndown chart: 
-**Note:** Please make sure that the filter is set to MYF-Sprint2.
+**Note:** Please make sure that the filter is set to MYF-Sprint3.
 
 https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/reports/burndown
 
 
 ### Daily Scrums
-The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/15, 11/17, 11/19, 11/22, 11/24 and 11/26.
+The team meets Mondays, Wednesdays and Fridays to discuss progress of the Sprint. During the Sprint, the team met on 11/29, 12/1, 12/3, 12/6, 12/8 and 12/9.
 
-A recording of a daily scrum: https://harvard.zoom.us/rec/share/H5e_8POVDciWos7smd1LfvDIcCdGjsu0RsmVeOZwdJz2_1xf-U9rJrFJpQ8auevh.Jhm4HzWa4le558K2
+A recording of a daily scrum: https://harvard.zoom.us/rec/share/1G9QBqwi5PQKiPNHIdCYNYEAYVKkiIrIuX9RB0hzv2d0cWtgBa6kaaeBaJtDShu9.vfReNRdV9ojetsWq
 
 Progress is updated in Jira using the Kanban Board:
 
@@ -697,137 +705,103 @@ Progress is updated in Jira using the Kanban Board:
 The URL of the Kanban Board is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 
 
-##### Daily Scrum 11/15
+##### Daily Scrum 11/30
 Completed since our last meeting:
 - All: conducted Sprint Review and Sprint Retrospective.
+- Madusha: added more validations to the produce add/edit screens to disallow negative numbers, added lbs. labels on display screens
+- Neha: Added grids for customers view for cleaner UI and added descriptive url to send email to farmers.
 
 Will work on next:
-- Sprint planning 
+- All: Sprint planning 
 
 Impediments: None at this time.
 
-##### Daily Scrum 11/17
+##### Daily Scrum 12/1
 Completed since our last meeting:
 - All: conducted Sprint Planning.
-- Chris Rogers: Implemented the Continuous Integration setup in GitHub.
-- Chris R., Madusha, Luis: mob programming session on story MYF-80. Created the model for the story.
-- Madusha: Planning the template for MYF-80.
+- Chris Rogers: Produced data model Need others to review. Added subtasks to several stories
+- Chris Calleri: Organizing stories in Jira.
 
 Will work on next:
-- Chris R. MYF-81, including setup of CI/CD.
-- Madusha and Kelly: MYF-80
-- Neha and Luis: MYF-84
-- Neha will watch the mob programming video to catch-up on CI setup.
+
 
 Impediments: 
 
-##### Daily Scrum 11/19
+##### Daily Scrum 12/3
 Completed since last meeting
 
 Will work on next:
 
 Impediments: 
-- All: understand how to use the CI/CD pipeline. The plan to remove this impediment is to have Chris R. finish researching and implementing the CI/CD pipeline and transfer the knowledge to the rest of the team.
+- All: 
 
 
-##### Daily scrum 11/22
-Completed since last meeting:
-- Chris Rogers: further developed the CI/CD pipelines.
-- Madusha and Kelly: continued to move forward the MYF-80 story.
-
-Will work on next:
-- Chris Rogers: the filter for the produce view.
-
-Impediments: 
-
-##### Daily scrum 11/24
+##### Daily scrum 12/6
 Completed since last meeting:
 
 
 Will work on next:
-- Chris Rogers: filtering functionality.
-- Neha and Luis: email functionality.
+
 
 Impediments: 
-- Neha and Luis: understanding how to code email functionality in Django framework. The plan to address this impediment is to conduct research on the web on how the Django framework supports email functionality. We expect to have this solved by the end of the sprint.
-    
-Burndown Chart as of 11/24:
-![BurndownChartSprint2](images/BurnDownAsOf1124.png)
 
-##### Daily scrum 11/26
-
-Zoom recording of the standup: https://harvard.zoom.us/rec/play/CUW5ElpmTbBHyB8fuLG_rc1-j0ynQyf9kgIBZC-93CDCcaD4uIT6ABvlFr1wQC6HjV1UvWklqh_xWssp.K9N0Dt9lAhMJTbCi?_x_zm_rhtaid=873&_x_zm_rtaid=WEuGlLM2ScSfhyARFds16g.1638144755620.267071cce8a565bae1e1337bf9890bd1&autoplay=true&continueMode=true&startTime=1637973520000
-
+##### Daily scrum 12/8
 Completed since last meeting:
-- Chris: finished on the local branch the filter of produce
-- Madusha: finished the location implementation
-- Neha and Luis : added the changes for sending emails to the farmers.
-- Kelly: updated produce model and pushed changes
-- Shrikanth: confirmed stakeholders for Sunday at 7 pm.
+
 
 Will work on next:
-- Chris: push the changes of the filter produce to production.
-- Madusah: address some of the edge cases; update the label for the produce
-- Neha and Luis: make changes to email functionality.
-- Kelly: cleanup and adding more tests.
-- Shrikanth: coordinate Sprint Review on Sunday.
+
 
 Impediments: 
 
-#### Burndown Chart as of Nov. 17:
-![Burndown](images/BurndownChartSprint2.png)
+
+
+##### Daily scrum 12/10
+
+
+Completed since last meeting:
+
+
+Will work on next:
+
+
+Impediments: 
+
+#### Burndown Chart as of Nov 30:
+![Burndown]()
 
 #### Burndown Chart at the end of the Sprint:
 
-![Burndown](images/BurndownChartAtEndOfSprint2.png)
+![Burndown]()
 
 
 
 #### Pair Programming:
 
-Neha and Luis pair programming:
+
 
 
 #### Mob Programming:
-Madusha, Chris and Luis mob programming:
 
-![MobProgramming](images/Sprint2MobProgramming.png)
 
-Mob programming session with all developers and the product owner:
+![MobProgramming]()
 
-![MobProgramming2](images/Sprint2MobProgramming2.png)
+
+
+![MobProgramming2]()
 
 #### Test Driven Development.
 
 Our solution currently has 35 micro-scale unit tests, and they all pass.
 
 URLs in Github to all of the tests conducted:
-- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_forms.py
-- https://github.com/madushag/MyFarm/blob/main/app/authenticate/tests/test_views.py
-- https://github.com/madushag/MyFarm/blob/main/app/farm/tests.py
-- https://github.com/madushag/MyFarm/blob/main/app/homepage/tests/test_views.py
-- https://github.com/madushag/MyFarm/blob/main/app/produce/test_models.py
-- https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
 
-The following tests were added and/or updated to account for functionality delivered in this sprint:
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/homepage/tests/test_views.py#L15
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L29
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L34
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L52
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/farm/tests.py#L94
-https://github.com/madushag/MyFarm/blob/eb7859e0c68afd76be5c48984f17d5f0c3cf6e06/app/produce/test_views.py#L28
-https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L40
-https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L59
-https://github.com/madushag/MyFarm/blob/68b328a284cadaf36c9304831755804a09b52967/app/produce/test_views.py#L90
-https://github.com/madushag/MyFarm/blob/de134cacb1a2e5466fff5cc92c9f6e4f4ab42d3e/app/produce/test_views.py#L122
+
 
 Test Failed:
 
-![TestFailed](images/Sprint2TestFailed.png)
 
 Test Passed:
-
-![TestPassed](images/Sprint2TestPassed.png)
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
@@ -836,31 +810,7 @@ The URL is: http://myfarmalb-1945437152.us-east-1.elb.amazonaws.com/
 
 Image of the working product:
 
-![WorkingProduct](images/WorkingProductSprint2.png)
-
-
-### Sprint Review
-The Sprint Review took place on 11/28 at 7 pm. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
-
-Recording of the Sprint Review can be found here: https://harvard.zoom.us/rec/play/X7QOVJjfTjxT_IBgYjPtVDbYs3FcnEDN9VDz6clwbwjAyBAw5elT5VhGRbAfr1_mw0qkCyBA9asMXYfY.JzIIqtnljjd7dhrS?_x_zm_rhtaid=873&_x_zm_rtaid=WEuGlLM2ScSfhyARFds16g.1638144755620.267071cce8a565bae1e1337bf9890bd1&autoplay=true&continueMode=true&startTime=1638143746000
-
-The team during Sprint Review with the two stakeholders:
-
-![SprintReview](images/Sprint2Review.png)
-
-Feedback from both Ari and Vijaya was very positive; they like the simplicity and ease of use of the interface.
-
-Based on feedback from Vijaya, as a customer she would like the ability to filter based on whether or not the item in organic or conventional. Three user stories were added to the backlog during the meeting:
-
-![BacklogEdited](images/Sprint2ReviewBacklogModification.png)
-
-URLs to these stories are:
-
-MYF-118: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-118
-
-MYF-117: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-117
-
-MYF-116: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-116
+![WorkingProduct]()
 
 
 ### Continuous Integration
@@ -915,3 +865,19 @@ It is at the top of the backlog for Sprint 3:
 ![ActionforSprint3](images/Sprint2ActionToImprove.png)
 
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
+
+
+### Sprint Review
+The Sprint Review took place on 12/13 during class. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+ 
+
+The team during Sprint Review with the two stakeholders:
+
+![SprintReview]()
+
+Feedback from both Ari and Vijaya was very positive; they like the simplicity and ease of use of the interface.
+
+Based on feedback from 
+![BacklogEdited]()
+
+URLs to these stories are:
