@@ -5,31 +5,40 @@
     <link rel="stylesheet" type="text/css" href="{% static 'produce.css' %}" />
 
     <div class="container">
-      <h1>List of Produce</h1>
-        {% if produce_list %}
-            <div class="input-group">
-                <span class="input-group-text">Your Location</span>
-                <input id="id_customer_location" type="text" aria-label="Location" class="form-control">
-            </div>
-            <br/>
-            <div class="input-group">
-                <span class="input-group-text">Produce</span>
-                <select class="form-select" id="produce-filter">
-                    <option selected=true value="All">All</option>
-                    {% for key, value in filter_values %}
+        <h1>List of Produce</h1>
+        <div class="input-group">
+            <span class="input-group-text">Your Location</span>
+            <input id="id_customer_location" type="text" aria-label="Location" class="form-control">
+        </div>
+        <br/>
+        <div class="input-group">
+            <span class="input-group-text">Produce</span>
+            <select class="form-select" id="produce-filter">
+                <option selected=true value="Any">Any</option>
+                {% for key, value in filter_values %}
+                <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+            <span class="input-group-text">Sale Type</span>
+            <select class="form-select" id="sale-type-filter">
+                <option selected=true value="Any">Any</option>
+                {% for key, value in mode_filter_values %}
                     <option value="{{ key }}">{{ value }}</option>
-                    {% endfor %}
-                </select>
-                <span class="input-group-text">Distance</span>
-                <select class="form-select" id="distance-filter">
-                    <option selected=true value="5">5 miles</option>
-                    <option value="10">10 miles</option>
-                    <option value="15">15 miles</option>
-                    <option value="20">20 miles</option>
-                    <option value="-1">Any</option>
-                </select>
-                <input type="button" class="btn btn-secondary" value="Filter" onclick="filter_page()">
-            </div>
+                {% endfor %}
+            </select>
+            <span class="input-group-text">Distance</span>
+            <select class="form-select" id="distance-filter">
+                <option selected=true value="-1">Any</option>
+                <option value="5">5 miles</option>
+                <option value="10">10 miles</option>
+                <option value="15">15 miles</option>
+                <option value="20">20 miles</option>
+                <option value="20">50 miles</option>
+            </select>
+            <input type="button" class="btn btn-secondary" value="Filter" onclick="filter_page()">
+        </div>
+
+        {% if produce_list %}
 
             <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
             {% for produce in produce_list %}
@@ -60,7 +69,8 @@
         {% elif error_message %}
             <p>{{ error_message }}</p>
         {% else %}
-            <p>No produce available.</p>
+            <br/>
+            <p>No produce available. <img style="width:30px" src="{% static 'sad_face.jpg' %}" /></p>
         {% endif %}
     </div>
 

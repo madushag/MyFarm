@@ -24,14 +24,16 @@ function setFieldStyles(){
 }
 
 function enableFieldValidations(){
-    $('#id_price').attr('step', '0.01');
-    $('#id_price').attr('min', '0.0');
+    let priceElement =$('#id_price');
+    priceElement.attr('step', '0.01');
+    priceElement.attr('min', '0.0');
 
     $('#id_min_quantity').attr('step', '0.01');
     $('#id_min_quantity').attr('min', '0.0');
 }
 
 function populateInitialValues(){
+    console.log($('#farm_id').val());
     $('#id_farm').val($('#farm_id').val())
 }
 
