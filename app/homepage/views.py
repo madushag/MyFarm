@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.shortcuts import render
 
-from produce.models import Produce, name_choices
+from produce.models import Produce, name_choices, mode_of_sale
 
 
 def homepage(request):

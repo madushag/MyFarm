@@ -20,12 +20,17 @@ name_choices = [
     ("ONIONS", "Onions"),
 ]
 
+mode_of_sale = [
+    ("WHOLESALE", "Wholesale"),
+    ("RETAIL", "Retail"),
+    ("PICK YOUR OWN", "Pick Your Own"),
+]
+
 
 # def UploadedConfigPath(instance, filename):
 #     return os.path.join(settings.MEDIA_ROOT, str(instance.id), filename)
 
 class Produce(models.Model):
-    name = models.CharField(max_length=200)
     description = models.TextField()
     price = models.FloatField(validators=[MinValueValidator(0.0)])
     min_quantity = models.FloatField(verbose_name='Min. Qty', validators=[MinValueValidator(0.0)])
@@ -38,6 +43,11 @@ class Produce(models.Model):
         max_length=20,
         choices=name_choices,
     )
+
+    mode_of_sale = models.CharField(
+        max_length=50,
+        choices=mode_of_sale,
+        )
 
     def __str__(self):
         return self.name

@@ -46,6 +46,10 @@ class TestHomepageViews(TestCase):
     response = c.get('/?produce=KALE')
     self.assertTemplateUsed(response, 'produce/customer_view.html')
 
-  def test_customer_view_of_produce_displays_filter(self):
+  def test_customer_view_of_produce_displays_produce_filter(self):
     response = c.get('/')
     self.assertContains(response, "Filter produce")
+
+  def test_customer_view_of_produce_displays_mode_filter(self):
+    response = c.get('/')
+    self.assertContains(response, "Filter sale type")

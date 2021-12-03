@@ -9,7 +9,7 @@ from .models import Produce
 class ProduceForm(ModelForm):
     class Meta:
         model = Produce
-        fields = ['id', 'name', 'description', 'price', 'min_quantity', 'is_organic', 'farm', 'picture']
+        fields = ['id', 'name', 'description', 'price', 'min_quantity', 'is_organic', 'farm', 'picture', 'mode_of_sale']
         widgets = {
             'id': forms.HiddenInput(),
             'farm': forms.Select(attrs={'style': 'display:none'}),

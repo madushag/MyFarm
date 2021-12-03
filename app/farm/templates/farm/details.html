@@ -7,17 +7,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'farm.css' %}" />
 
     <div class="container-sm">
-        {% if form.initial.id %}
-            {% if not error_message %}
-                <h1>Update farm details</h1>
-            {% endif %}
-            <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
-        {% else %}
-            {% if not error_message %}
-                <h1>Add a new farm</h1>
-            {% endif %}
-            <form  action="{% url 'farm:add' %}" method="post" id="details">
-         {% endif %}
+    {% if form.initial.id %}
+        {% if not error_message %}
+            <h1>Update point of sale details</h1>
+        {% endif %}
+        <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
+    {% else %}
+        {% if not error_message %}
+            <h1>Add a new point of sale</h1>
+        {% endif %}
+        <form  action="{% url 'farm:add' %}" method="post" id="details">
+    {% endif %}
 
             <div style="padding-top:20px">
                 {% csrf_token %}
