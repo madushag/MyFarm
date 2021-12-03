@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
@@ -94,3 +95,4 @@ def customer(request, farm_id):
     produce_list.farm_name = farm_name
     context = {'produce_list': produce_list}
     return render(request, 'produce/customer_view.html', context)
+
