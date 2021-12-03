@@ -729,11 +729,19 @@ Impediments:
 
 ##### Daily Scrum 12/3
 Completed since last meeting
+- Neha, Chris Rogers, Luis: mob programming; completed story MYF-4. 
+- Kelly:
+- Luis: 
 
 Will work on next:
+- Neha: will work on MYF-120.
+- Kelly: will work on MYF-116 over the weekend.
+- Madusha: will work on MYF-85 over the weekend.
+- Kelly, Chris Calleri, Madusha and Luis to do mob programming over the weekend.
 
 Impediments: 
-- All: 
+- All: issue this morning with CI/CD pipeline. Chris Rogers is debugging the issue.
+- All: need to familiarize ourselves the Cucumber and how to do BDD. The plan to address this is for Neha to install Cucumber locally over the weekend.
 
 
 ##### Daily scrum 12/6
