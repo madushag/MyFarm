@@ -9,7 +9,14 @@
       <p>Filter produce</p>
         <select id="produce-filter">
           <option selected=true value="All">All</option>
-          {% for key, value in filter_values %}
+          {% for key, value in produce_filter_values %}
+            <option value="{{ key }}">{{ value }}</option>
+          {% endfor %}
+        </select>
+      <p>Filter sale type</p>
+        <select id="mode-filter">
+          <option selected=true value="Wholesale">Wholesale</option>
+          {% for key, value in mode_filter_values %}
             <option value="{{ key }}">{{ value }}</option>
           {% endfor %}
         </select>

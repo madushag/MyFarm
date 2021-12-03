@@ -74,7 +74,8 @@ class TestProduceView(TestCase):
             "price": "1.00",
             "min_quantity": "10",
             "is_organic": False,
-            "farm": farm_id
+            "farm": farm_id,
+            "mode_of_sale": "WHOLESALE"
         })
         request.user = self.user
         produce_add(request, farm_id)
@@ -155,3 +156,58 @@ class TestProduceView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'PRICE - Ensure this value is greater than or equal to 0.0.')
         self.assertContains(response, 'MIN. QTY - Ensure this value is greater than or equal to 0.0.')
+
+    def test_mode_of_sale(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        # create test farm
+        request = self.factory.post('/farm/add/', valid_farm_data)
+        request.user = self.user
+        add(request)
+
+        # create test produce
+        farm_id = Farm.objects.first().id
+        request = self.factory.post('/produce/add', {
+            "name": "CARROTS",
+            "description": "Test Description",
+            "price": "1.00",
+            "min_quantity": "10",
+            "is_organic": False,
+            "farm": farm_id,
+            "mode_of_sale": "WHOLESALE",
+        })
+    
+        request.user = self.user
+        response = produce_add(request, farm_id)
+        produce = Produce.objects.first()
+
+        self.assertEqual(produce.mode_of_sale, "WHOLESALE")
+
+    def test_invalid_mode_of_sale(self):
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', email='test@user.com', password='testpassword')
+
+        # create test farm
+        request = self.factory.post('/farm/add/', valid_farm_data)
+        request.user = self.user
+        add(request)
+
+        # create test produce
+        farm_id = Farm.objects.first().id
+        request = self.factory.post('/produce/add', {
+            "name": "CARROTS",
+            "description": "Test Description",
+            "price": "1.00",
+            "min_quantity": "10",
+            "is_organic": False,
+            "farm": farm_id,
+            "mode_of_sale": "mode of sale",
+        })
+    
+        request.user = self.user
+        response = produce_add(request, farm_id)
+        produce = Produce.objects.first()
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(produce, None)
