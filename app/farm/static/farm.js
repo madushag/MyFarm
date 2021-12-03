@@ -3,10 +3,13 @@ function setFieldStyles(){
         $(this).addClass('form-control');
 
         if($(this).attr('id').indexOf('name') > 0){
-            $(this).attr({'placeholder': 'Name of farm'});
+            $(this).attr({'placeholder': 'Name of point of sale location, e.g. "Lincoln Farmer\'s Market"'});
+        }
+        if($(this).attr('id').indexOf('farm_name') > 0){
+            $(this).attr({'placeholder': 'Display name for your farm, e.g. "Dave\'s organic veg farm"'});
         }
         if($(this).attr('id').indexOf('description') > 0){
-            $(this).attr({'placeholder': 'Description of farm'});
+            $(this).attr({'placeholder': 'Description of point of sale'});
         }
         if($(this).attr('id').indexOf('phone') > 0){
             $(this).attr({'placeholder': 'Phone number of farm as 123-456-7890'});

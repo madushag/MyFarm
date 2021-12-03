@@ -173,7 +173,7 @@ class TestFarmView(TestCase):
         request = self.factory.get('/farm/')
         request.user = authenticate(username='testuser', password='testpassword')
         response = index(request)
-        self.assertContains(response, 'No farms are available.')
+        self.assertContains(response, 'No points of sale are available.')
 
     def test_farm_model(self):
         farm = Farm(name='Test Farm', description='Test Description', phone_no='1234567890')

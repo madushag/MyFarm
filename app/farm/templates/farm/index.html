@@ -6,7 +6,7 @@
 
     <div class="container">
         {% if farm_list %}
-            <h1>My Farms</h1>
+            <h1>My points of sale</h1>
 
             {% for farm in farm_list %}
             <div class="card">
@@ -31,11 +31,11 @@
             {% endfor %}
 
         {% else %}
-            <p>No farms are available.</p>
+            <p>No points of sale are available.</p>
         {% endif %}
 
         <div class="col-auto">
-            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New Farm</a>
+            <a href="{% url 'farm:add' %}" class="btn btn-primary mb-3 float-right"  style="margin-top:10px">Add New Point of Sale</a>
         </div>
     </div>
 

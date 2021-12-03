@@ -9,12 +9,12 @@
     <div class="container-sm">
     {% if form.initial.id %}
         {% if not error_message %}
-            <h1>Update farm details</h1>
+            <h1>Update point of sale details</h1>
         {% endif %}
         <form  action="{% url 'farm:details' form.initial.id %}" method="post" id="details">
     {% else %}
         {% if not error_message %}
-            <h1>Add a new farm</h1>
+            <h1>Add a new point of sale</h1>
         {% endif %}
         <form  action="{% url 'farm:add' %}" method="post" id="details">
     {% endif %}
