@@ -45,7 +45,7 @@
                 <div class="list-group-item list-group-item-action" aria-current="true">
                     <div class="container">
                     <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{ produce.name }} {% if produce.is_organic %} <img style="margin-left: 10px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
+                        <h5 class="mb-1">{{ produce.name }} ({{ produce.mode_of_sale }}) {% if produce.is_organic %} <img style="margin-left: 10px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
                         <small><b>Price : </b>${{ produce.price }}</small>
                     </div>
                     <p class="mb-1">{{ produce.description }}</p>

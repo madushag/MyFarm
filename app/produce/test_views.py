@@ -87,6 +87,8 @@ class TestProduceView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'Produce For Sale at Test Farm')
         self.assertContains(response, 'CARROTS')
+        self.assertContains(response, 'WHOLESALE')
+        self.assertNotContains(response, 'RETAIL')
 
     def test_farmer_view_unauthenticated(self):
         self.factory = RequestFactory()
@@ -113,7 +115,6 @@ class TestProduceView(TestCase):
         response = c.get(f"/produce/{farm_id}/list")
         self.assertEqual(response.status_code, 302)
         self.assertEqual(response.url, f'/register/login/?next=/produce/{farm_id}/list')
-
 
     def test_form_input(self):
         response = self.client.post('/produce/add', valid_form_data)
