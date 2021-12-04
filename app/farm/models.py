@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Farm(models.Model):
-    name = models.CharField(max_length=200, verbose_name="Location name")
+    name = models.CharField(max_length=200, verbose_name="POS Name")
     farm_name = models.CharField(max_length=200, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     phone_no = models.CharField(max_length=12, verbose_name="Phone", blank=True, null=True)

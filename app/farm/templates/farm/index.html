@@ -6,18 +6,18 @@
 
     <div class="container">
         {% if farm_list %}
-            <h1>My points of sale</h1>
+            <h1>My Points of Sale</h1>
 
             {% for farm in farm_list %}
             <div class="card">
                 <div class="card-body" style="margin-bottom: -30px">
                     <h5 class="card-title"><a href="{% url 'produce:list' farm.id %}">{{ farm.name }}</a></h5>
                     <div class="card-text">
-                        {{ farm.description }}<br/>
-                        <span><b>Website: </b>{{ farm.website_url }}</span>
+                        {% if farm.description %} {{ farm.description }}<br/><br/> {% endif %}
+                        <span><strong>Website:</strong> {% if farm.website_url %} <a href="{{ farm.website_url }}" target="_blank">{{ farm.website_url }} {% else %} None {% endif %}</a> </span>
                         {% if farm.city %}
                             <div class="gap-left">
-                                <b>Located in {{ farm.city }}, {{ farm.location_state }}</b>
+                                <strong>Address :</strong> <a href="{{ farm.location_url }}" target="_blank">{{ farm.location_address }}&nbsp;&nbsp;&nbsp;(Click to see on Google Maps)</a>
                             </div>
                          {% endif %}
                     </div>

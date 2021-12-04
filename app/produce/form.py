@@ -10,6 +10,7 @@ class ProduceForm(ModelForm):
         widgets = {
             'id': forms.HiddenInput(),
             'farm': forms.TextInput(attrs={'style': 'display:none'}),
+            'description': forms.Textarea(attrs={'rows': '3'}),
             # 'picture': forms.FileInput(),
         }
 

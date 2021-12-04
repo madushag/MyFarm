@@ -5,8 +5,7 @@ from produce.models import Produce, name_choices, mode_of_sale
 
 
 def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat):
-    # ordering the sequence of filter checks optimizing for the least number of results returned to the client,
-    # and then by not having to calculate distance for every produce
+    # ordering the sequence of filter checks optimizing for the least number of results returned to the client
 
     # all 3 filters are set
     if produce_filter and distance_filter and sale_type_filter:
@@ -19,6 +18,22 @@ def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter,
     # only produce and sale type filters are set
     if produce_filter and sale_type_filter:
         produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter)
+        return produce_list
+
+    # only produce and distance filters are set
+    if produce_filter and distance_filter:
+        produce_list = Produce.objects.filter(name=produce_filter)
+        for produce in produce_list:
+            if produce.get_distance(lat, lng) > int(distance_filter):
+                produce_list = produce_list.exclude(id=produce.id)
+        return produce_list
+
+    # only sale type and distance filters are set
+    if sale_type_filter and distance_filter:
+        produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter)
+        for produce in produce_list:
+            if produce.get_distance(lat, lng) > int(distance_filter):
+                produce_list = produce_list.exclude(id=produce.id)
         return produce_list
 
     # only produce filter is set
@@ -51,9 +66,14 @@ def homepage(request):
     lat = request.GET.get('lat')
 
     produce_list = get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat)
+
+    # calculate the distance from customer of each produce to be shown
     for produce in produce_list:
-        distance = produce.get_distance(lat, lng)
-        produce.distance_from_customer = distance
+        produce.distance_from_customer = produce.get_distance(lat, lng)
+
+    context = {'produce_list': produce_list, 'filter_values': name_choices, 'mode_filter_values': mode_of_sale, 'maps_api_key': settings.GOOGLE_MAPS_API_KEY}
+    return render(request, 'produce/customer_view.html', context)
+
 
     # if all three filters are set
     # if produce_filter and distance_filter and sale_type_filter:
@@ -90,6 +110,4 @@ def homepage(request):
     # else:
     #     produce_list = Produce.objects.all()
 
-    context = {'produce_list': produce_list, 'filter_values': name_choices, 'mode_filter_values': mode_of_sale, 'maps_api_key': settings.GOOGLE_MAPS_API_KEY}
-    return render(request, 'produce/customer_view.html', context)
 

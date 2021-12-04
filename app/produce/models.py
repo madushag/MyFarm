@@ -32,17 +32,14 @@ mode_of_sale = [
 
 class Produce(models.Model):
     description = models.TextField()
-    price = models.FloatField(validators=[MinValueValidator(0.0)])
+    price = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0.0)], verbose_name="Price ($)")
     min_quantity = models.FloatField(verbose_name='Min. Qty', validators=[MinValueValidator(0.0)])
     is_organic = models.BooleanField(verbose_name='Organic')
     # picture = models.ImageField(upload_to=UploadedConfigPath, blank=True)
     # picture = models.ImageField(upload_to='produce_pics', blank=True)
     picture = models.FileField(upload_to='produce_pics', blank=True)
-    farm = models.ForeignKey(Farm, on_delete=models.CASCADE)
-    name = models.CharField(
-        max_length=20,
-        choices=name_choices,
-    )
+    farm = models.ForeignKey(Farm, on_delete=models.CASCADE, verbose_name='Location')
+    name = models.CharField(max_length=20, choices=name_choices)
 
     mode_of_sale = models.CharField(
         max_length=50,

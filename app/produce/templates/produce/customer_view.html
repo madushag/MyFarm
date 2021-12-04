@@ -33,16 +33,15 @@
                 <option value="10">10 miles</option>
                 <option value="15">15 miles</option>
                 <option value="20">20 miles</option>
-                <option value="20">50 miles</option>
+                <option value="50">50 miles</option>
             </select>
-            <input type="button" class="btn btn-secondary" value="Filter" onclick="filter_page()">
+            <input id="btn_search" type="button" class="btn btn-secondary" value="Filter" />
         </div>
 
         {% if produce_list %}
 
             <div class="list-group" style="padding-top:10px; padding-bottom: 10px">
             {% for produce in produce_list %}
-                {{ produce.distance_from_customer }}
                 <div class="list-group-item list-group-item-action" aria-current="true">
                     <div class="container">
                     <div class="d-flex w-100 justify-content-between">
@@ -52,13 +51,13 @@
                     <p class="mb-1">{{ produce.description }}</p>
                         <div class="row">
                             <div class="gap-left col"><b>Min. Quantity : </b>{{ produce.min_quantity }} lbs.</div>
-                            <div class="gap-left col"><b>Farmer:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm.farm_name }}</a>{% else %} {{ produce.farm.farm_name }} {% endif %}</div>
-                            <div class="gap-left col"><b>Selling at:</b> {{ produce.farm }}</div>
-                            <div class="gap-left col"><b>Location : </b>{{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
-                            <a class="gap-left col fa fa-envelope" 
-                            href="mailto:{{ produce.farm.farmer.email }}?subject=Confirm {{ produce.name }} pickup
-                            &body=Hi,%0A%0ACan you please confirm location and date for {{ produce.name }} pickup.%0A%0AThanks.">
-                            Contact Farmer</a>
+                            <div class="gap-left col"><b>Farm:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm.farm_name }}</a>{% else %} {{ produce.farm.farm_name }} {% endif %}</div>
+                            <div class="gap-left col"><b>Selling at:</b> <a href="{{ produce.farm.location_url }}" target="_blank">{{ produce.farm.name }}, {{ produce.farm.location_address }}</a></div>
+                            <div class="gap-left col"><b>Distance:</b> {{ produce.distance_from_customer|floatformat:2 }} miles</div>
+                            <div class="gap-left col" style="margin-right: -65px">
+                                <a class="col fa fa-envelope"  href="mailto:{{ produce.farm.farmer.email }}?subject=Confirm {{ produce.name }} pickup&body=Hi,%0A%0ACan you please confirm location and date for {{ produce.name }} pickup.%0A%0AThanks.">
+                                    Contact Farmer</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,16 +73,13 @@
         {% endif %}
     </div>
 
-{#    <input type="hidden" id="customer_location_lat" />#}
-{#    <input type="hidden" id="customer_location_lng" />#}
-{#    <input type="hidden" id="customer_address" />#}
-
     <script type="text/javascript" src="{% static 'homepage.js' %}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&callback=initMap&libraries=places&v=weekly"></script>
 
      <script>
          $(document).ready(function(){
             populateInitialValues();
+            attachEventHandlers();
          });
 
         function initMap(){

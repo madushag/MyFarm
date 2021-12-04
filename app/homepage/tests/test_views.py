@@ -48,8 +48,8 @@ class TestHomepageViews(TestCase):
 
   def test_customer_view_of_produce_displays_produce_filter(self):
     response = c.get('/')
-    self.assertContains(response, "Filter produce")
+    self.assertContains(response, "Produce")
 
   def test_customer_view_of_produce_displays_mode_filter(self):
     response = c.get('/')
-    self.assertContains(response, "Filter sale type")
+    self.assertContains(response, "Sale Type")

@@ -11,7 +11,7 @@ from .models import Farm
 # Landing page that display the list of farms that belongs to the currently logged in user
 @login_required(login_url='/register/login/')
 def index(request):
-    farm_list = Farm.objects.filter(farmer=request.user.id).order_by('-name')[:5]
+    farm_list = Farm.objects.filter(farmer=request.user.id).order_by('name')
     context = {'farm_list': farm_list}
     return render(request, 'farm/index.html', context)
 
@@ -25,6 +25,8 @@ def add(request):
         if form.is_valid():
             farm = Farm(**form.cleaned_data, farmer=request.user)
             farm.save()
+        else:
+            return render(request, 'farm/details.html', {'form': form, 'maps_api_key': settings.GOOGLE_MAPS_API_KEY})
 
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a

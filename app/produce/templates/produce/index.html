@@ -14,7 +14,7 @@
         {% else %}
 
             {% if produce_list %}
-                <h1>Produce Available At Farm - {{ produce_list.farm_name }}</h1>
+                <h1>Produce For Sale at {{ produce_list.pos_name }}</h1>
 
                 {% for produce in produce_list %}
                  <div class="card">
@@ -31,7 +31,7 @@
                             <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
                             <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
                             <div class="gap-left"><b>Farm:</b> {% if produce_list.farm_website %} <a href="{{ produce_list.farm_website }}">{{ produce_list.farm_name }}</a> {% else %} {{ produce_list.farm_name }} {% endif %}</div>
-                            <div class="gap-left"><b>Location:</b> {{ produce.farm.city }}, {{ produce.farm.location_state }}</div>
+                            <div class="gap-left"><b>Mode of Sale:</b> {{ produce.mode_of_sale }}</div>
                         </div>
                         <div style="float:right">
                             <a href="{% url 'produce:edit' produce.id %}" class="btn btn-primary mb-3" style="position:relative;top:-55px">Edit</a>

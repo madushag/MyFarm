@@ -85,7 +85,7 @@ class TestProduceView(TestCase):
         request.user = self.user
         response = list_produce(request, farm_id)
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Produce Available At Farm - Test Farm')
+        self.assertContains(response, 'Produce For Sale at Test Farm')
         self.assertContains(response, 'CARROTS')
 
     def test_farmer_view_unauthenticated(self):
@@ -143,7 +143,7 @@ class TestProduceView(TestCase):
         # create test produce
         farm_id = Farm.objects.first().id
         request = self.factory.post('/produce/add', {
-            "name": "Item 1",
+            "name": "CARROTS",
             "description": "Test Description",
             "price": "-1",
             "min_quantity": "-10",
@@ -154,7 +154,7 @@ class TestProduceView(TestCase):
         response = produce_add(request, farm_id)
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'PRICE - Ensure this value is greater than or equal to 0.0.')
+        self.assertContains(response, 'PRICE ($) - Ensure this value is greater than or equal to 0.0')
         self.assertContains(response, 'MIN. QTY - Ensure this value is greater than or equal to 0.0.')
 
     def test_mode_of_sale(self):

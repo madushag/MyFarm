@@ -23,18 +23,16 @@ let distanceFilter = urlParams.get('distance');
 // }
 
 
-// function attachEventHandlers(){
-//     $('#produce_filter').on('change',()=>{
-//         $('#filter_criteria').val($('#produce_filter').val())
-//     })
-//     });
-// }
+function attachEventHandlers(){
+   $('#btn_search').click(filter_page);
+}
 
 function storeCustomerLocationInLocalStorage(place){
     localStorage.setItem('customer_address', place.formatted_address);
     localStorage.setItem('customer_lat', place.geometry.location.lat());
     localStorage.setItem('customer_lng', place.geometry.location.lng());
 }
+
 
 function populateInitialValues(){
     if(produceFilter) {
@@ -54,9 +52,6 @@ function populateInitialValues(){
 
 function filter_page() {
     if($('#id_customer_location').val()) {
-        // let urlParams = new URLSearchParams(window.location.search);
-        // let produce_query = urlParams.get('produce');
-
         let produce_filter = $('#produce-filter').val();
         let saleType_filter = $('#sale-type-filter').val();
         let distance_filter = $('#distance-filter').val();
@@ -66,7 +61,8 @@ function filter_page() {
         }
         let filter_url = "/?1=1" + (produce_filter !== 'Any' ? "&produce=" + produce_filter.toUpperCase() : '')
                                 + (saleType_filter !== 'Any' ? "&saleType=" + saleType_filter : '')
-                                + (distance_filter !== '-1' ? "&distance=" + distance_filter + "&lng=" + localStorage.getItem('customer_lng') + "&lat=" + localStorage.getItem('customer_lat'): '') ;
+                                + (distance_filter !== '-1' ? "&distance=" + distance_filter : '')
+                                + (localStorage.getItem('customer_lng') ? "&lng=" + localStorage.getItem('customer_lng') + "&lat=" + localStorage.getItem('customer_lat') : '') ;
         document.location.href = filter_url;
     }
     else{
