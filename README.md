@@ -746,10 +746,16 @@ Impediments:
 
 ##### Daily scrum 12/6
 Completed since last meeting:
+- Chris Rogers: modified AWS ECS infrastructure to resolve conflicts with push. Provided instructions to team during standup. Reviewed Madusha's code.
+- Kelly: finished MYF-118.
+- Neha: researched tool for BDD - called Behave.
+- Luis: continue to work on deliverable.
 
 
 Will work on next:
-
+- Kelly: will push her changes today.
+- Neha: will work on BDD.
+- Luis: prepare presentation for in-class Sprint Review
 
 Impediments: 
 
