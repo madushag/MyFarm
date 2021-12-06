@@ -684,7 +684,7 @@ Our sprint backlog is shown above. The URL of the board is : https://txmd-webops
 
 At the end of the meeting, the team pulled the stories at the top of the backlog into Sprint 3; we made sure that the aggregate size did not exceed the forecast.
 
-**The Burndow Chart for Sprint 3:**
+**The Burndown Chart for Sprint 3:**
 
 ![BurndownChartSprint3](images/BurndownCharSprint3.png)
 
@@ -775,8 +775,9 @@ Will work on next:
 
 Impediments: 
 
-#### Burndown Chart as of Nov 30:
-![Burndown]()
+#### Burndown Chart as of Dec 2:
+
+![Burndown](images/Sprint3BurndownChart12-02.png)
 
 #### Burndown Chart at the end of the Sprint:
 
@@ -786,13 +787,16 @@ Impediments:
 
 #### Pair Programming:
 
+Kelly and Luis pair programming:
 
+![Sprint3PairProgramming](images/Sprint3PairProgramming.png)
 
 
 #### Mob Programming:
 
+Neha, Chris and Luis mob programming:
 
-![MobProgramming]()
+![MobProgramming](images/Sprint3MobProgramming.png)
 
 
 
@@ -806,10 +810,13 @@ URLs in Github to all of the tests conducted:
 
 
 
-Test Failed:
+**Test Failed:**
 
+![Sprint3TestFail](images/Sprint3TDD-TestFail.png)
 
 Test Passed:
+
+![Sprint3TestPass](images/Sprint3TDD-TestPass.png)
 
 ### Product Increment - Working Software
 The product is installed in an EC2 instance.
@@ -889,3 +896,4 @@ Based on feedback from
 ![BacklogEdited]()
 
 URLs to these stories are:
+
