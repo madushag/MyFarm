@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render
 
 from produce.models import Produce, name_choices, mode_of_sale
+from farm.models import Farm
 
 
 def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat):
@@ -74,6 +75,16 @@ def homepage(request):
     context = {'produce_list': produce_list, 'filter_values': name_choices, 'mode_filter_values': mode_of_sale, 'maps_api_key': settings.GOOGLE_MAPS_API_KEY}
     return render(request, 'produce/customer_view.html', context)
 
+## As a customer I want to see all produce available at a farm
+def list_farm_produce(request, name):
+    try:
+        farm = Farm.objects.get(name=name)
+    except Farm.DoesNotExist:
+        return render(request, 'produce/index.html', {'error_message': 'Invalid farm ID'})
+    else:
+        farm_produce_list = pos = Produce.objects.filter(farm=farm)
+        context = {'farm_produce_list': farm_produce_list, 'pos_name': farm}
+        return render(request, 'farm/farm_details.html', context)
 
     # if all three filters are set
     # if produce_filter and distance_filter and sale_type_filter:
@@ -109,5 +120,3 @@ def homepage(request):
     #
     # else:
     #     produce_list = Produce.objects.all()
-
-
