@@ -51,7 +51,7 @@ function populateInitialValues(){
 }
 
 function filter_page() {
-    if($('#id_customer_location').val()) {
+    if($('#id_customer_location').val() || $('#distance-filter').val() === '-1'){
         let produce_filter = $('#produce-filter').val();
         let saleType_filter = $('#sale-type-filter').val();
         let distance_filter = $('#distance-filter').val();
