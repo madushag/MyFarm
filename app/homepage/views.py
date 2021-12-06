@@ -51,7 +51,8 @@ def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter,
         produce_list = Produce.objects.all()
         for produce in produce_list:
             if produce.get_distance(lat, lng) > int(distance_filter):
-                produce_list = produce_list.exclude(id=produce.id)  # remove produce from list if distance is greater than distance filter
+                produce_list = produce_list.exclude(
+                    id=produce.id)  # remove produce from list if distance is greater than distance filter
         return produce_list
 
     # if we get this far then no filters are set
@@ -67,13 +68,14 @@ def homepage(request):
 
     produce_list = get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat)
 
-    # calculate the distance from customer of each produce to be shown
-    for produce in produce_list:
-        produce.distance_from_customer = produce.get_distance(lat, lng)
+    # calculate the distance from customer of each produce to be shown, if customer location is avaialble
+    if lng is not None and lat is not None:
+        for produce in produce_list:
+            produce.distance_from_customer = produce.get_distance(lat, lng)
 
-    context = {'produce_list': produce_list, 'filter_values': name_choices, 'mode_filter_values': mode_of_sale, 'maps_api_key': settings.GOOGLE_MAPS_API_KEY}
+    context = {'produce_list': produce_list, 'filter_values': name_choices, 'mode_filter_values': mode_of_sale,
+               'maps_api_key': settings.GOOGLE_MAPS_API_KEY}
     return render(request, 'produce/customer_view.html', context)
-
 
     # if all three filters are set
     # if produce_filter and distance_filter and sale_type_filter:
@@ -109,5 +111,3 @@ def homepage(request):
     #
     # else:
     #     produce_list = Produce.objects.all()
-
-
