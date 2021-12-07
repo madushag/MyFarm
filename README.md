@@ -797,6 +797,9 @@ Kelly and Luis pair programming:
 
 ![Sprint3PairProgramming](images/Sprint3PairProgramming.png)
 
+Kelly and Madusha pair programming:
+
+![kelly_madusha_pairprog_sprint4](images/kelly_madusha_pairprog_sprint4.png)
 
 #### Mob Programming:
 
@@ -813,7 +816,13 @@ Neha, Chris and Luis mob programming:
 Our solution currently has 35 micro-scale unit tests, and they all pass.
 
 URLs in Github to all of the tests conducted:
-
+https://github.com/madushag/MyFarm/blob/main/app/homepage/tests/test_views.py
+* test_customer_view_of_produce_displays_produce_filter
+* test_customer_view_of_produce_displays_mode_filter
+* test_customer_view_of_produce_filtered_on_sale_type_returns_correct_results
+* test_customer_view_of_produce_filtered_on_distance_returns_correct_results
+* test_customer_view_of_produce_filtered_on_produce_and_distance_type_returns_correct_results
+* test_customer_view_of_produce_filtered_on_produce_and_sale_type_returns_correct_results
 
 
 **Test Failed:**
