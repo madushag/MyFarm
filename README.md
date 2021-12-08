@@ -761,9 +761,13 @@ Impediments:
 
 ##### Daily scrum 12/8
 Completed since last meeting:
+- Madusha: completed TDD
+- Kelly: completed tickets.
 
 
 Will work on next:
+- Kelly work on TDD case failing.
+- Neha: MYF-120. Will use BDD for developing this.
 
 
 Impediments: 
