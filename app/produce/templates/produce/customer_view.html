@@ -7,8 +7,9 @@
     <div class="container">
         <h1>List of Produce</h1>
         <div class="input-group">
-            <span class="input-group-text">Your Location</span>
-            <input id="id_customer_location" type="text" aria-label="Location" class="form-control">
+            <span class="input-group-text">Your Location<sup> <a href="#privacy-policy" style="text-decoration: none"> **</a> </sup></span>
+            <input id="id_customer_location" type="text" aria-label="Location" class="form-control" placeholder="Enter a location. Note we do not store this information.">
+            <input type="button" id="btn_clear_customer_location"  class="btn btn-secondary" value="Reset"/>
         </div>
         <br/>
         <div class="input-group">
@@ -44,11 +45,11 @@
             {% for produce in produce_list %}
                 <div class="list-group-item list-group-item-action" aria-current="true">
                     <div class="container">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{ produce.name }} ({{ produce.mode_of_sale }}) {% if produce.is_organic %} <img style="margin-left: 10px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
-                        <small><b>Price : </b>${{ produce.price }}</small>
-                    </div>
-                    <p class="mb-1">{{ produce.description }}</p>
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">{{ produce.name }} ({{ produce.mode_of_sale }}) {% if produce.is_organic %} <img style="margin-left: 10px; height:50px;width:50px" src="{% static 'organic.png' %}">{% endif %}</h5>
+                            <small><b>Price : </b>${{ produce.price }}</small>
+                        </div>
+                        <p class="mb-1">{{ produce.description }}</p>
                         <div class="row">
                             <div class="gap-left col"><b>Min. Quantity : </b>{{ produce.min_quantity }} lbs.</div>
                             <div class="gap-left col"><b>Farm:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm.farm_name }}</a>{% else %} {{ produce.farm.farm_name }} {% endif %}</div>
@@ -72,6 +73,11 @@
             <p>No produce available. <img style="width:30px" src="{% static 'sad_face.jpg' %}" /></p>
         {% endif %}
     </div>
+    <footer>
+        <div class="container" id="privacy-policy">
+            <small><sup>** </sup>Note that we value your privacy and do not store your location details in our system.</small>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="{% static 'homepage.js' %}"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ maps_api_key }}&callback=initMap&libraries=places&v=weekly"></script>
