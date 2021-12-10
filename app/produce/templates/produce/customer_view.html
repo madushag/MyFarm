@@ -51,7 +51,7 @@
                         </div>
                         <p class="mb-1">{{ produce.description }}</p>
                         <div class="row">
-                            <div class="gap-left col"><b>Min. Quantity : </b>{{ produce.min_quantity }} lbs.</div>
+                            <div class="gap-left col"><b>Min. Quantity : </b>{{ produce.min_quantity }} {{ produce.purchase_units }}</div>
                             <div class="gap-left col"><b>Farm:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm.farm_name }}</a>{% else %} {{ produce.farm.farm_name }} {% endif %}</div>
                             <div class="gap-left col"><b>Selling at:</b> <a href="{{ produce.farm.location_url }}" target="_blank">{{ produce.farm.name }}, {{ produce.farm.location_address }}</a></div>
                             <div class="gap-left col"><b>Distance:</b> {% if produce.distance_from_customer %}{{ produce.distance_from_customer|floatformat:2 }} miles{% else %} NA {% endif %}</div>
