@@ -115,4 +115,3 @@ class TestHomepageViews(TestCase):
         response = c.get('/?produce=CARROTS&distance=5&lng=-71.0169325&lat=42.4068238')
         self.assertInHTML("<div class='gap-left col'><b>Distance:</b> 0.18 miles</div>", response.content.decode("utf-8"), count=2)
         self.assertNotContains(response, ">BEETS")
-

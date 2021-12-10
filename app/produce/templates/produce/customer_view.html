@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="gap-left col"><b>Min. Quantity : </b>{{ produce.min_quantity }} lbs.</div>
                             <div class="gap-left col"><b>Farm:</b> {% if produce.farm.website_url %} <a href="{{ produce.farm.website_url }}">{{ produce.farm.farm_name }}</a>{% else %} {{ produce.farm.farm_name }} {% endif %}</div>
-                            <div class="gap-left col"><b>Selling at:</b> <a href="{% url 'homepage:list_farm_produce' produce.farm.name %}" target="_blank">{{ produce.farm.name }}, {{ produce.farm.location_address }}</a></div>
+                            <div class="gap-left col"><b>Selling at:</b> <a href="{{ produce.farm.location_url }}" target="_blank">{{ produce.farm.name }}, {{ produce.farm.location_address }}</a><br/> <a href="{% url 'homepage:list_farm_produce' produce.farm.name %}" target="_blank">(see all produce)</a></div>
                             <div class="gap-left col"><b>Distance:</b> {{ produce.distance_from_customer|floatformat:2 }} miles</div>
                             <div class="gap-left col">
                                 <a class="col fa fa-envelope"  href="mailto:{{ produce.farm.farmer.email }}?subject=Confirm {{ produce.name }} pickup&body=Hi,%0A%0ACan you please confirm location and date for {{ produce.name }} pickup.%0A%0AThanks.">
