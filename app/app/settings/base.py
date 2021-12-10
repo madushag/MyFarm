@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # 'storages',
     'farm',
     'produce',
-    'behave_django'
+    # 'behave_django'
 ]
 
 MIDDLEWARE = [
