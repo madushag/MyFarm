@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'authenticate',
     # 'storages',
     'farm',
-    'produce'
+    'produce',
+    'behave_django'
 ]
 
 MIDDLEWARE = [

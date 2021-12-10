@@ -778,12 +778,18 @@ Impediments:
 
 
 Completed since last meeting:
-
+- Kelly: MYF-118.
+- Chris Rogers: fixed CI/CD pipeline.
+- Chris Calleri: created demo data
+- Neha: finished MYF-120.
 
 Will work on next:
+- Kelly: MYF-116.
+- Madusha: working on BDD
+- Kelly: implement BDD in CI/CD pipeline.
 
 
-Impediments: 
+Impediments: how to get BDD to work in Django framework. The plan to address is for Madusha to continue research Neha started.
 
 #### Burndown Chart as of Dec 2:
 
