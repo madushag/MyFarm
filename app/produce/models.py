@@ -26,6 +26,13 @@ mode_of_sale = [
     ("PICK YOUR OWN", "Pick Your Own"),
 ]
 
+purchase_units = [
+    ("OUNCE", "oz"),
+    ("PINT", "pt"),
+    ("QUART", "qt"),
+    ("BUNCH", "Bunch"),
+    ("POUND", "lbs"),
+]
 
 # def UploadedConfigPath(instance, filename):
 #     return os.path.join(settings.MEDIA_ROOT, str(instance.id), filename)
@@ -44,7 +51,12 @@ class Produce(models.Model):
     mode_of_sale = models.CharField(
         max_length=50,
         choices=mode_of_sale,
-        )
+    )
+
+    purchase_units = models.CharField(
+        max_length=20,
+        choices=purchase_units
+    )
 
     def __str__(self):
         return self.name

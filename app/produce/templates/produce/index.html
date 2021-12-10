@@ -29,7 +29,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">{% if produce.description %} {{ produce.description }} {% else %} This items does not have a description {% endif %}</h6>
                         <div class="card-text">
                             <div class="gap-left"><b>Price:</b> ${{ produce.price }}</div>
-                            <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }}</div>
+                            <div class="gap-left"><b>Min. Qty:</b> {{ produce.min_quantity }} {{ produce.purchase_units }}</div>
                             <div class="gap-left"><b>Farm:</b> {% if produce_list.farm_website %} <a href="{{ produce_list.farm_website }}">{{ produce_list.farm_name }}</a> {% else %} {{ produce_list.farm_name }} {% endif %}</div>
                             <div class="gap-left"><b>Mode of Sale:</b> {{ produce.mode_of_sale }}</div>
                         </div>
