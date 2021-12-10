@@ -53,7 +53,7 @@ class TestHomepageViews(TestCase):
         self.assertContains(response, '>SPINACH')
         self.assertContains(response, 'This is a carrot')
         self.assertContains(response, 'Test POS')
-        self.assertContains(response, '<b>Min. Quantity : </b>10.0 lbs.')
+        self.assertContains(response, '<b>Min. Quantity : </b>10.0')
         self.assertContains(response, 'Test Farm')
         self.assertContains(response, 'Test POS')
         self.assertContains(response, 'www.test.com')

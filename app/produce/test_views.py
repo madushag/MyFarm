@@ -75,7 +75,8 @@ class TestProduceView(TestCase):
             "min_quantity": "10",
             "is_organic": False,
             "farm": farm_id,
-            "mode_of_sale": "WHOLESALE"
+            "mode_of_sale": "WHOLESALE",
+            "purchase_units": "POUND"
         })
         request.user = self.user
         produce_add(request, farm_id)
@@ -177,6 +178,7 @@ class TestProduceView(TestCase):
             "is_organic": False,
             "farm": farm_id,
             "mode_of_sale": "WHOLESALE",
+            "purchase_units": "PINT"
         })
     
         request.user = self.user
