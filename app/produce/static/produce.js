@@ -6,10 +6,10 @@ function setFieldStyles(){
             $(this).attr({'placeholder': 'Name produce'});
         }
         if($(this).attr('id').indexOf('price') > 0){
-            $(this).attr({'placeholder': 'Price per lb'});
+            $(this).attr({'placeholder': 'Price per unit'});
         }
         if($(this).attr('id').indexOf('min_quantity') > 0){
-            $(this).attr({'placeholder': 'Minimum quantity for sale in lbs'});
+            $(this).attr({'placeholder': 'Minimum quantity for sale'});
         }
     });
 
