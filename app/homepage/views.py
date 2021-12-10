@@ -5,12 +5,19 @@ from produce.models import Produce, name_choices, mode_of_sale
 from farm.models import Farm
 
 
-def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat):
+def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, organic_type_filter, lng, lat):
     # ordering the sequence of filter checks optimizing for the least number of results returned to the client
+    print(organic_type_filter)
 
-    # all 3 filters are set
+
+    # 3 filters are set
     if produce_filter and distance_filter and sale_type_filter:
-        produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter)
+
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter)
+
         for produce in produce_list:
             if produce.get_distance(lat, lng) > int(distance_filter):
                 produce_list = produce_list.exclude(id=produce.id)
@@ -18,12 +25,20 @@ def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter,
 
     # only produce and sale type filters are set
     if produce_filter and sale_type_filter:
-        produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter)
+        # print("what")
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(name=produce_filter).filter(mode_of_sale=sale_type_filter)
         return produce_list
 
     # only produce and distance filters are set
     if produce_filter and distance_filter:
-        produce_list = Produce.objects.filter(name=produce_filter)
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(name=produce_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(name=produce_filter)
+
         for produce in produce_list:
             if produce.get_distance(lat, lng) > int(distance_filter):
                 produce_list = produce_list.exclude(id=produce.id)
@@ -31,7 +46,11 @@ def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter,
 
     # only sale type and distance filters are set
     if sale_type_filter and distance_filter:
-        produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter)
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter)
+
         for produce in produce_list:
             if produce.get_distance(lat, lng) > int(distance_filter):
                 produce_list = produce_list.exclude(id=produce.id)
@@ -39,21 +58,35 @@ def get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter,
 
     # only produce filter is set
     if produce_filter:
-        produce_list = Produce.objects.filter(name=produce_filter)
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(name=produce_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(name=produce_filter)
         return produce_list
 
     # only sale type filter is set
     if sale_type_filter:
-        produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter)
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter).filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.filter(mode_of_sale=sale_type_filter)
         return produce_list
 
     # only distance filter is set
     if distance_filter:
-        produce_list = Produce.objects.all()
+        if organic_type_filter == 'true':
+            produce_list = Produce.objects.all().filter(is_organic=True)
+        else:
+            produce_list = Produce.objects.all()
         for produce in produce_list:
             if produce.get_distance(lat, lng) > int(distance_filter):
                 produce_list = produce_list.exclude(
                     id=produce.id)  # remove produce from list if distance is greater than distance filter
+        return produce_list
+
+    # only distance filter is set
+    if organic_type_filter == 'true':
+        produce_list = Produce.objects.all().filter(is_organic=True)
         return produce_list
 
     # if we get this far then no filters are set
@@ -64,10 +97,11 @@ def homepage(request):
     produce_filter = request.GET.get('produce')
     distance_filter = request.GET.get('distance')
     sale_type_filter = request.GET.get('saleType')
+    organic_type_filter = request.GET.get('organic')
     lng = request.GET.get('lng')
     lat = request.GET.get('lat')
 
-    produce_list = get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, lng, lat)
+    produce_list = get_filtered_produce_list(produce_filter, distance_filter, sale_type_filter, organic_type_filter, lng, lat)
 
     # calculate the distance from customer of each produce to be shown, if customer location is avaialble
     if lng is not None and lat is not None:
