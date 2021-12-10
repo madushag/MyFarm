@@ -50,8 +50,8 @@ jobs:
         run: python manage.py migrate
       - name: Django Tests 
         run: python manage.py test
-      - name: BDD Tests
-        run: python manage.py behave
+#      - name: BDD Tests
+#        run: python manage.py behave
   build:
     name: Build Docker Container
     # Only build container when code has been merged into main
