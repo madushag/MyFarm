@@ -671,8 +671,10 @@ As indicated above the forecast for the number of story points the team can comp
 
 ![KanbanBoardSprint3](images/KanbanwithSubtasksSprint3.png)
 
-Our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
-**Note** this URL shows the Kanban board for the active Sprint. As of 11/30, the board was as depicted above, with the tasks MYF-124, MYF-51, MYF-85, MYF-120, MYF-4, MYF-118 and MYF-119. Links to these tasks below:
+The Kanban Board for our sprint backlog is shown above. The URL of the board is : https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
+
+**Note** this URL shows the Kanban board for the active Sprint. As of 11/30, the board was as depicted above, with the stories MYF-124, MYF-51, MYF-85, MYF-120, MYF-4, MYF-116, MYF-118 and MYF-119. Links to these stories below:
+
 
 - MYF-124: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
 - MYF-51: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-51
@@ -744,8 +746,14 @@ Will work on next:
 - Kelly, Chris Calleri, Madusha and Luis to do mob programming over the weekend.
 
 Impediments: 
-- All: issue this morning with CI/CD pipeline. Chris Rogers is debugging the issue.
+- All: issue this morning with CI/CD pipeline. The plan to address is for Chris Rogers to debug the issue, and keep the team up to date on progress.
 - All: need to familiarize ourselves with Cucumber and how to do BDD. The plan to address this is for Neha to install Cucumber locally over the weekend, learn how to work with it and come back to the team with the next steps.
+
+The sprint task board and burndown chart were updated
+
+#### Burndown Chart after update:
+
+![Burndown](images/Sprint3BurndownChart12-02.png)
 
 
 ##### Daily scrum 12/6
@@ -765,7 +773,13 @@ Will work on next:
 - Neha: will work on BDD and how to use Behave.
 - Luis: prepare presentation for in-class Sprint Review
 
-Impediments: 
+Impediments: None at this time.
+
+The sprint task board and burndown chart were updated
+
+#### Burndown Chart after update:
+
+![Burndown](images/Sprint3BurndownChart12-05.png)
 
 ##### Daily scrum 12/8
 
@@ -781,7 +795,7 @@ Will work on next:
 - Neha: MYF-120. Will use BDD for developing this.
 
 
-Impediments: 
+Impediments: None at this time.
 
 
 
@@ -800,13 +814,11 @@ Will work on next:
 - Chris: implement BDD in CI/CD pipeline.
 
 
-Impediments: how to get BDD to work in Django framework. The plan to address is for Madusha to continue research Neha started.
+Impediments: how to get BDD to work in Django framework. The plan to address is for Madusha to continue research Neha started; based on progress, Madusha will update the team on how to write and execute BDD tests.
 
-#### Burndown Chart as of Dec 2:
+The sprint task board and burndown chart were updated
 
-![Burndown](images/Sprint3BurndownChart12-02.png)
-
-#### Burndown Chart at the end of the Sprint:
+#### Burndown Chart after update:
 
 ![Burndown](images/Sprint3BurndownChart-EndOfSprint.jpg)
 
@@ -827,7 +839,7 @@ Neha, Chris and Luis mob programming:
 ![MobProgramming](images/Sprint3MobProgramming.png)
 
 
-#### Test Driven Development.
+#### Behaviour Driven Development and Test Driven Development.
 
 Our solution currently has 1 BDD test and 51 micro-scale unit tests, and they all pass.
 
@@ -842,14 +854,19 @@ The URLs in Github to the 51 micro-scale unit tests conducted:
 - Test of produce model(1): https://github.com/madushag/MyFarm/blob/main/app/produce/test_models.py
 - Test of produce views(9): https://github.com/madushag/MyFarm/blob/main/app/produce/test_views.py
 
+Screenshot of BDD and TDD having successfully run in the Continuous Integration system:
+
+![AllTestSuccessinCI](images/Sprint3Tests.jpg)
 
 **The Team conducting TDD**
+
+During the various pair and mob programming sessions, TDD took place. A sample of a test first failing and then passing below:
 
 **Test Failed:**
 
 ![Sprint3TestFail](images/Sprint3TDD-TestFail.png)
 
-Test Passed:
+**Test Passed:**
 
 ![Sprint3TestPass](images/Sprint3TDD-TestPass.png)
 
@@ -865,31 +882,31 @@ Image of the working product:
 
 ### Continuous Integration
 
-The full CI/CD workflow can be seen at: https://github.com/madushag/MyFarm/actions/runs/1500976876/workflow
+The full CI/CD workflow for a successful integration and deployment can be seen at: https://github.com/madushag/MyFarm/actions/runs/1567237551
 
-Every time changes for a branch is pushed to github, the CI/CD workflow is triggered. For all non-main branch pushes the CI portion of the workflow runs all tests. 
+Every time a change is pushed to github, the CI/CD workflow is triggered. For all non-main branch pushes the CI portion of the workflow runs all tests. 
 
-If any of the tests fail, the workflow aborts. URL to a failed test sample: https://github.com/madushag/MyFarm/actions/runs/1500920552
+If any of the tests fail, the workflow aborts. URL to a failed test sample: https://github.com/madushag/MyFarm/runs/4487379106?check_suite_focus=true
 
 A sample of a successful completion of the tests:
 
-![CITestsPassed](images/CITestsPassed.png)
+![CITestsPassed](images/Sprint3CITestSuccess.jpg)
 
 If a push is made to the main branch and the tests pass, the workflow then builds a container for the application:
 
-![DockerBuilt](images/CIDockerBuilt.png)
+![DockerBuilt](images/Sprint3CIDockerSuccess.jpg)
 
 ### Continuous Delivery
 
-With these two action having completed successfully, the Delivery portion of the workflow triggers next.
+With these two action having completed successfully, the Delivery portion of the workflow triggers next. URL to a successful CD run: https://github.com/madushag/MyFarm/runs/4493241239?check_suite_focus=true
 
-![CDRunning](images/CD-Running.png)
+If the build is "red", the CD system does not trigger. URL to a failed test, where the delivery did not trigger: https://github.com/madushag/MyFarm/runs/4487379106?check_suite_focus=true
 
 If the entire pipeline is successful the working application is delivered to AWS ECS:
 
-![CICDSuccess](images/CI-CD-RanSuccess.png)
+![CICDSuccess](images/Sprint3CICDSuccess.jpg)
 
-URL to a successful end-to-end CI/CD workflow: https://github.com/madushag/MyFarm/actions/runs/1502264087
+URL to a successful end-to-end CI/CD workflow: https://github.com/madushag/MyFarm/actions/runs/1567237551
 
 A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group for the application load balancer that is serving requests for the ECS container includes a health check that pings the root (‘/’) url every 30 seconds. If it doesn’t receive a reply within five seconds it records a failure. If it receives 2 consecutive failures, it will restart the ECS service, resulting in the app being redeployed. Screenshot of the health check configuration in the screenshot below.
 
@@ -916,6 +933,10 @@ It is at the top of the backlog for Sprint 4:
 
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
 
+
+### Sprint Review Rehearsal
+
+After the Sprint Retrospective, the team rehearse the in-class Sprint Review: URL of the rehearsal video: 
 
 ### Sprint Review
 The Sprint Review took place on 12/13 during class. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
