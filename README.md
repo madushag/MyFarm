@@ -15,9 +15,9 @@
 |---------------------------|-------------  |
 | Chris Rogers              | Developer     |
 | Neha Dubey                | Developer     |
-| Christian Calleri         | Scrum Master  |
+| Christian Calleri         | UX Designer   |
 | Shrikanth Ananthakrishnan | Product Owner |
-| Luis Rengifo              | Developer     |
+| Luis Rengifo              | Scrum Master  |
 | Madusha Gamage            | Developer     |
 | Kelly McDougall           | Developer     |
 
