@@ -896,6 +896,12 @@ If a push is made to the main branch and the tests pass, the workflow then build
 
 ![DockerBuilt](images/Sprint3CIDockerSuccess.jpg)
 
+**No long-lived code branches**
+
+The team only works on the main branch - no other branches exist in github:
+
+![MainBranch](images/MainBranch.jpg)
+
 ### Continuous Delivery
 
 With these two action having completed successfully, the Delivery portion of the workflow triggers next. URL to a successful CD run: https://github.com/madushag/MyFarm/runs/4493241239?check_suite_focus=true
@@ -912,44 +918,49 @@ A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group
 
 ![ECS-Healthcheck](images/ECS-Healthcheck.png)
 
+### Real Sprint3 Review
+
+**NOTE - a real sprint review was conducted with the stakeholders on the night of 12/12/**
+
+Real Sprint 3 Review with stakeholders:
+
+![RealSprint3Review](images/Sprint3RealReview.jpg)
+
+Feedback from both Ari and Vijaya was very positive; they like the simplicity and ease of use of the interface.
+
 
 ### Sprint Retrospective
-The Sprint Restrospective took place on 12/09 as well, right after the Sprint Review. The team discussed ways to increase quality and effectiveness. In particular,
+
+The Sprint Restrospective took place on 12/12, right after the Sprint Review with the stakeholders. The team discussed ways to increase quality and effectiveness. In particular, make sure that we have more specifically defined deliverables (more granularity in stories and technical specifications). 
+
+As well, the team is performing really well, perhaps we could have taken on additional stories. The team got really good at working on the main branch.
 
 Recording of the Sprint Retrospective can be found here: 
 
 The team during the retrospective:
 
-![Sprint2Retrospective]()
+![Sprint3Retrospective](images/Sprint3Retrospective.jpg)
 
-The team discussed the following action, which should make the team significantly better:
+The team discussed the following action, which should make the team significantly better: 
 
-Do more pair programming / mob programming and implement code review session to address lack of uniformity in how the various modules are coded. This story was added at the top of the backlog as story MYF-119 - the URL: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-119
+Always pull the main branch before making migrations. This story was added at the top of the backlog as story MYF-153 - the URL: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog?selectedIssue=MYF-153
 
 
 It is at the top of the backlog for Sprint 4:
 
-![ActionforSprint3](images/Sprint2ActionToImprove.png)
+![ActionforSprint3](images/Sprint3RetroAction.jpg)
 
 As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1/backlog
 
 
 ### Sprint Review Rehearsal
 
-After the Sprint Retrospective, the team rehearse the in-class Sprint Review: URL of the rehearsal video: 
+After the Sprint Retrospective, the team rehearsed the in-class Sprint Review: URL of the rehearsal video: 
 
 ### Sprint Review
-The Sprint Review took place on 12/13 during class. In attendance was Ari Kurtz, our farmer stakeholder and Vijaya Meduri, our customer stakeholder. The Scrum Team presented to the stakeholders the results of the the work and progress toward the product goal.
+
+The Sprint Review took place on 12/13 during class. 
+
+URL to slide deck used for the Sprint Review: https://docs.google.com/presentation/d/1bys0YZZf9plvkCRR365bTB__KYeW2HZvI7O8eKc59xM/
  
-
-The team during Sprint Review with the two stakeholders:
-
-![SprintReview]()
-
-Feedback from both Ari and Vijaya was very positive; they like the simplicity and ease of use of the interface.
-
-Based on feedback from 
-![BacklogEdited]()
-
-URLs to these stories are:
 
