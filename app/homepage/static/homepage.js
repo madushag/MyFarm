@@ -58,7 +58,7 @@ function filter_page() {
         let filter_url = "/?1=1" + (produce_filter !== 'Any' ? "&produce=" + produce_filter.toUpperCase() : '')
                                 + (saleType_filter !== 'Any' ? "&saleType=" + saleType_filter : '')
                                 + (organic_filter !== 'Any' ? "&organic=" + organic_filter : '')
-                                + (distance_filter !== '-1' ? "&=" + distance_filter : '')
+                                + (distance_filter !== '-1' ? "&distance=" + distance_filter : '')
                                 + (localStorage.getItem('customer_lng') ? "&lng=" + localStorage.getItem('customer_lng') + "&lat=" + localStorage.getItem('customer_lat') : '') ;
         document.location.href = filter_url;
     }
