@@ -646,7 +646,7 @@ We agreed that for the next sprint it makes sense to plan 20 points as well. The
 - Customer - As a customer I want to set a location and a search distance so that the search results are displayed within the radius of the location I set [MYF-85](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-85)
 - Farmer - In addition to pounds, as a farmer I want to set additional units of purchasing produce such as ounces, pints, quarts and bunches so that the customer can buy the produce accordingly [MYF-120](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-120)
 - Farmer - As a farmer I want to display a mode of sale (wholesale/retail/pick your own) so that the customer can choose how to buy the produce [MYF-4](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-4)
-- Customer - As a customer I would like to be able to filter for produce that are organic vs. conventional. [MYF-116] (https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-116)
+- Customer - As a customer I would like to be able to filter for produce that are organic vs. conventional. [MYF-116](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-116)
 - Customer - Having filtered results I want to be able to click on the farm name to see additional available items so that I can shop all my needs from the farmer [MYF-118](https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-118)
 
 #### 3) How will the chosen work get done
@@ -667,7 +667,7 @@ As indicated above the forecast for the number of story points the team can comp
 
 ![Sprint3Backlog](images/Sprint3Backlog.png)
 
-**Our Sprint backlog's Kanban Board at the beginning of the Sprint (including subtasks):**
+**Our Sprint backlog's Kanban Board at the beginning of the Sprint (including developer tasks):**
 
 ![KanbanBoardSprint3](images/KanbanwithSubtasksSprint3.png)
 
@@ -676,7 +676,7 @@ The Kanban Board for our sprint backlog is shown above. The URL of the board is 
 **Note** this URL shows the Kanban board for the active Sprint. As of 11/30, the board was as depicted above, with the stories MYF-124, MYF-51, MYF-85, MYF-120, MYF-4, MYF-116, MYF-118 and MYF-119. Links to these stories below:
 
 
-- MYF-124: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1
+- MYF-124: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-124
 - MYF-51: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-51
 - MYF-85: https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-85
 - MYF-120:https://txmd-webops.atlassian.net/jira/software/projects/MYF/boards/1?selectedIssue=MYF-120
