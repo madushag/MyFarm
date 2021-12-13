@@ -922,6 +922,8 @@ A crucial component of the CI/CD pipeline is hosted on AWS ECS. The target group
 
 **NOTE - a real sprint review was conducted with the stakeholders on the night of 12/12/**
 
+URL to the "real" sprint 3 review recording: https://harvard.zoom.us/rec/share/CmR2j8KDAlpJsY9OudsnAHmsIropa7Jt8PVbzF9PDxViL_9DvoGSdYnMxRkgnFK3.OVMUY6n_D5jDnRZe?startTime=1639354059000
+
 Real Sprint 3 Review with stakeholders:
 
 ![RealSprint3Review](images/Sprint3RealReview.jpg)
@@ -935,7 +937,7 @@ The Sprint Restrospective took place on 12/12, right after the Sprint Review wit
 
 As well, the team is performing really well, perhaps we could have taken on additional stories. The team got really good at working on the main branch.
 
-Recording of the Sprint Retrospective can be found here: 
+Recording of the Sprint Retrospective can be found here: https://harvard.zoom.us/rec/share/CmR2j8KDAlpJsY9OudsnAHmsIropa7Jt8PVbzF9PDxViL_9DvoGSdYnMxRkgnFK3.OVMUY6n_D5jDnRZe?startTime=1639357372000
 
 The team during the retrospective:
 
@@ -955,7 +957,7 @@ As a reminder, URL to the backlog is: https://txmd-webops.atlassian.net/jira/sof
 
 ### Sprint Review Rehearsal
 
-After the Sprint Retrospective, the team rehearsed the in-class Sprint Review: URL of the rehearsal video: 
+After the Sprint Retrospective, the team rehearsed the in-class Sprint Review: URL of the rehearsal video: https://harvard.zoom.us/rec/share/CmR2j8KDAlpJsY9OudsnAHmsIropa7Jt8PVbzF9PDxViL_9DvoGSdYnMxRkgnFK3.OVMUY6n_D5jDnRZe?startTime=1639359692000
 
 ### Sprint Review
 
